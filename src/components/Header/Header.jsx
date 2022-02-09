@@ -25,7 +25,7 @@ function Header() {
             <li className="top__workinghours">All week 24/7</li>
           </ul>
 
-          <Social_icons />
+          {/*<Social_icons />*/}
         </div>
         <div className="header__main main">
           <div className="main_logo">CleverShop</div>
