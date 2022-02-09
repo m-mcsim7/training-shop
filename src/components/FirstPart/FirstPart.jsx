@@ -3,7 +3,7 @@ import big_banner from "../../img/images/big_banner.jpg";
 import banner_woman from "../../img/images/banner_woman.jpg";
 import banner_man from "../../img/images/banner_man.jpg";
 import banner_accessories from "../../img/images/banner_accessories.jpg";
-import "./FirstPart.css";
+//import "./FirstPart.css";
 
 function FirstPart() {
   return (

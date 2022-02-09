@@ -2,7 +2,7 @@ import React from "react";
 import blog_1 from "../../img/images/blog1.jpg"
 import blog_2 from "../../img/images/blog2.jpg"
 import blog_3 from "../../img/images/blog3.jpg"
-import "./SixthPart.css";
+//import "./SixthPart.css";
 
 function SixthPart() {
   return (

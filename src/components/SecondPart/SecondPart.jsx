@@ -1,5 +1,5 @@
 import React from 'react';
-import "./SecondPart.css";
+//import "./SecondPart.css";
 
 function SecondPart() {
   return <div>
