@@ -3,7 +3,7 @@ import basket_number from "../../img/icons/basket_number.svg";
 import "./Header.css";
 
 import Navigation from "./Navigation";
-import Social_icons from "./Social_icons";
+
 
 function Header() {
   return (
