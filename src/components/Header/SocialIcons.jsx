@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Social_icons() {
+function SocialIcons() {
   return (
    <ul className="top__social">
    <li>
@@ -19,4 +19,4 @@ function Social_icons() {
  );
 }
 
-export default Social_icons;
+export default SocialIcons;
