@@ -1,14 +1,9 @@
 import React from "react";
 import basket_number from "../../img/icons/basket_number.svg";
 import "./Header.css";
-//import facebook from "../../img/icons/facebook.svg";
-//import twitter from "../../img/icons/twitter.svg";
-//import instagram from "../../img/icons/instagram.svg";
-//import pinterest from "../../img/icons/pinterest.svg";
 
 import Navigation from "./Navigation";
 import Social_icons from "./Social_icons";
-
 
 function Header() {
   return (
@@ -32,9 +27,7 @@ function Header() {
             <li className="top__workinghours">All week 24/7</li>
           </ul>
 
-          <Social_icons
-          // onClick={(Social_icons) => console.log(Social_icons)}
-          />
+          <Social_icons />
         </div>
         <div className="header__main main">
           <div className="main_logo">CleverShop</div>

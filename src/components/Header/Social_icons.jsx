@@ -1,8 +1,4 @@
 import React from 'react';
-//import 'facebook' from "../../img/icons/facebook.svg";
-//import 'twitter' from "../../img/icons/twitter.svg";
-//import 'instagram' from "../../img/icons/instagram.svg";
-//import 'pinterest' from "../../img/icons/pinterest.svg";
 
 function Social_icons() {
   return (
