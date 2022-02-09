@@ -3,7 +3,7 @@ import basket_number from "../../img/icons/basket_number.svg";
 import "./Header.css";
 
 import Navigation from "./Navigation";
-import Social_icons from "./Social_icons";
+import SocialIcons from "./SocialIcons";
 
 function Header() {
   return (
@@ -25,7 +25,7 @@ function Header() {
             <li className="top__workinghours">All week 24/7</li>
           </ul>
 
-          <Social_icons />
+          <SocialIcons />
         </div>
         <div className="header__main main">
           <div className="main_logo">CleverShop</div>
