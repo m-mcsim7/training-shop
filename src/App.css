@@ -557,7 +557,7 @@
    line-height: 22px;
    width: 302px;
  }*/
- .sort {
+ /*.sort {
  }
  .container {
  }
@@ -605,10 +605,10 @@
  }
  .item__card {
    /*max-width: 255px;
-    height: 408px;*/
+    height: 408px;
    max-width: 255px;
- }
- .item__card-img {
+ }*/
+ /*.item__card-img {
    max-width: 255px;
    max-height: 318px;
  }
@@ -647,8 +647,8 @@
    border: 2px solid #f8f8f8;
    background-color: #f8f8f8;
    text-transform: uppercase;
- }
- .banners__wrapper {
+ }*/
+ /*.banners__wrapper {
    margin-top: 96px;
    margin-left: auto;
    margin-right: auto;
@@ -695,7 +695,7 @@
  }
  .banners__wrapper-title span {
    color: #ea1e63;
- }
+ }*/
  .bigbanner {
  }
  .container {
