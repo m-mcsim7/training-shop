@@ -1,7 +1,7 @@
 import React from 'react';
 import item_1 from "../../img/images/item_1.jpg";
 
-import "./Woman.css"
+
 
 
 function Woman() {

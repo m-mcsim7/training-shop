@@ -1,7 +1,7 @@
 import React from "react";
 import BigBannerWoman from "../../img/images/woman.png";
 import BigBannerMan from "../../img/images/man.png";
-import "./FifthPart.css";
+
 
 function FifthPart() {
   return (

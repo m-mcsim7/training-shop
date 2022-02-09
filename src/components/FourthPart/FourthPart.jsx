@@ -1,7 +1,7 @@
 import React from "react";
 import banner_1 from "../../img/images/newseason.jpg"
 import banner_2 from "../../img/images/sale.jpg"
-import "./FourthPart.css";
+
 
 function FourthPart() {
   return (
