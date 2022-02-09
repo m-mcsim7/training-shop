@@ -1,6 +1,6 @@
 import React from "react";
 
-//import Header from "./components/Header/Header";
+import Header from "./components/Header/Header";
 //import FirstPart from "./components/FirstPart/FirstPart";
 //import SecondPart from "./components/SecondPart/SecondPart";
 //import ThirdPart from "./components/ThirdPart/ThirdPart";
@@ -15,8 +15,8 @@ function App() {
     <div>
 
        <h1>Hello world</h1>
-      {/*<Header />
-      <FirstPart />
+      <Header />
+      {/*<FirstPart />
       <SecondPart />
       <ThirdPart />
       <FourthPart />
