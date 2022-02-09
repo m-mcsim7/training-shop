@@ -19,6 +19,7 @@ function App() {
       <ThirdPart />
       <FourthPart />
       <FifthPart />
+      <FifthPart />
       <SixthPart />
 
     </div>
