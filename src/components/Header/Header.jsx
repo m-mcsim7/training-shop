@@ -12,9 +12,7 @@ function Header() {
         <div className="header__top top">
           <ul className="top__contacts">
             <li>
-              <a href="tel:+375291002030" className="top__phone">
-                +375 29 100 20 30
-              </a>
+              <a href="tel:+375291002030" className="top__phone">  +375 29 100 20 30 </a>
             </li>
             <li>
               <a
@@ -47,13 +45,13 @@ function Header() {
 
           <ul className="main__icons">
             <li>
-              <a className="main__icons-search" href="https://yandex.by/"></a>
+              <a className="main__icons-search" href="https://yandex.by/">8</a>
             </li>
             <li>
-              <a className="main__icons-earth" href="https://yandex.by/"></a>
+              <a className="main__icons-earth" href="https://yandex.by/">8</a>
             </li>
             <li>
-              <a className="main__icons-human" href="https://yandex.by/"></a>
+              <a className="main__icons-human" href="https://yandex.by/">8</a>
             </li>
             <li>
               <a className="main__icons-basket" href="https://yandex.by/">
