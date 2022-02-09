@@ -5,7 +5,7 @@ function Navigation({ items, onClick }) {
     <ul className="main__navigation">
       {items.map((name_navigation, index) => (
         <li key={index}>
-          <a href="#" onClick={() => onClick(name_navigation)}>
+          <a href="https://yandex.by/" onClick={() => onClick(name_navigation)}>
             {name_navigation}
           </a>
         </li>

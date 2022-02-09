@@ -47,16 +47,16 @@ function Header() {
 
           <ul className="main__icons">
             <li>
-              <a className="main__icons-search" href="#"></a>
+              <a className="main__icons-search" href="https://yandex.by/"></a>
             </li>
             <li>
-              <a className="main__icons-earth" href="#"></a>
+              <a className="main__icons-earth" href="https://yandex.by/"></a>
             </li>
             <li>
-              <a className="main__icons-human" href="#"></a>
+              <a className="main__icons-human" href="https://yandex.by/"></a>
             </li>
             <li>
-              <a className="main__icons-basket" href="#">
+              <a className="main__icons-basket" href="https://yandex.by/">
                 <img src={basket_number} alt="basket_number" />
               </a>
             </li>
