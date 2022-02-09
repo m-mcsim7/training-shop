@@ -20,6 +20,7 @@ function App() {
       <FourthPart />
       <FifthPart />
       <SixthPart />
+      <SixthPart />
 
     </div>
   );
