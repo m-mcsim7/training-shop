@@ -7,7 +7,7 @@ import Header from "./components/Header/Header";
 //import FourthPart from "./components/FourthPart/FourthPart";
 //import FifthPart from "./components/FifthPart/FifthPart";
 //import SixthPart from "./components/SixthPart/SixthPart";
-import Categories from "./components/Categories/Categories";
+import CategoriesWomen from "./components/Categories/Categories";
 import Footer from "./components/Footer/Footer";
 
 import "./App.css";
@@ -22,7 +22,7 @@ function App() {
       <FourthPart />
       <FifthPart />
       <SixthPart />*/}
-      <Categories />
+      <CategoriesWomen />
       <Footer />
 
     </div>
