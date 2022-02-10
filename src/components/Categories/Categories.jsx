@@ -10,7 +10,7 @@ import item from "../../img/images/item_1.jpg"
 
 import "./Categories.css";
 
-function Categories() {
+function CategoriesWomen() {
   return <div>
       <div className="nav__categoriya">
         <div className="container">
@@ -143,4 +143,4 @@ function Categories() {
   </div>;
 }
 
-export default Categories;
+export default CategoriesWomen;
