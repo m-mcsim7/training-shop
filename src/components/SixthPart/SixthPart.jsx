@@ -36,7 +36,7 @@ function SixthPart() {
                 </div>
               </div>
               <div className="blog__columm">
-                <img src={blog_3} />
+                <img src={blog_3} alt="blog"/>
                 <div className="blog__info">
                   <p className="blog__info-title">Recent Favorites On Repeat</p>
                   <p className="blog__info-contetnt">
