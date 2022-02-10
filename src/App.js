@@ -7,7 +7,8 @@ import Header from "./components/Header/Header";
 //import FourthPart from "./components/FourthPart/FourthPart";
 //import FifthPart from "./components/FifthPart/FifthPart";
 //import SixthPart from "./components/SixthPart/SixthPart";
-import CategoriesWomen from "./components/Categories/Categories";
+import CategoriesWomen from "./components/Categories/CategoriesWomen";
+import CategoriesMen from "./components/Categories/CategoriesMen";
 import Footer from "./components/Footer/Footer";
 
 import "./App.css";
@@ -23,6 +24,7 @@ function App() {
       <FifthPart />
       <SixthPart />*/}
       <CategoriesWomen />
+      <CategoriesMen />
       <Footer />
 
     </div>
