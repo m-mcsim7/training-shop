@@ -1,4 +1,13 @@
 import React from 'react';
+import pay1 from "../../img/icons/pay/pay1.svg";
+import pay2 from "../../img/icons/pay/pay2.svg";
+import pay3 from "../../img/icons/pay/pay3.svg";
+import pay4 from "../../img/icons/pay/pay4.svg";
+import pay5 from "../../img/icons/pay/pay5.svg";
+import pay6 from "../../img/icons/pay/pay6.svg";
+import pay7 from "../../img/icons/pay/pay7.svg";
+
+
 import "./Footer.css";
 
 function Footer() {
@@ -57,13 +66,13 @@ function Footer() {
             <ul className="footer__pay">
               <li>Copyright © 2032 all rights reserved</li>
               <li>
-                 <img src="./img/icons/pay/pay1.svg" alt="pay">
-                 <img src="./img/icons/pay/pay2.svg" alt="pay">
-                 <img src="./img/icons/pay/pay3.svg" alt="pay">
-                 <img src="./img/icons/pay/pay4.svg" alt="pay">
-                 <img src="./img/icons/pay/pay5.svg" alt="pay">
-                 <img src="./img/icons/pay/pay6.svg" alt="pay">
-                 <img src="./img/icons/pay/pay7.svg" alt="pay">
+                 <img src={pay1} alt="pay">
+                 <img src={pay2} alt="pay">
+                 <img src={pay3} alt="pay">
+                 <img src={pay4} alt="pay">
+                 <img src={pay5} alt="pay">
+                 <img src={pay6} alt="pay">
+                 <img src={pay7} alt="pay">
               </li>
               <li><a href="https://clevertec.ru/">Clevertec.ru/training</a> </li>
             </ul>
