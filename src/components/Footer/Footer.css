@@ -113,10 +113,12 @@
 .footer__pay-line div{
    padding-right: 12px;
 }
-.footer__pay div img:last-child{
+.footer__pay-line div img:last-child{
    padding-right: 0;
 }
-.footer__pay div a {
+.footer__pay-line div a {
   color: #121212;
   opacity: 0.8;
+  margin-left: -85px;
+  margin-right: -85px;
 }
