@@ -72,7 +72,6 @@ function Footer() {
                  <div><img src={pay5} alt="pay" /></div>
                  <div><img src={pay6} alt="pay" /></div>
                  <div><img src={pay7} alt="pay" /></div>
-
               </div>
               <div><a href="https://clevertec.ru/">Clevertec.ru/training</a></div>
             </div>

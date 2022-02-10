@@ -110,7 +110,7 @@
 .footer__pay-line{
    display: flex;
 }
-.footer__pay div img{
+.footer__pay-line div{
    padding-right: 12px;
 }
 .footer__pay div img:last-child{
