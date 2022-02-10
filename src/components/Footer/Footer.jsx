@@ -1,11 +1,11 @@
 import React from 'react';
 import pay1 from "../../img/icons/pay/pay1.svg";
-//import pay2 from "../../img/icons/pay/pay2.svg";
-//import pay3 from "../../img/icons/pay/pay3.svg";
-//import pay4 from "../../img/icons/pay/pay4.svg";
-//import pay5 from "../../img/icons/pay/pay5.svg";
-//import pay6 from "../../img/icons/pay/pay6.svg";
-//import pay7 from "../../img/icons/pay/pay7.svg";
+import pay2 from "../../img/icons/pay/pay2.svg";
+import pay3 from "../../img/icons/pay/pay3.svg";
+import pay4 from "../../img/icons/pay/pay4.svg";
+import pay5 from "../../img/icons/pay/pay5.svg";
+import pay6 from "../../img/icons/pay/pay6.svg";
+import pay7 from "../../img/icons/pay/pay7.svg";
 
 import "./Footer.css";
 
@@ -66,6 +66,12 @@ function Footer() {
               <div>Copyright © 2032 all rights reserved</div>
               <div>
                  <div><img src={pay1} alt="pay" /></div>
+                 <div><img src={pay2} alt="pay" /></div>
+                 <div><img src={pay3} alt="pay" /></div>
+                 <div><img src={pay4} alt="pay" /></div>
+                 <div><img src={pay5} alt="pay" /></div>
+                 <div><img src={pay6} alt="pay" /></div>
+                 <div><img src={pay7} alt="pay" /></div>
 
               </div>
               <div><a href="https://clevertec.ru/">Clevertec.ru/training</a></div>

@@ -99,7 +99,7 @@
   margin: 0 auto;
   background-color: #f8f8f8;
 }
-.footer__pay li {
+.footer__pay div {
   font-size: 11px;
   font-weight: 500;
   line-height: 22px;
@@ -107,13 +107,13 @@
   color: #121212;
   opacity: 0.8;
 }
-.footer__pay li img{
+.footer__pay div img{
    padding-right: 12px;
 }
-.footer__pay li img:llast-child{
+.footer__pay div img:last-child{
    padding-right: 0;
 }
-.footer__pay li a {
+.footer__pay div a {
   color: #121212;
   opacity: 0.8;
 }
