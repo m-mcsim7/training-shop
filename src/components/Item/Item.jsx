@@ -30,7 +30,7 @@ import Item1 from "../../img/images/Item_1.jpg"
 import Item2 from "../../img/images/Item_2.jpg"
 import Item3 from "../../img/images/Item_3.jpg"
 import Item4 from "../../img/images/Item_4.jpg"
-import Review from "../../img/icons/review.svg""
+import Review from "../../img/icons/review.svg"
 
 //import "./Item.css";
 
