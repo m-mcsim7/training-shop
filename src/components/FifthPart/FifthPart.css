@@ -1,0 +1,100 @@
+ /*font-family: 'Inter', sans-serif;
+ font-family: 'Playfair Display SC', serif;
+ font-family: 'Spartan', sans-serif;*/
+ 
+ /*--------------------*/
+ body {
+   font-family: "Spartan", sans-serif;
+   color: #121212;
+ }
+ .wrapper {
+ }
+ .header {
+ }
+ .container {
+   max-width: 1280px;
+   margin: 0 auto;
+ }
+ .bigbanner {
+}
+.container {
+}
+.bigbanner__wrapper {
+  position: relative;
+  margin-top: 96px;
+  height: 580px;
+  max-width: 1280px;
+  background: linear-gradient(180deg, #f3f2f2 0%, #dcdbdb 100%);
+}
+.bigbanner_woman {
+  position: absolute;
+  top: 35px;
+  left: 122px;
+  z-index: 2;
+}
+.bigbanner_man {
+  position: absolute;
+  top: 45px;
+  left: 900px;
+  z-index: 2;
+}
+.bigbanner__contain {
+  position: absolute;
+  left: calc(50% - 266px);
+  height: 461px;
+  width: 532px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  margin: 60px auto;
+}
+.bigbanner__subtitle {
+  margin-top: 80px;
+  margin-bottom: 16px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 13px;
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-transform: uppercase;
+  opacity: 0.4;
+}
+.bigbanner__title {
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 36px;
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-transform: uppercase;
+  width: 285px;
+  margin: 0 auto;
+}
+.bigbanner__title span {
+  color: #ea1e63;
+}
+.bigbanner__email {
+  height: 64px;
+  width: 340px;
+  background: rgba(248, 248, 248, 1);
+  margin: 32px auto 0 auto;
+  display: block;
+}
+.bigbanner__email::placeholder {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
+  text-align: center;
+  opacity: 0.4;
+}
+.bigbanner__button {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
+  text-align: center;
+  display: block;
+  color: #ffffff;
+  height: 64px;
+  width: 340px;
+  background: rgba(18, 18, 18, 1);
+  margin: 24px auto 0 auto;
+}
