@@ -134,7 +134,7 @@ function Categories() {
               </div>
             </div>
             <div className="item__further">
-               <img src={further} alt="item__further">
+               <img src={further} alt="item__further" />
             </div>
           </div>
         </div>
