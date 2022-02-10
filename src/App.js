@@ -3,7 +3,7 @@ import React from "react";
 import Header from "./components/Header/Header";
 import FirstPart from "./components/FirstPart/FirstPart";
 import SecondPart from "./components/SecondPart/SecondPart";
-//import ThirdPart from "./components/ThirdPart/ThirdPart";
+import ThirdPart from "./components/ThirdPart/ThirdPart";
 //import FourthPart from "./components/FourthPart/FourthPart";
 //import FifthPart from "./components/FifthPart/FifthPart";
 //import SixthPart from "./components/SixthPart/SixthPart";
@@ -16,8 +16,8 @@ function App() {
       <Header />
       <FirstPart />
       <SecondPart />
-      {/*<ThirdPart />
-      <FourthPart />
+      <ThirdPart />
+      {/*<FourthPart />
       <FifthPart />
       <SixthPart />*/}
     </div>
