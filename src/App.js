@@ -15,8 +15,8 @@ function App() {
     return (
         <div>
             <Header/>
-            {/*<FirstPart />
-      <SecondPart />
+            <FirstPart />
+     {/* <SecondPart />
       <ThirdPart />
       <FourthPart />
       <FifthPart />
