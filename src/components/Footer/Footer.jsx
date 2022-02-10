@@ -65,7 +65,8 @@ function Footer() {
             </div>
             <ul className="footer__pay">
               <li>Copyright © 2032 all rights reserved</li>
-              <li>
+              <li>Copyright © 2032 all rights reserved</li>
+              {/*<li>
                  <img src={pay1} alt="pay">
                  <img src={pay2} alt="pay">
                  <img src={pay3} alt="pay">
@@ -73,7 +74,7 @@ function Footer() {
                  <img src={pay5} alt="pay">
                  <img src={pay6} alt="pay">
                  <img src={pay7} alt="pay">
-              </li>
+              </li>*/}
               <li><a href="https://clevertec.ru/">Clevertec.ru/training</a> </li>
             </ul>
           </div>
