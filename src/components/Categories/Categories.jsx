@@ -5,6 +5,7 @@ import view1 from "../../img/icons/view1.svg"
 import view2 from "../../img/icons/view2.svg"
 import down from "../../img/icons/down.svg"
 import further from "../../img/icons/item__further.svg"
+import filter from "../../img/icons/filter.svg"
 import item from "../../img/images/item_1.jpg"
 
 import "./Categories.css";
@@ -33,7 +34,7 @@ function Categories() {
           <div className="filter__wrapper">
             <div className="filter__items">
               <div className="filter__filter">
-                <img src="./img/icons/filter.svg" alt="filter" />
+                <img src={filter} alt="filter" />
                 <p>filter</p>
               </div>
               <div className="filter__view">
