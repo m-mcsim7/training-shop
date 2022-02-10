@@ -98,6 +98,8 @@
   height: 40px;
   margin: 0 auto;
   background-color: #f8f8f8;
+  padding-left: 85px;
+  padding-right: 85px;
 }
 .footer__pay div {
   font-size: 11px;
