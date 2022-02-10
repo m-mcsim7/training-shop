@@ -141,7 +141,7 @@ function Item() {
                     Shipping & Delivery
                   </p>
                   <p>
-                    <img src={Returns & Exchnges} alt="icon" />
+                    <img src={Returns} alt="icon" />
                     Returns & Exchanges
                   </p>
                   <p>
