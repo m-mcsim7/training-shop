@@ -258,6 +258,7 @@ function Item() {
         </div>
       </div>
   </div>;
+  </div>;
 }
 
 export default Item;
