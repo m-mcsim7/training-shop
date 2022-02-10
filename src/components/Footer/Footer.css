@@ -1,0 +1,119 @@
+.footer {
+}
+.container {
+}
+.footer__wrapper {
+}
+.footer__input {
+  height: 56px;
+  max-width: 1280px;
+  background-color: #121212;
+  display: flex;
+  justify-content: space-between;
+  margin: 162px auto 0 auto;
+  align-items: center;
+  padding-left: 85px;
+  padding-right: 85px;
+}
+.footer__input-text {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  opacity: 0.4;
+}
+
+.footer__input-email {
+  height: 32px;
+  width: 400px;
+  background-color: rgba(248, 248, 248, 0.2);
+}
+.footer__input-email::placeholder {
+  padding-left: 16px;
+}
+
+.footer__input-button {
+  margin-left: 12px;
+  height: 32px;
+  width: 108px;
+  border: 1px solid #ffffff;
+  background-color: transparent;
+  color: #ffffff;
+  opacity: 0.9;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Spartan", sans-serif;
+}
+.footer__input-social {
+  width: 108px;
+  height: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.top__social-facebook {
+}
+.top__social-twitter {
+}
+.top__social-instagram {
+}
+.top__social-pinteerst {
+}
+
+.footer__rows {
+  max-width: 1110px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  /*height: 237px;*/
+}
+.footer__column li {
+  padding-top: 20px;
+  font-size: 12px;
+  font-weight: 400;
+  /*line-height: 34px;*/
+}
+.footer__column li:first-child {
+  padding-top: 40px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 13px;
+  letter-spacing: 0.06em;
+}
+.footer__column li:last-child {
+  padding-bottom: 40px;
+}
+.footer__pay {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1110px;
+  height: 40px;
+  margin: 0 auto;
+  background-color: #f8f8f8;
+}
+.footer__pay li {
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0em;
+  color: #121212;
+  opacity: 0.8;
+}
+.footer__pay li img{
+   padding-right: 12px;
+}
+.footer__pay li img:llast-child{
+   padding-right: 0;
+}
+.footer__pay li a {
+  color: #121212;
+  opacity: 0.8;
+}
