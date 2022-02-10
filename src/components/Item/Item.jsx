@@ -26,10 +26,10 @@ import Pay6 from "../../img/icons/pay/pay6.svg";
 import Pay7 from "../../img/icons/pay/pay7.svg";
 import Left from "../../img/icons/left.png";
 import Right from "../../img/icons/right.png";
-import Item1 from "../../img/images/Item_1.jpg";
-import Item2 from "../../img/images/Item_2.jpg";
-import Item3 from "../../img/images/Item_3.jpg";
-import Item4 from "../../img/images/Item_4.jpg";
+import Item1 from "../../img/images/item_1.jpg";
+import Item2 from "../../img/images/item_2.jpg";
+import Item3 from "../../img/images/item_3.jpg";
+import Item4 from "../../img/images/item_4.jpg";
 import Review from "../../img/icons/review.svg";
 
 //import "./Item.css";
