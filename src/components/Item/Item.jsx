@@ -205,10 +205,10 @@ function Item() {
 
          <div class="related-products">
             <div class="related-products__title">
-               <p>RELATED PRODUCTS</p>
+               <div>RELATED PRODUCTS</div>
                <p>
-                  <img src={Left} alt="icon">
-                  <img src={Right} alt="icon">
+                  <img src={Left} alt="icon" />
+                  <img src={Right} alt="icon" />
                </p>
             </div>
             <div class="related-products__items">
