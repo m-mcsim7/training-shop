@@ -14,9 +14,9 @@ import Item_color_2 from "../../img/images/item_color2.jpg"
 import Item_color_3 from "../../img/images/item_color3.jpg"
 import Item_color_4 from "../../img/images/item_color4.jpg"
 import Size_guide from "../../img/icons/size_guide.svg"
-import Shipping from "../../img/icons/Shipping & Delivery.svg"
-import Returns from "../../img/icons/Returns & Exchnges.svg"
-import Ask from "../../img/icons/Ask a question.svg"
+import Shipping from "../../img/icons/Shipping_Delivery.svg"
+import Returns from "../../img/icons/Returns.svg"
+import Ask from "../../img/icons/Ask_question.svg"
 import Pay1 from "../../img/icons/pay/pay1.svg"
 import Pay2 from "../../img/icons/pay/pay2.svg"
 import Pay3 from "../../img/icons/pay/pay3.svg"
@@ -35,7 +35,7 @@ import Review from "../../img/icons/review.svg""
 //import "./Item.css";
 
 function Item() {
-  return (  <div>
+  return <div>
    <div class="nav__categoriya">
      <div class="container">
        <div class="nav__categotiya-wrapper">
@@ -253,16 +253,13 @@ function Item() {
                   </div>
                 </div>
             </div>
-
+                  </div>
+               </div>
+            </div>
          </div>
-       </div>
-     </div>
-   </div>
-   </div>
-   </div>
-</div>;
-);
-
+            </div>
+      </div>
+</div>
 }
 
 export default Item;
