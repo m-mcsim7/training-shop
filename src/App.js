@@ -9,7 +9,7 @@ import Header from "./components/Header/Header";
 //import SixthPart from "./components/SixthPart/SixthPart";
 //import CategoriesWomen from "./components/Categories/CategoriesWomen";
 //import CategoriesMen from "./components/Categories/CategoriesMen";
-import Item from "./components/Categories/Item";
+import Item from "./components/Item/Item";
 import Footer from "./components/Footer/Footer";
 
 import "./App.css";
