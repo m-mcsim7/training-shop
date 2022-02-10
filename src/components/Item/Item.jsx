@@ -27,6 +27,7 @@ import Pay7 from "../../img/icons/pay/pay7.svg";
 import Left from "../../img/icons/left.png";
 import Right from "../../img/icons/right.png";
 import Item1 from "../../img/images/item_1.jpg";
+import Item2 from "../../img/images/item_2.jpg";
 //import Item2 from "../../img/images/item_2.jpg";
 //import Item3 from "../../img/images/item_3.jpg";
 //import Item4 from "../../img/images/item_4.jpg";
@@ -255,7 +256,7 @@ function Item() {
                 </div>
                 <div class="item__card">
                   <div class="item__card-img">
-                    <img src={Item1} alt="item" />
+                    <img src={Item2} alt="item" />
                   </div>
                   <div class="item__card-title">Women's tracksuit Q109</div>
                   <div class="item__card-suptitle">
