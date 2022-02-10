@@ -64,7 +64,7 @@ function Footer() {
             </div>
             <div className="footer__pay">
               <div>Copyright © 2032 all rights reserved</div>
-              <div>
+              <div className="footer__pay-line>
                  <div><img src={pay1} alt="pay" /></div>
                  <div><img src={pay2} alt="pay" /></div>
                  <div><img src={pay3} alt="pay" /></div>

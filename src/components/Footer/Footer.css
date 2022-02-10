@@ -107,6 +107,9 @@
   color: #121212;
   opacity: 0.8;
 }
+.footer__pay-line{
+   display: flex;
+}
 .footer__pay div img{
    padding-right: 12px;
 }
