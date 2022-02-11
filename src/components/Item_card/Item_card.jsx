@@ -18,7 +18,19 @@ const items = [
     title: "Women's tracksuit Q109",
     price: "$ 30.00",
     score: "",
-  }
+  },
+  {
+    img: item_3,
+    title: "Women's tracksuit Q109",
+    price: "$ 30.00",
+    score: "",
+  },
+  {
+    img: item_4,
+    title: "Women's tracksuit Q109",
+    price: "$ 30.00",
+    score: "",
+  },
 ];
 
 function Item_card() {
@@ -42,18 +54,3 @@ function Item_card() {
 }
 
 export default Item_card;
-
-//function Item_card() {
-//  return (
-//    <div>
-//      <div className="item__card-img">
-//        <img src={item_2} alt="item" />
-//      </div>
-//      <div className="item__card-title">Women's tracksuit Q109</div>
-//      <div className="item__card-suptitle">
-//        <div className="item__card-price">$ 30.00</div>
-//        <div className="item__card-score"></div>
-//      </div>
-//    </div>
-//  );
-//}
