@@ -17,7 +17,6 @@ import "./App.css";
 
 function App() {
   return (
-   // <HashRouter>
       <div className="App" data-test-id="app">
         <Header />
         {/*<Router>*/}
@@ -34,11 +33,10 @@ function App() {
         <CategoriesWomen />
          <CategoriesMen />*/}
         {/*<Item />*/}
-
         {/*</Router>*/}
+        
         <Footer />
       </div>
-    {/*</HashRouter>*/}
   );
 }
 
