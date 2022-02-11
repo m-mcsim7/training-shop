@@ -1,12 +1,14 @@
-import React from 'react';
+import React from "react";
 import item_1 from "../../img/images/item1.jpg";
 
-import "./Woman.css"
+import Item_card from "../../components/Item_card/Item_card";
 
+import "./Woman.css";
 
 function Woman() {
-  return <div>
-     <div className="sort">
+  return (
+    <div>
+      <div className="sort">
         <div className="container">
           <div className="sort__main">
             <div className="sort__title">
@@ -20,92 +22,15 @@ function Woman() {
               </ul>
             </div>
             <div className="sort__items">
-              <div className="item__card">
-                <div className="item__card-img">
-                  <img src={item_1} alt="item" />
-                </div>
-                <div className="item__card-title">Women's tracksuit Q109</div>
-                <div className="item__card-suptitle">
-                  <div className="item__card-price">$ 30.00</div>
-                  <div className="item__card-score"></div>
-                </div>
-              </div>
-              <div className="item__card">
-                <div className="item__card-img">
-                  <img src={item_1} alt="item" />
-                </div>
-                <div className="item__card-title">Women's tracksuit Q109</div>
-                <div className="item__card-suptitle">
-                  <div className="item__card-price">$ 30.00</div>
-                  <div className="item__card-score"></div>
-                </div>
-              </div>
-              <div className="item__card">
-                <div className="item__card-img">
-                  <img src={item_1} alt="item" />
-                </div>
-                <div className="item__card-title">Women's tracksuit Q109</div>
-                <div className="item__card-suptitle">
-                  <div className="item__card-price">$ 30.00</div>
-                  <div className="item__card-score"></div>
-                </div>
-              </div>
-              <div className="item__card">
-                <div className="item__card-img">
-                  <img src={item_1} alt="item" />
-                </div>
-                <div className="item__card-title">Women's tracksuit Q109</div>
-                <div className="item__card-suptitle">
-                  <div className="item__card-price">$ 30.00</div>
-                  <div className="item__card-score"></div>
-                </div>
-              </div>
-              <div className="item__card">
-                <div className="item__card-img">
-                  <img src={item_1} alt="item" />
-                </div>
-                <div className="item__card-title">Women's tracksuit Q109</div>
-                <div className="item__card-suptitle">
-                  <div className="item__card-price">$ 30.00</div>
-                  <div className="item__card-score"></div>
-                </div>
-              </div>
-              <div className="item__card">
-                <div className="item__card-img">
-                  <img src={item_1} alt="item" />
-                </div>
-                <div className="item__card-title">Women's tracksuit Q109</div>
-                <div className="item__card-suptitle">
-                  <div className="item__card-price">$ 30.00</div>
-                  <div className="item__card-score"></div>
-                </div>
-              </div>
-              <div className="item__card">
-                <div className="item__card-img">
-                  <img src={item_1} alt="item" />
-                </div>
-                <div className="item__card-title">Women's tracksuit Q109</div>
-                <div className="item__card-suptitle">
-                  <div className="item__card-price">$ 30.00</div>
-                  <div className="item__card-score"></div>
-                </div>
-              </div>
-              <div className="item__card">
-                <div className="item__card-img">
-                  <img src={item_1} alt="item" />
-                </div>
-                <div className="item__card-title">Women's tracksuit Q109</div>
-                <div className="item__card-suptitle">
-                  <div className="item__card-price">$ 30.00</div>
-                  <div className="item__card-score"></div>
-                </div>
-              </div>
+               <Item_card />
+
             </div>
             <div className="sort__button">See All</div>
           </div>
         </div>
       </div>
-  </div>;
+    </div>
+  );
 }
 
 export default Woman;

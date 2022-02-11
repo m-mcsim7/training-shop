@@ -213,6 +213,9 @@ body {
   line-height: 32px;
   margin-left: 85px;
 }
+.main_logo a{
+   color: #121212;
+}
 .main__navigation {
   display: flex;
   justify-content: space-between;

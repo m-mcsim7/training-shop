@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import basket_number from "../../img/icons/basket_number.svg";
 import "./Header.css";
 
@@ -30,10 +31,9 @@ function Header() {
           <SocialIcons />
         </div>
         <div className="header__main main">
-          <div className="main_logo">CleverShop</div>
+          <div className="main_logo"><Link to="/">CleverShop</Link></div>
 
           <Navigation
-            onClick={(name_navigation) => console.log(name_navigation)}
             items={[
               "About Us",
               "Women",
