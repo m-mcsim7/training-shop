@@ -35,13 +35,13 @@ function Header() {
 
           <Navigation
             items={[
-              "About Us",
-              "Women",
-              "Men",
-              "Beauty",
-              "Accessories",
-              "Blog",
-              "Contact",
+              "about Us",
+              "women",
+              "men",
+              "beauty",
+              "accessories",
+              "blog",
+              "contact",
             ]}
           />
 

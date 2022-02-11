@@ -12,7 +12,7 @@ import filter from "../../img/icons/filter.svg"
 import "./Categories.css";
 
 function CategoriesWomen() {
-  return <div data-test-id="clothes-Women">
+  return <div data-test-id="clothes-women">
       <div className="nav__categoriya">
         <div className="container">
           <div className="nav__categotiya-wrapper">
@@ -55,90 +55,6 @@ function CategoriesWomen() {
           <div className="items_wrapper">
             <div className="sort__items">
                <Item_card_women />
-
-
-              {/*<div className="item__card">
-                <div className="item__card-img">
-                  <img src={item} alt="item" />
-                </div>
-                <div className="item__card-title">Women's tracksuit Q109</div>
-                <div className="item__card-suptitle">
-                  <div className="item__card-price">$ 30.00</div>
-                  <div className="item__card-score"></div>
-                </div>
-              </div>
-              <div className="item__card">
-                <div className="item__card-img">
-                  <img src={item} alt="item" />
-                </div>
-                <div className="item__card-title">Women's tracksuit Q109</div>
-                <div className="item__card-suptitle">
-                  <div className="item__card-price">$ 30.00</div>
-                  <div className="item__card-score"></div>
-                </div>
-              </div>
-              <div className="item__card">
-                <div className="item__card-img">
-                  <img src={item} alt="item" />
-                </div>
-                <div className="item__card-title">Women's tracksuit Q109</div>
-                <div className="item__card-suptitle">
-                  <div className="item__card-price">$ 30.00</div>
-                  <div className="item__card-score"></div>
-                </div>
-              </div>
-              <div className="item__card">
-                <div className="item__card-img">
-                  <img src={item} alt="item" />
-                </div>
-                <div className="item__card-title">Women's tracksuit Q109</div>
-                <div className="item__card-suptitle">
-                  <div className="item__card-price">$ 30.00</div>
-                  <div className="item__card-score"></div>
-                </div>
-              </div>
-              <div className="item__card">
-                <div className="item__card-img">
-                  <img src={item} alt="item" />
-                </div>
-                <div className="item__card-title">Women's tracksuit Q109</div>
-                <div className="item__card-suptitle">
-                  <div className="item__card-price">$ 30.00</div>
-                  <div className="item__card-score"></div>
-                </div>
-              </div>
-              <div className="item__card">
-                <div className="item__card-img">
-                  <img src={item} alt="item" />
-                </div>
-                <div className="item__card-title">Women's tracksuit Q109</div>
-                <div className="item__card-suptitle">
-                  <div className="item__card-price">$ 30.00</div>
-                  <div className="item__card-score"></div>
-                </div>
-              </div>
-              <div className="item__card">
-                <div className="item__card-img">
-                  <img src={item} alt="item" />
-                </div>
-                <div className="item__card-title">Women's tracksuit Q109</div>
-                <div className="item__card-suptitle">
-                  <div className="item__card-price">$ 30.00</div>
-                  <div className="item__card-score"></div>
-                </div>
-              </div>
-              <div className="item__card">
-                <div className="item__card-img">
-                  <img src={item} alt="item" />
-                </div>
-                <div className="item__card-title">Women's tracksuit Q109</div>
-                <div className="item__card-suptitle">
-                  <div className="item__card-price">$ 30.00</div>
-                  <div className="item__card-score"></div>
-                </div>
-              </div>*/}
-
-
             </div>
             <div className="item__further">
                <img src={further} alt="item__further" />

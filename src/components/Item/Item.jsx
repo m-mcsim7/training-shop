@@ -37,7 +37,7 @@ import "./Item.css";
 
 function Item() {
   return (
-    <div>
+    <div data-test-id="product-page-men">
       <div class="nav__categoriya">
         <div class="container">
           <div class="nav__categotiya-wrapper">

@@ -37,10 +37,10 @@ function Footer() {
             <div className="footer__rows">
               <ul className="footer__column">
                 <li>Categories</li>
-                <li><Link to="/Men" data-test-id="footer-test-id-Men">Men</Link></li>
-                <li><Link to="/Women" data-test-id="footer-test-id-Women">Women</Link></li>
-                <li><Link to="/Accessories" data-test-id="footer-test-id-Accessories">Accessories</Link></li>
-                <li><Link to="/Beauty" data-test-id="footer-test-id-Beauty">Beauty</Link></li>
+                <li><Link to="/Men" data-test-id="footer-test-id-men">Men</Link></li>
+                <li><Link to="/Women" data-test-id="footer-test-id-women">Women</Link></li>
+                <li><Link to="/Accessories" data-test-id="footer-test-id-accessories">Accessories</Link></li>
+                <li><Link to="/Beauty" data-test-id="footer-test-id-beauty">Beauty</Link></li>
                </ul>
               <ul className="footer__column">
                 <li>Infomation</li>
