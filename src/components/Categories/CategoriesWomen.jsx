@@ -6,7 +6,7 @@ import view2 from "../../img/icons/view2.svg"
 import down from "../../img/icons/down.svg"
 import further from "../../img/icons/item__further.svg"
 import filter from "../../img/icons/filter.svg"
-import item from "../../img/images/item_1.jpg"
+import item from "../../img/images/item1.jpg"
 
 import "./Categories.css";
 
