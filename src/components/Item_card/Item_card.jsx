@@ -35,9 +35,9 @@ const items = [
 
 function Item_card() {
   return (
-    <div>
+    <div className="sort__items">
       {items.map((a, index) => (
-    <div key={index}>
+    <div key={index} className="item__card">
       <div className="item__card-img">
         <Link to="product_page"><img src={a.img} alt="item" /></Link>
       </div>
