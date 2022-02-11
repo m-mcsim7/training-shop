@@ -8,7 +8,7 @@ import SocialIcons from "./SocialIcons";
 
 function Header() {
   return (
-    <div className="header">
+    <div className="header" data-test-id="header">
       <div className="container">
         <div className="header__top top">
           <ul className="top__contacts">
@@ -31,7 +31,7 @@ function Header() {
           <SocialIcons />
         </div>
         <div className="header__main main">
-          <div className="main_logo"><Link to="/">CleverShop</Link></div>
+          <div className="main_logo"><Link to="/" className="header-nav-logo" data-test-id="header-logo-link">CleverShop</Link></div>
 
           <Navigation
             items={[

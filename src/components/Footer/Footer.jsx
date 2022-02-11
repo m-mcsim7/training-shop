@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from "react-router-dom";
+
 import pay1 from "../../img/icons/pay/pay1.svg";
 import pay2 from "../../img/icons/pay/pay2.svg";
 import pay3 from "../../img/icons/pay/pay3.svg";
@@ -11,7 +13,7 @@ import "./Footer.css";
 
 function Footer() {
   return <div>
-           <footer className="footer">
+           <footer className="footer" data-test-id="footer">
         <div className="container">
           <div className="footer__wrapper">
             <div className="footer__input">
@@ -35,11 +37,11 @@ function Footer() {
             <div className="footer__rows">
               <ul className="footer__column">
                 <li>Categories</li>
-                <li>Men</li>
-                <li>Women</li>
-                <li>Accessories</li>
-                <li>Beauty</li>
-              </ul>
+                <li><Link to="/Men" data-test-id="footer-test-id-Men">Men</Link></li>
+                <li><Link to="/Women" data-test-id="footer-test-id-Women">Women</Link></li>
+                <li><Link to="/Accessories" data-test-id="footer-test-id-Accessories">Accessories</Link></li>
+                <li><Link to="/Beauty" data-test-id="footer-test-id-Beauty">Beauty</Link></li>
+               </ul>
               <ul className="footer__column">
                 <li>Infomation</li>
                 <li>About Us</li>
