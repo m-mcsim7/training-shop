@@ -18,7 +18,8 @@ function App() {
         <Route  exact path="/" element={<Main />} />
         <Route exact path="/Women" element={<CategoriesWomen />} />
         <Route exact path="/men" element={<CategoriesMen />} />
-        <Route exact path="/product_page" element={<Item />} />
+        <Route path="/product_page" element={<Item />} />
+        <Route path="/Men/product_page" element={<Item />} />
       </Routes>
 
       {/*  <Item />*/}

@@ -1,11 +1,12 @@
 import React from 'react';
 import './ThirdPart.css';
 import Woman from "./Woman";
+import Men from "./Men";
 
 function ThirdPart() {
   return <div>
      <Woman />
-     <Woman />
+     <Men />
   </div>;
 }
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import Item_card_women from "../Item_card/Item_card_women";
 
 import Share from "../../img/icons/Share.svg"
 import view1 from "../../img/icons/view1.svg"
@@ -6,7 +7,7 @@ import view2 from "../../img/icons/view2.svg"
 import down from "../../img/icons/down.svg"
 import further from "../../img/icons/item__further.svg"
 import filter from "../../img/icons/filter.svg"
-import item from "../../img/images/item1.jpg"
+//import item from "../../img/images/item1.jpg"
 
 import "./Categories.css";
 
@@ -53,7 +54,10 @@ function CategoriesWomen() {
         <div className="continer">
           <div className="items_wrapper">
             <div className="sort__items">
-              <div className="item__card">
+               <Item_card_women />
+
+
+              {/*<div className="item__card">
                 <div className="item__card-img">
                   <img src={item} alt="item" />
                 </div>
@@ -132,7 +136,9 @@ function CategoriesWomen() {
                   <div className="item__card-price">$ 30.00</div>
                   <div className="item__card-score"></div>
                 </div>
-              </div>
+              </div>*/}
+
+
             </div>
             <div className="item__further">
                <img src={further} alt="item__further" />

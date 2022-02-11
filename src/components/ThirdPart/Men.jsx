@@ -1,16 +1,16 @@
 import React from "react";
-import Item_card_women from "../Item_card/Item_card_women";
+import Item_card_men from "../Item_card/Item_card_men";
 
-import "./Woman.css";
+import "./Men.css";
 
-function Woman() {
+function Men() {
   return (
     <div>
       <div className="sort">
         <div className="container">
           <div className="sort__main">
             <div className="sort__title">
-              <div className="sort__logo">WOMEN’S</div>
+              <div className="sort__logo">MEN’S</div>
               <ul className="sort__navigation">
                 <li>NEW ARRIVALS</li>
                 <li>SPECIALS</li>
@@ -20,7 +20,7 @@ function Woman() {
               </ul>
             </div>
             <div className="sort__items">
-               <Item_card_women />
+               <Item_card_men />
 
             </div>
             <div className="sort__button">See All</div>
@@ -31,4 +31,4 @@ function Woman() {
   );
 }
 
-export default Woman;
+export default Men;

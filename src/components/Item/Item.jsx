@@ -1,4 +1,5 @@
 import React from "react";
+import Item_card_related from "../Item_card/Item_card_related";
 
 import Share from "../../img/icons/Share.svg";
 import Star from "../../img/icons/star.svg";
@@ -26,10 +27,10 @@ import Pay6 from "../../img/icons/pay/pay6.svg";
 import Pay7 from "../../img/icons/pay/pay7.svg";
 import Left from "../../img/icons/left.png";
 import Right from "../../img/icons/right.png";
-import Item1 from "../../img/images/item1.jpg";
-import Item2 from "../../img/images/item2.jpg";
-import Item3 from "../../img/images/item3.jpg";
-import Item4 from "../../img/images/item4.jpg";
+//import Item1 from "../../img/images/item1.jpg";
+//import Item2 from "../../img/images/item2.jpg";
+//import Item3 from "../../img/images/item3.jpg";
+//import Item4 from "../../img/images/item4.jpg";
 import Review from "../../img/icons/review.svg";
 
 import "./Item.css";
@@ -243,7 +244,8 @@ function Item() {
                 </p>
               </div>
               <div class="related-products__items">
-                <div class="item__card">
+                 <Item_card_related />
+                {/*<div class="item__card">
                   <div class="item__card-img">
                     <img src={Item4} alt="item" />
                   </div>
@@ -252,8 +254,8 @@ function Item() {
                     <div class="item__card-price">$ 30.00</div>
                     <div class="item__card-score"></div>
                   </div>
-                </div>
-                <div class="item__card">
+                </div>*/}
+                {/*<div class="item__card">
                   <div class="item__card-img">
                     <img src={Item1} alt="item" />
                   </div>
@@ -262,8 +264,8 @@ function Item() {
                     <div class="item__card-price">$ 30.00</div>
                     <div class="item__card-score"></div>
                   </div>
-                </div>
-                <div class="item__card">
+                </div>*/}
+                {/*<div class="item__card">
                   <div class="item__card-img">
                     <img src={Item2} alt="item" />
                   </div>
@@ -272,8 +274,8 @@ function Item() {
                     <div class="item__card-price">$ 30.00</div>
                     <div class="item__card-score"></div>
                   </div>
-                </div>
-                <div class="item__card">
+                </div>*/}
+                {/*<div class="item__card">
                   <div class="item__card-img">
                     <img src={Item3} alt="item" />
                   </div>
@@ -282,7 +284,7 @@ function Item() {
                     <div class="item__card-price">$ 30.00</div>
                     <div class="item__card-score"></div>
                   </div>
-                </div>
+                </div>*/}
               </div>
             </div>
           </div>
