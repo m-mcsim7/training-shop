@@ -98,7 +98,7 @@ body {
   line-height: 48px;
   letter-spacing: 0.06em;
   text-align: center;
-  width: 1110px;
+  max-width: 1110px;
   height: 48px;
   border: 2px solid #f8f8f8;
   background-color: #f8f8f8;

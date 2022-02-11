@@ -19,10 +19,10 @@ function Woman() {
                 <li>FEATURED PRODUCTS</li>
               </ul>
             </div>
-            <div className="sort__items">
+            {/*<div className="sort__items">*/}
                <Item_card_women />
 
-            </div>
+            {/*</div>*/}
             <div className="sort__button">See All</div>
           </div>
         </div>

@@ -1,65 +1,76 @@
- /*font-family: 'Inter', sans-serif;
+/*font-family: 'Inter', sans-serif;
  font-family: 'Playfair Display SC', serif;
  font-family: 'Spartan', sans-serif;*/
- 
- /*--------------------*/
- body {
-   font-family: "Spartan", sans-serif;
-   color: #121212;
- }
- .wrapper {
- }
- .header {
- }
- .container {
-   max-width: 1280px;
-   margin: 0 auto;
- }
- .banners__wrapper {
-   margin-top: 96px;
-   margin-left: auto;
-   margin-right: auto;
-   display: flex;
-   justify-content: space-between;
-   gap: 30px;
-   max-width: 1110px;
- }
- 
- .banners__wrapper-img {
-   position: relative;
-   max-width: 540px;
-   height: 260px;
- }
- .banners__wrapper-img img {
-   width: 100%;
-   height: 100%;
-   object-fit: cover;
- }
- .banners__wrapper-title {
-   width: 293px;
-   height: 71px;
-   position: absolute;
-   background-color: #ffffff;
-   border-radius: 4px;
-   font-size: 16px;
-   font-weight: 600;
-   line-height: 18px;
-   letter-spacing: 0.06em;
-   text-align: center;
-   text-transform: uppercase;
-   top: 106px;
-   left: calc(50% - 146px);
- }
- .banners__wrapper-title p {
-   opacity: 0.6;
-   font-size: 12px;
-   font-weight: 600;
-   line-height: 13px;
-   letter-spacing: 0.06em;
-   text-align: center;
-   margin-top: 16px;
-   margin-bottom: 8px;
- }
- .banners__wrapper-title span {
-   color: #ea1e63;
- }
+
+/*--------------------*/
+body {
+  font-family: "Spartan", sans-serif;
+  color: #121212;
+}
+.wrapper {
+}
+.header {
+}
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.banners__wrapper {
+  margin-top: 96px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-around;
+
+  gap: 30px;
+  max-width: 1110px;
+}
+@media (max-width: 1110px) {
+  .banners__wrapper {
+    padding: 0 20px;
+  }
+}
+@media (max-width: 680px) {
+  .banners__wrapper {
+      flex-wrap: wrap;
+  }
+}
+
+.banners__wrapper-img {
+  position: relative;
+  max-width: 540px;
+  height: 260px;
+}
+.banners__wrapper-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.banners__wrapper-title {
+  width: 293px;
+  height: 71px;
+  position: absolute;
+  background-color: #ffffff;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-transform: uppercase;
+  top: 106px;
+  left: calc(50% - 146px);
+}
+.banners__wrapper-title p {
+  opacity: 0.6;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 13px;
+  letter-spacing: 0.06em;
+  text-align: center;
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+.banners__wrapper-title span {
+  color: #ea1e63;
+}

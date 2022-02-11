@@ -29,14 +29,31 @@
 .bigbanner_woman {
   position: absolute;
   top: 35px;
-  left: 122px;
+  left: 10%;
+  /*left: 122px;*/
   z-index: 2;
 }
+
+
 .bigbanner_man {
   position: absolute;
   top: 45px;
-  left: 900px;
+  /*left: 900px;*/
+  left: 70%;
   z-index: 2;
+}
+@media (max-width: 1130px) {
+   .bigbanner_woman {
+      left: 2%;
+   }
+}
+@media (max-width: 950px) {
+   .bigbanner_woman {
+      display: none;
+   }
+   .bigbanner_man {
+      display: none;
+   }
 }
 .bigbanner__contain {
   position: absolute;
@@ -46,6 +63,12 @@
   background-color: #ffffff;
   border-radius: 4px;
   margin: 60px auto;
+}
+@media (max-width: 585px){
+   .bigbanner__contain{
+      width: 340px;
+      left: calc(50% - 170px);
+   }
 }
 .bigbanner__subtitle {
   margin-top: 80px;
@@ -68,6 +91,7 @@
   width: 285px;
   margin: 0 auto;
 }
+
 .bigbanner__title span {
   color: #ea1e63;
 }
@@ -97,4 +121,12 @@
   width: 340px;
   background: rgba(18, 18, 18, 1);
   margin: 24px auto 0 auto;
+}
+@media (max-width: 585px){
+   .bigbanner__email{
+      width: 200px;
+   }
+   .bigbanner__button{
+      width: 200px;
+   }
 }

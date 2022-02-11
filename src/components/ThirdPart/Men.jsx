@@ -1,7 +1,7 @@
 import React from "react";
 import Item_card_men from "../Item_card/Item_card_men";
 
-import "./Men.css";
+//import "./Men.css";
 
 function Men() {
   return (

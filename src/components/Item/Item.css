@@ -441,9 +441,7 @@
     gap: 30px;
  }
  
- .item__card {
-   /*max-width: 255px;
-      height: 408px;*/
+ /*.item__card {
    max-width: 255px;
  }
  .item__card-img {
@@ -472,6 +470,6 @@
    background-image: url(../../img/icons/4stars.svg);
    width: 70px;
    height: 14px;
- }
+ }*/
  
  

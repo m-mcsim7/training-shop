@@ -93,6 +93,14 @@
      top: calc(50%-50px);
    }
  }
+ @media (max-width: 540px) {
+   .banners__bg-title {
+     width: 200px;
+     left: calc(50% - 100px);
+     /*top: calc(50%-50px);*/
+     top: 30%;
+   }
+ }
  .banners__bg-title::before {
    cursor: pointer;
    position: absolute;
@@ -137,6 +145,14 @@
      }
      .banners__bg-title::after {
        right: -100px;
+     }
+ }
+ @media (max-width: 540px){
+    .banners__bg-title::before {
+       left: -50px;
+     }
+     .banners__bg-title::after {
+       right: -50px;
      }
  }
  .banners__small {

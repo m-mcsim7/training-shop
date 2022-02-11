@@ -36,6 +36,11 @@ body {
     padding: 25px 0 0 0;
   }
 }
+@media (max-width: 400px) {
+  .conditions__rows {
+   display: none;
+  }
+}
 .conditions__column {
   display: flex;
   justify-content: space-between;

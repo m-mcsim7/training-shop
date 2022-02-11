@@ -134,13 +134,13 @@
    max-width: 1110px;
    margin: 0 auto;
  }
- .sort__items {
+ /*.sort__items {
    display: flex;
    align-items: center;
    justify-content: space-between;
    gap: 30px;
    flex-wrap: wrap;
- }
+ }*/
  .item__card {
    /*max-width: 255px;
      height: 408px;*/

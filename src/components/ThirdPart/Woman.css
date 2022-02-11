@@ -29,7 +29,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
+@media (max-width: 1150px) {
+   .sort__title {
+     padding: 96px 15px 0 15px;
+   }
+ }
 .sort__logo {
   font-size: 22px;
   font-weight: 600;
@@ -40,7 +46,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 }
+
 .sort__navigation li {
   font-size: 12px;
   font-weight: 400;
@@ -48,6 +56,11 @@ body {
   letter-spacing: 0.06em;
   opacity: 0.6;
   padding-left: 32px;
+}
+@media (max-width: 695px){
+   .sort__navigation {
+      display: none;
+   }
 }
 .sort__navigation li:first-child {
   font-weight: 500;
@@ -57,16 +70,24 @@ body {
 .sort__items {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
+  
   gap: 30px;
   flex-wrap: wrap;
+  /*margin: 0 -15px;*/
+
+  /*padding: 0 20px;*/
 }
+
+
 .item__card {
-  max-width: 255px;
+  /*padding: 0 15px;*/
+  width: 255px;
 }
 .item__card-img {
-  max-width: 255px;
-  max-height: 318px;
+   overflow: hidden;
+  /*max-width: 255px;
+  max-height: 318px;*/
 }
 .item__card-title {
   padding-top: 16px;
@@ -98,7 +119,7 @@ body {
   line-height: 48px;
   letter-spacing: 0.06em;
   text-align: center;
-  width: 1110px;
+  max-width: 1110px;
   height: 48px;
   border: 2px solid #f8f8f8;
   background-color: #f8f8f8;
