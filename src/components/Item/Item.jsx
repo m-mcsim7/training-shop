@@ -32,7 +32,7 @@ import Item3 from "../../img/images/item3.jpg";
 import Item4 from "../../img/images/item4.jpg";
 import Review from "../../img/icons/review.svg";
 
-//import "./Item.css";
+import "./Item.css";
 
 function Item() {
   return (
