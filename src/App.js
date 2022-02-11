@@ -27,6 +27,7 @@ function App() {
       {/*<CategoriesWomen />
       <CategoriesMen />*/}
       <Item />
+      <Item />
       <Footer />
 
     </div>
