@@ -42,10 +42,10 @@ function CategoriesWomen() {
                 <img src={view1} alt="view" />
                 <img src={view2} alt="view" />
               </div>
-              <div className="filter__best">
+              {/*<div className="filter__best">
                 <p>bestsellers</p>
                 <img src={down} alt="down" />
-              </div>
+              </div>*/}
             </div>
           </div>
         </div>
