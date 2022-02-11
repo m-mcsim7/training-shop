@@ -1,6 +1,4 @@
 import React from "react";
-//import item_1 from "../../img/images/item1.jpg";
-
 import Item_card from "../../components/Item_card/Item_card";
 
 import "./Woman.css";

@@ -34,7 +34,6 @@ const items = [
 ];
 
 function Item_card() {
-   
   return (
     <div>
       {items.map((a, index) => (
