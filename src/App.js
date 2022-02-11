@@ -8,9 +8,9 @@ import Header from "./components/Header/Header";
 //import FourthPart from "./components/FourthPart/FourthPart";
 //import FifthPart from "./components/FifthPart/FifthPart";
 //import SixthPart from "./components/SixthPart/SixthPart";
-import CategoriesWomen from "./components/Categories/CategoriesWomen";
-import CategoriesMen from "./components/Categories/CategoriesMen";
-import Item from "./components/Item/Item";
+//import CategoriesWomen from "./components/Categories/CategoriesWomen";
+//import CategoriesMen from "./components/Categories/CategoriesMen";
+//import Item from "./components/Item/Item";
 import Footer from "./components/Footer/Footer";
 
 import "./App.css";
@@ -22,8 +22,8 @@ function App() {
         <Header />
         <Router>
 
-         <Route exact path="/women" element={<CategoriesWomen />} />
-         <Route exact path="/men" element={<CategoriesMen />} />
+         {/*<Route exact path="/women" element={<CategoriesWomen />} />
+         <Route exact path="/men" element={<CategoriesMen />} />*/}
 
         {/*<FirstPart />
          <SecondPart />
@@ -33,7 +33,7 @@ function App() {
          <SixthPart />
         <CategoriesWomen />
          <CategoriesMen />*/}
-        <Item />
+        {/*<Item />*/}
 
         </Router>
         <Footer />
