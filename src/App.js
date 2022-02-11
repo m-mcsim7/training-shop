@@ -1,8 +1,8 @@
 import React from "react";
-import { HashRouter as Router, Route } from "react-router-dom";
+import { Link, Routes, Route } from "react-router-dom";
 
 import Header from "./components/Header/Header";
-//import FirstPart from "./components/FirstPart/FirstPart";
+import FirstPart from "./components/FirstPart/FirstPart";
 //import SecondPart from "./components/SecondPart/SecondPart";
 //import ThirdPart from "./components/ThirdPart/ThirdPart";
 //import FourthPart from "./components/FourthPart/FourthPart";
@@ -17,13 +17,15 @@ import "./App.css";
 
 function App() {
   return (
-      <div className="App" data-test-id="app">
-        <Header />
-        <Router>
-          <Route exact path="/Women" element={<CategoriesWomen />} />
-          <Route exact path="/men" element={<CategoriesMen />} />
+    <div className="App" data-test-id="app">
+      <Header />
+      <Routes>
+        <Route  exact path="/" element={<FirstPart />} />
+        <Route exact path="/Women" element={<CategoriesWomen />} />
+        <Route exact path="/men" element={<CategoriesMen />} />
+      </Routes>
 
-          {/*<FirstPart />
+      {/*<FirstPart />
          <SecondPart />
          <ThirdPart />
          <FourthPart />
@@ -32,10 +34,9 @@ function App() {
         <CategoriesWomen />
          <CategoriesMen />
         <Item />*/}
-        </Router>
 
-        <Footer />
-      </div>
+      <Footer />
+    </div>
   );
 }
 
