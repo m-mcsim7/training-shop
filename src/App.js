@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter, HashRouter as Router, Route } from "react-router-dom";
+import { HashRouter as Router, Route } from "react-router-dom";
 
 import Header from "./components/Header/Header";
 //import FirstPart from "./components/FirstPart/FirstPart";
@@ -17,7 +17,6 @@ import "./App.css";
 
 function App() {
   return (
-    <HashRouter>
       <div className="App" data-test-id="app">
         <Header />
         <Router>
@@ -37,7 +36,6 @@ function App() {
 
         <Footer />
       </div>
-    </HashRouter>
   );
 }
 
