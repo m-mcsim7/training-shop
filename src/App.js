@@ -1,5 +1,5 @@
 import React from "react";
-//import { Link, HashRouter as Router, Route } from "react-router-dom";
+import { Link, HashRouter as Router, Route } from "react-router-dom";
 
 import Header from "./components/Header/Header";
 //import FirstPart from "./components/FirstPart/FirstPart";
@@ -8,8 +8,8 @@ import Header from "./components/Header/Header";
 //import FourthPart from "./components/FourthPart/FourthPart";
 //import FifthPart from "./components/FifthPart/FifthPart";
 //import SixthPart from "./components/SixthPart/SixthPart";
-//import CategoriesWomen from "./components/Categories/CategoriesWomen";
-//import CategoriesMen from "./components/Categories/CategoriesMen";
+import CategoriesWomen from "./components/Categories/CategoriesWomen";
+import CategoriesMen from "./components/Categories/CategoriesMen";
 //import Item from "./components/Item/Item";
 import Footer from "./components/Footer/Footer";
 
@@ -19,10 +19,10 @@ function App() {
   return (
       <div className="App" data-test-id="app">
         <Header />
-        {/*<Router>*/}
+        <Router>
 
-         {/*<Route exact path="/women" element={<CategoriesWomen />} />
-         <Route exact path="/men" element={<CategoriesMen />} />*/}
+         <Route exact path="/Women" element={<CategoriesWomen />} />
+         <Route exact path="/men" element={<CategoriesMen />} />
 
         {/*<FirstPart />
          <SecondPart />
@@ -31,10 +31,11 @@ function App() {
          <FifthPart />
          <SixthPart />
         <CategoriesWomen />
-         <CategoriesMen />*/}
-        {/*<Item />*/}
-        {/*</Router>*/}
-        
+         <CategoriesMen />
+        <Item />*/}
+
+        </Router>
+
         <Footer />
       </div>
   );
