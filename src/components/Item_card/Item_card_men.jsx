@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 
 import item_men_1 from "../../img/images/item_men/item_men_1.jpg";
 import item_men_2 from "../../img/images/item_men/item_men_2.jpg";
-import item_men_3 from "../../img/images/item_men/item_men_3.jpg";
-import item_men_4 from "../../img/images/item_men/item_men_4.jpg";
-import item_men_5 from "../../img/images/item_men/item_men_5.jpg";
-import item_men_6 from "../../img/images/item_men/item_men_6.jpg";
-import item_men_7 from "../../img/images/item_men/item_men_7.jpg";
+import item_men_5 from "../../img/images/item_men/item_men_3.jpg";
+import item_men_6 from "../../img/images/item_men/item_men_4.jpg";
+import item_men_3 from "../../img/images/item_men/item_men_5.jpg";
+import item_men_7 from "../../img/images/item_men/item_men_6.jpg";
+import item_men_4 from "../../img/images/item_men/item_men_7.jpg";
 import item_men_8 from "../../img/images/item_men/item_men_8.jpg";
 
 

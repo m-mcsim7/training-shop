@@ -1,14 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import item_women_1 from "../../img/images/item_woman/item_women_1.jpg";
-import item_women_2 from "../../img/images/item_woman/item_women_2.jpg";
-import item_women_3 from "../../img/images/item_woman/item_women_3.jpg";
-import item_women_4 from "../../img/images/item_woman/item_women_4.jpg";
+import item_women_7 from "../../img/images/item_woman/item_women_1.jpg";
+import item_women_3 from "../../img/images/item_woman/item_women_2.jpg";
+import item_women_6 from "../../img/images/item_woman/item_women_3.jpg";
+import item_women_2 from "../../img/images/item_woman/item_women_4.jpg";
 import item_women_5 from "../../img/images/item_woman/item_women_5.jpg";
-import item_women_6 from "../../img/images/item_woman/item_women_6.jpg";
-import item_women_7 from "../../img/images/item_woman/item_women_7.jpg";
-import item_women_8 from "../../img/images/item_woman/item_women_8.jpg";
+import item_women_1 from "../../img/images/item_woman/item_women_6.jpg";
+import item_women_8 from "../../img/images/item_woman/item_women_7.jpg";
+import item_women_4 from "../../img/images/item_woman/item_women_8.jpg";
 
 
 const items = [
