@@ -68,7 +68,7 @@ function Item_card_women() {
       {items.map((a, index) => (
     <div key={index} className="item__card">
       <div className="item__card-img">
-        <Link to="product_page"data-test-id="clotnes-card-women"><img src={a.img} alt="item" /></Link>
+        <Link to="product_page"data-test-id="clothes-card-women"><img src={a.img} alt="item" /></Link>
       </div>
       <div className="item__card-title">{a.title}</div>
       <div className="item__card-suptitle">
