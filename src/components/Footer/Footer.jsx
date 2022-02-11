@@ -63,7 +63,7 @@ function Footer() {
               </ul>
             </div>
             <div className="footer__pay">
-              <div>Copyright © 2032 all rights reserved</div>
+              <div className='footer__copyright'>Copyright © 2032 all rights reserved</div>
               <div className="footer__pay-line">
                  <div><img src={pay1} alt="pay" /></div>
                  <div><img src={pay2} alt="pay" /></div>
@@ -73,7 +73,7 @@ function Footer() {
                  <div><img src={pay6} alt="pay" /></div>
                  <div><img src={pay7} alt="pay" /></div>
               </div>
-              <div><a href="https://clevertec.ru/">Clevertec.ru/training</a></div>
+              <div className='footer__link'><a href="https://clevertec.ru/">Clevertec.ru/training</a></div>
             </div>
           </div>
         </div>

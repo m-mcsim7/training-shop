@@ -6,7 +6,7 @@ import Main from "./components/Main/Main";
 import CategoriesWomen from "./components/Categories/CategoriesWomen";
 import CategoriesMen from "./components/Categories/CategoriesMen";
 import Item from "./components/Item/Item";
-//import Footer from "./components/Footer/Footer";
+import Footer from "./components/Footer/Footer";
 
 import "./App.css";
 
@@ -21,9 +21,8 @@ function App() {
         <Route path="/product_page" element={<Item />} />
         <Route path="/Men/product_page" element={<Item />} />
       </Routes>
-      {/*  <Item />*/}
 
-      {/*<Footer />*/}
+      <Footer />
     </div>
   );
 }
