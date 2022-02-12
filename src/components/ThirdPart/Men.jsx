@@ -5,7 +5,7 @@ import Item_card_men from "../Item_card/Item_card_men";
 
 function Men() {
   return (
-    <div>
+    <div data-test-id="products-page-men">
       <div className="sort">
         <div className="container">
           <div className="sort__main">

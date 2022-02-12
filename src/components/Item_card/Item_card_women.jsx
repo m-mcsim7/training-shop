@@ -22,7 +22,7 @@ const items = [
   {
     img: item_women_2,
     title: "Women's tracksuit Q109",
-    price: "$ 30.00",
+    price: "$ 30.00   $ 60.00",
     score: "",
     id: 2,
   },
