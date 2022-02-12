@@ -5,7 +5,8 @@ import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
 import CategoriesWomen from "./components/Categories/CategoriesWomen";
 import CategoriesMen from "./components/Categories/CategoriesMen";
-import Item from "./components/Item/Item";
+import ItemMen from "./components/Item/ItemMen.jsx";
+import ItemWomen from "./components/Item/ItemWomen.jsx";
 import Footer from "./components/Footer/Footer";
 
 import "./App.css";
@@ -19,8 +20,8 @@ function App() {
         <Route exact path="/women" element={<CategoriesWomen />} />
         <Route exact path="/men" element={<CategoriesMen />} />
         {/*<Route path="/product_page" element={<Item />} />*/}
-        <Route path="/men/*" element={<Item />} />
-        <Route path="/women/*" element={<Item />} />
+        <Route path="/men/*" element={<ItemMen />} />
+        <Route path="/women/*" element={<ItemWomen />} />
       </Routes>
 
       <Footer />
