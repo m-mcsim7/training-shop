@@ -14,51 +14,59 @@ import item_men_8 from "../../img/images/item_men/item_men_8.jpg";
 const items = [
   {
     img: item_men_1,
-    title: "men's tracksuit Q109",
+    title: "Women's tracksuit Q109",
     price: "$ 30.00",
     score: "",
+    id: 1,
   },
   {
     img: item_men_2,
-    title: "men's tracksuit Q109",
+    title: "Women's tracksuit Q109",
     price: "$ 30.00",
     score: "",
+    id: 2,
   },
   {
     img: item_men_3,
-    title: "men's tracksuit Q109",
+    title: "Women's tracksuit Q109",
     price: "$ 30.00",
     score: "",
+    id: 3,
   },
   {
     img: item_men_4,
-    title: "men's tracksuit Q109",
+    title: "Women's tracksuit Q109",
     price: "$ 30.00",
     score: "",
+    id: 4,
   },
   {
     img: item_men_5,
-    title: "men's tracksuit Q109",
+    title: "Women's tracksuit Q109",
     price: "$ 30.00",
     score: "",
+    id: 5,
   },
   {
     img: item_men_6,
-    title: "men's tracksuit Q109",
+    title: "Women's tracksuit Q109",
     price: "$ 30.00",
     score: "",
+    id: 6,
   },
   {
     img: item_men_7,
-    title: "men's tracksuit Q109",
+    title: "Women's tracksuit Q109",
     price: "$ 30.00",
     score: "",
+    id: 7,
   },
   {
     img: item_men_8,
-    title: "men's tracksuit Q109",
+    title: "Women's tracksuit Q109",
     price: "$ 30.00",
     score: "",
+    id: 8,
   },
 ];
 
@@ -68,7 +76,7 @@ function Item_card_men() {
       {items.map((a, index) => (
     <div key={index} className="item__card">
       <div className="item__card-img">
-        <Link to="product_page" data-test-id="clothes-card-men"><img src={a.img} alt="item" /></Link>
+        <Link to={`/men/${a.id}`} data-test-id="clothes-card-men"><img src={a.img} alt="item" /></Link>
       </div>
       <div className="item__card-title">{a.title}</div>
       <div className="item__card-suptitle">

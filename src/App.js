@@ -16,10 +16,11 @@ function App() {
       <Header />
       <Routes>
         <Route  exact path="/" element={<Main />} />
-        <Route exact path="/Women" element={<CategoriesWomen />} />
+        <Route exact path="/women" element={<CategoriesWomen />} />
         <Route exact path="/men" element={<CategoriesMen />} />
-        <Route path="/product_page" element={<Item />} />
-        <Route path="/Men/product_page" element={<Item />} />
+        {/*<Route path="/product_page" element={<Item />} />*/}
+        <Route path="/men/*" element={<Item />} />
+        <Route path="/women/*" element={<Item />} />
       </Routes>
 
       <Footer />
