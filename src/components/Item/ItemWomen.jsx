@@ -27,6 +27,8 @@ import Pay6 from "../../img/icons/pay/pay6.svg";
 import Pay7 from "../../img/icons/pay/pay7.svg";
 import Left from "../../img/icons/left.png";
 import Right from "../../img/icons/right.png";
+import Heart from "../../img/icons/hearth.svg";
+import Scale from "../../img/icons/scales.svg";
 //import Item1 from "../../img/images/item1.jpg";
 //import Item2 from "../../img/images/item2.jpg";
 //import Item3 from "../../img/images/item3.jpg";
@@ -132,8 +134,8 @@ function ItemWomen() {
                 <div class="item__info-cost">
                   <div class="item__info-price">$ 379.99</div>
                   <div class="item__info-add-to-card">Add to card</div>
-                  <img src="./img/icons/hearth.svg" alt="icon" />
-                  <img src="./img/icons/scales.svg" alt="icon" />
+                  <img src={Heart} alt="icon" />
+                  <img src={Scale} alt="icon" />
                 </div>
                 <div class="item__info-line"></div>
                 <div class="item__info-conditions">
