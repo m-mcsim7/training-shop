@@ -5,7 +5,7 @@ import "./Woman.css";
 
 function Woman() {
   return (
-    <div data-test-id="products-page-women">
+    <div data-test-id="clothes-women">
       <div className="sort">
         <div className="container">
           <div className="sort__main">

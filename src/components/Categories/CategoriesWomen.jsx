@@ -12,7 +12,7 @@ import filter from "../../img/icons/filter.svg"
 import "./Categories.css";
 
 function CategoriesWomen() {
-  return <div data-test-id="clothes-women">
+  return <div data-test-id="products-page-women">
       <div className="nav__categoriya">
         <div className="container">
           <div className="nav__categotiya-wrapper">

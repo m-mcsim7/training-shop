@@ -74,16 +74,16 @@ function Item_card_men() {
   return (
     <div className="sort__items">
       {items.map((a, index) => (
-    <div key={index} className="item__card">
+    <Link to={`/men/${a.id}`} data-test-id="clothes-card-men" key={index} className="item__card">
       <div className="item__card-img">
-        <Link to={`/men/${a.id}`} data-test-id="clothes-card-men"><img src={a.img} alt="item" /></Link>
+           <img src={a.img} alt="item" />
       </div>
       <div className="item__card-title">{a.title}</div>
       <div className="item__card-suptitle">
         <div className="item__card-price">{a.price}</div>
         <div className="item__card-score"></div>
       </div>
-    </div>
+    </Link>
       ))}
     </div>
   );
