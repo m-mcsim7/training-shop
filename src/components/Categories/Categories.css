@@ -156,6 +156,7 @@
    font-weight: 400;
    line-height: 16px;
    opacity: 0.6;
+   color: #121212;
  }
  .item__card-suptitle {
    display: flex;
@@ -167,6 +168,7 @@
    font-weight: 700;
    line-height: 16px;
    padding-top: 12px;
+   color: #121212;
  }
  .item__card-score {
    background-image: url(../../img/icons/4stars.svg);

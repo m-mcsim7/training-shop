@@ -1,6 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import basket_number from "../../img/icons/basket_number.svg";
+import Search from "../../img/icons/Search.svg";
+import Earth from "../../img/icons/Earth.svg";
+import Human from "../../img/icons/human.svg";
+
 import "./Header.css";
 
 import Navigation from "./Navigation";
@@ -47,13 +51,20 @@ function Header() {
 
           <ul className="main__icons">
             <li>
-              <a className="main__icons-search" href="https://m-mcsim7.github.io/training-shop/">1</a>
+              <a className="main__icons-search" href="https://m-mcsim7.github.io/training-shop/">
+                 <img src={Search} alt="icon" />
+              </a>
             </li>
             <li>
-              <a className="main__icons-earth" href="https://m-mcsim7.github.io/training-shop/">1</a>
+
+              <a className="main__icons-earth" href="https://m-mcsim7.github.io/training-shop/">
+                 <img src={Earth} alt="icon" />
+              </a>
             </li>
             <li>
-              <a className="main__icons-human" href="https://m-mcsim7.github.io/training-shop/">1</a>
+              <a className="main__icons-human" href="https://m-mcsim7.github.io/training-shop/">
+                 <img src={Human} alt="icon" />
+              </a>
             </li>
             <li>
               <a className="main__icons-basket" href="https://m-mcsim7.github.io/training-shop/">

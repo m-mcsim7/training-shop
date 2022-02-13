@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import SocialIcons from "../../components/Header/SocialIcons";
 
 import pay1 from "../../img/icons/pay/pay1.svg";
 import pay2 from "../../img/icons/pay/pay2.svg";
@@ -27,12 +28,7 @@ function Footer() {
                 />
                 <button className="footer__input-button">Join Us</button>
               </div>
-              <ul className="footer__input-social">
-                <li><a className="top__social-facebook" href="https://m-mcsim7.github.io/training-shop/">f</a></li>
-                <li><a className="top__social-twitter" href="https://m-mcsim7.github.io/training-shop/">f</a></li>
-                <li><a className="top__social-instagram" href="https://m-mcsim7.github.io/training-shop/">f</a></li>
-                <li><a className="top__social-pinteerst" href="https://m-mcsim7.github.io/training-shop/">f</a></li>
-              </ul>
+              <SocialIcons />
             </div>
             <div className="footer__rows">
               <ul className="footer__column">

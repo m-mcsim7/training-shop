@@ -74,7 +74,7 @@ function Item_card_women() {
   return (
     <div className="sort__items">
       {items.map((a, index) => (
-    <Link to={`/women/${a.id}`}data-test-id="clothes-card-women" key={index} className="item__card">
+    <Link to={`/women/${a.id}`} data-test-id="clothes-card-women" key={index} className="item__card">
       <div className="item__card-img">
            <img src={a.img} alt="item" />
       </div>

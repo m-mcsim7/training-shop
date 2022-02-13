@@ -89,9 +89,9 @@ body {
   display: flex;
   justify-content: space-between;
 }
-@media (max-width: 750px) {
+@media (max-width: 425px) {
    .header__top {
-      height: 35px;
+      height: 40px;
    }
    
 }
@@ -103,11 +103,15 @@ body {
   flex-wrap: wrap;
   justify-content: space-around;
   height: 24px;
-  width: 550px;
+  max-width: 550px;
 }
-@media (max-width: 650px) {
+.top__contacts li{
+   padding-left: 35px;
+}
+@media (max-width: 425px) {
    .top__contacts {
-      height: 35px;
+      line-height: 20px;
+      justify-content: flex-start;
    }
    
 }
@@ -164,14 +168,14 @@ body {
   font-size: 11px;
   font-weight: 500;
   line-height: 12px;
-  text-align: left;
+  /*text-align: left;*/
   color: #ffffff;
 }
 .top__workinghours::before {
   content: "";
   position: absolute;
   top: 0;
-  left: -20px;
+  left: 15px;
   width: 10px;
   height: 10px;
   background-image: url(../../img/icons/img_time.svg);
@@ -187,6 +191,11 @@ body {
   align-items: center;
   margin-right: 86px;
 }
+@media (max-width: 650px){
+   .top__social {
+      margin-right: 20px;
+   }
+}
 .top__social li {
   padding-right: 12px;
 }
@@ -197,40 +206,33 @@ body {
   display: block;
   width: 12.2px;
   height: 12.2px;
-  background-image: url(../../img/icons/facebook.svg);
-  background-size: cover;
+
 }
 .top__social-twitter {
   display: block;
   width: 13px;
   height: 10.5px;
-  background-image: url(../../img/icons/twitter.svg);
-  background-size: cover;
 }
 .top__social-instagram {
   display: block;
   width: 11px;
   height: 11px;
-  background-image: url(../../img/icons/instagram.svg);
-  background-size: cover;
 }
 .top__social-pinteerst {
   display: block;
   width: 12.2px;
   height: 12.2px;
-  background-image: url(../../img/icons/pinterest.svg);
-  background-size: cover;
 }
 .header__main {
   height: 66px;
   display: flex;
-  flex-wrap: wrap;
+  /*flex-wrap: wrap;*/
   justify-content: space-between;
   align-items: center;
 }
-@media (max-width: 485px) {
+@media (max-width: 650px) {
    .header__main{
-      justify-content: center;
+      padding: 0 20px;
    }
 }
 .main {
@@ -242,7 +244,7 @@ body {
   line-height: 32px;
   margin-left: 85px;
 }
-@media (max-width: 485px) {
+@media (max-width: 650px) {
    .main_logo{
       margin-left: 0;
    }
@@ -278,7 +280,7 @@ body {
   display: flex;
   justify-content: space-between;
 }
-@media (max-width: 485px) {
+@media (max-width: 650px) {
    .main__icons{
       margin-right: 0;
    }
@@ -286,29 +288,26 @@ body {
 .main__icons li {
   padding-right: 30px;
 }
+@media (max-width: 650px){
+   .main__icons li {
+      padding-right: 10px;
+    }
+}
 .main__icons li:last-child {
   padding-right: 0;
 }
-.main__icons-search {
-  display: block;
+.main__icons-search{
   width: 18px;
   height: 18px;
-  background-image: url(../../img/icons/Search.svg);
-  background-size: cover;
 }
 .main__icons-earth {
-  display: block;
   width: 18px;
   height: 18px;
-  background-image: url(../../img/icons/Earth.svg);
-  background-size: cover;
 }
 .main__icons-human {
   display: block;
   width: 14px;
   height: 18px;
-  background-image: url(../../img/icons/human.svg);
-  background-size: cover;
 }
 .main__icons-basket {
   position: relative;
