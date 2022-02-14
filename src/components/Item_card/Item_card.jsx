@@ -150,8 +150,7 @@ const items = [
 ];
 
 function Item_card(props) {
-  const item = props.product_item;
-
+  let item = props.product_item;
   let genderItems = items.filter((e) => e.gender == item);
   let id_card = "clothes-card-" + item;
 
