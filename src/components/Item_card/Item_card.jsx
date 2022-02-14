@@ -149,18 +149,18 @@ const items = [
   },
 ];
 
-
 function Item_card(props) {
   const item = props.product_item;
-  
-  let genderItems = items.filter(e => e.gender == item)
+
+  let genderItems = items.filter((e) => e.gender == item);
+  let id_card = "clothes-card-" + props.item;
 
   return (
     <div className="sort__items">
       {genderItems.map((a, index) => (
         <Link
           to={`/${item}/${a.id}`}
-          data-test-id="clothes-card-{props.item}"
+          data-test-id={id_card}
           key={index}
           className="item__card"
         >

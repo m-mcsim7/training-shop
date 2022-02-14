@@ -13,7 +13,8 @@ import filter from "../../img/icons/filter.svg"
 import "./Categories.css";
 
 function Categories(props) {
-  return <div data-test-id="products-page-{props.product_type}">
+   let id = "products-page-" + props.product_type;
+  return <div data-test-id= {id} >
       <div className="nav__categoriya">
         <div className="container">
           <div className="nav__categotiya-wrapper">

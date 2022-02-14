@@ -7,8 +7,12 @@ import "./ProductType.css";
 
 
 function ProductType (props)  {
+
+
+   let id = 'clothes-' + props.product_type;
+
   return (
-    <div data-test-id="clothes-{props.product_type}">
+    <div data-test-id = {id}>
       <div className="sort">
         <div className="container">
           <div className="sort__main">
