@@ -1,5 +1,6 @@
 import React from 'react';
-import Item_card_men from "../Item_card/Item_card_men";
+//import Item_card_men from "../Item_card/Item_card_men";
+import Item_card from "../Item_card/Item_card";
 
 import Share from "../../img/icons/Share.svg"
 import view1 from "../../img/icons/view1.svg"
@@ -11,22 +12,22 @@ import filter from "../../img/icons/filter.svg"
 
 import "./Categories.css";
 
-function CategoriesMen() {
-  return <div data-test-id="products-page-men">
+function Categories(props) {
+  return <div data-test-id="products-page-{props.product_type}">
       <div className="nav__categoriya">
         <div className="container">
           <div className="nav__categotiya-wrapper">
             <div className="nav_categoriya__chit">
               <ul className="nav__categoriya-link">
                 <li><a href="https://m-mcsim7.github.io/training-shop/">Home</a></li>
-                <li><a href="https://m-mcsim7.github.io/training-shop/">Men</a></li>
+                <li><a href="https://m-mcsim7.github.io/training-shop/">{props.product_type}</a></li>
               </ul>
               <div className="nav__categoriya-share">
                 <img src={Share} alt="share" />
                 <p>Share</p>
               </div>
             </div>
-            <div className="nav__categoriya-title">Men</div>
+            <div className="nav__categoriya-title">{props.product_type}</div>
           </div>
         </div>
       </div>
@@ -54,7 +55,7 @@ function CategoriesMen() {
         <div className="continer">
           <div className="items_wrapper">
             <div className="sort__items">
-               <Item_card_men />
+               <Item_card product_item = {props.product_type} />
             </div>
             <div className="item__further">
                <img src={further} alt="item__further" />
@@ -65,4 +66,4 @@ function CategoriesMen() {
   </div>;
 }
 
-export default CategoriesMen;
+export default Categories;
