@@ -153,7 +153,7 @@ function Item_card(props) {
   const item = props.product_item;
 
   let genderItems = items.filter((e) => e.gender == item);
-  let id_card = "clothes-card-" + props.item;
+  let id_card = "clothes-card-" + item;
 
   return (
     <div className="sort__items">
