@@ -1,5 +1,7 @@
 import React from 'react';
-import big_banner from "../../img/images/big_banner.jpg";
+import Slider from "./Slider";
+
+//import big_banner from "../../img/images/big_banner.jpg";
 import banner_woman from "../../img/images/banner_woman.jpg";
 import banner_man from "../../img/images/banner_man.jpg";
 import banner_accessories from "../../img/images/banner_accessories.jpg";
@@ -11,13 +13,7 @@ function FirstPart() {
            <div className="bloks">
         <div className="container">
           <div className="bloks__banners banners">
-            <div className="banners__big">
-              <div className="banners__bg-title">
-                <span>Banner</span>
-                your Title text
-              </div>
-              <img src={big_banner} alt="big_banner" />
-            </div>
+             <Slider />
             <div className="banners__small">
               <div className="banners__small-up">
                 <div className="banners__small-up-left">

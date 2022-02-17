@@ -141,15 +141,15 @@
    gap: 30px;
    flex-wrap: wrap;
  }*/
- .item__card {
-   /*max-width: 255px;
-     height: 408px;*/
+ /*.item__card {
+
    max-width: 255px;
- }
- .item__card-img {
+ }*/
+ /*.item__card-img {
    max-width: 255px;
    max-height: 318px;
- }
+ }*/
+
  .item__card-title {
    padding-top: 16px;
    font-size: 14px;
@@ -170,11 +170,11 @@
    padding-top: 12px;
    color: #121212;
  }
- .item__card-score {
+ /*.item__card-score {
    background-image: url(../../img/icons/4stars.svg);
    width: 70px;
    height: 14px;
- }
+ }*/
  .item__further {
    display: flex;
    justify-content: center;
