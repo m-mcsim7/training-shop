@@ -19,8 +19,10 @@ const [secondSwiper, setSecondSwiper] = useState(null);
 
 
   return (
-    <section className="slider_item">
+    <section className="slider_item"
+    data-test-id="product-slider">
       <Swiper
+      
         className="item__slider-small-photo mySwiper"
         navigation={true}
         modules={[Navigation, Controller]}

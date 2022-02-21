@@ -23,25 +23,6 @@ function FirstPart() {
         <div className="container">
           <div className="bloks__banners banners">
           <SliderFP />
-
-
-            {/*<div className="banners__big">
-              <div className="banners__bg-title">
-                <div className="slider_left">
-                  <img src={slider_left} alt="icon" />
-                </div>
-                <span>Banner</span>
-                your Title text
-                <div className="slider_right">
-                  <img src={slider_right} alt="icon" />
-                </div>
-              </div>
-              <img src={img1} alt="big_banner" />
-            </div>*/}
-
-
-
-
             <div className="banners__small">
               <div className="banners__small-up">
                 <div className="banners__small-up-left">

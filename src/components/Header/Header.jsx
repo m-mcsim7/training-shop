@@ -106,6 +106,7 @@ function Header() {
               className={
                 menuActive ? "header__burger _active" : "header__burger"
               }
+              data-test-id="burger-menu-btn"
             >
               <span></span>
             </li>

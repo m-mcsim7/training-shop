@@ -17,7 +17,7 @@ function Navigation(props) {
         props.setActive(!props.active);
       }}
       className={props.active ? "main__navigation _active" : "main__navigation"}
-      data-test-id="menu"
+      data-test-id="burger-menu"
     >
       {items.map((item, index) => (
         <li key={index}>

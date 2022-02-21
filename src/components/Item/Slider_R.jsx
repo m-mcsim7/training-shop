@@ -40,6 +40,7 @@ const items = [...number, ...number2];
 function Slider_R(props) {
   return (
     <Swiper
+    data-test-id="related-slider"
       className="related-products__items mySwiper"
       navigation={true}
       modules={[Navigation]}

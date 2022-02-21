@@ -263,12 +263,9 @@ const Navigation_RELATED ={
                 </p>
               </div>
 
-              {/*<Slider_RELATED />*/}
+
               <Slider_R  buttons={Navigation_RELATED}/>
-              {/*<Item_card_RELATED product_item = {"women"} />*/}
-              {/*<div className="related-products__items">
-                <Item_card_related />
-              </div>*/}
+
               
             </div>
           </div>

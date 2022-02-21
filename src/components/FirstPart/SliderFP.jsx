@@ -15,6 +15,7 @@ function SliderFP() {
       className="banners__big mySwiper"
       navigation={true}
       modules={[Navigation]}
+      data-test-id="main-slider"
     >
 
 
