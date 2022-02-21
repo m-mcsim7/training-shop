@@ -37,19 +37,17 @@ import Scale from "../../img/icons/scales.svg";
 
 import Review from "../../img/icons/review.svg";
 
-
-
 import "./Item.css";
 
 function Item(props) {
-const Navigation={
-   nextEl:".swiper-button-next-out",
-   prevEl:".swiper-button-prev-out"
-   }
-const Navigation_RELATED ={
-   nextEl:".swiper-button-next-out-related",
-   prevEl:".swiper-button-prev-out-related"
-   }
+  const Navigation = {
+    nextEl: ".swiper-button-next-out",
+    prevEl: ".swiper-button-prev-out",
+  };
+  const Navigation_RELATED = {
+    nextEl: ".swiper-button-next-out-related",
+    prevEl: ".swiper-button-prev-out-related",
+  };
   let id = "product-page-" + props.product_type;
   return (
     <div data-test-id={id}>
@@ -103,14 +101,12 @@ const Navigation_RELATED ={
               </div>
             </div>
             <div className="item__all">
-              <div className="item__slider">
-
-
+              <div className="item__slider-wrapper">
                 <div className="swiper-button-prev-out"></div>
                 <div className="swiper-button-next-out"></div>
 
-                <Slider buttons={Navigation}/>
-
+                <Slider buttons={Navigation} />
+                
               </div>
               <div className="item__info">
                 <div className="item__info-color">
@@ -248,25 +244,26 @@ const Navigation_RELATED ={
                   <div className="item__info-line"></div>
                 </div>
               </div>
-
-
-
-              
             </div>
 
             <div className="related-products">
               <div className="related-products__title">
                 <div>RELATED PRODUCTS</div>
                 <p>
-                  <img className="swiper-button-next-out-related" src={Left} alt="icon" />
-                  <img className="swiper-button-prev-out-related" src={Right} alt="icon" />
+                  <img
+                    className="swiper-button-next-out-related"
+                    src={Left}
+                    alt="icon"
+                  />
+                  <img
+                    className="swiper-button-prev-out-related"
+                    src={Right}
+                    alt="icon"
+                  />
                 </p>
               </div>
 
-
-              <Slider_R  buttons={Navigation_RELATED}/>
-
-              
+              <Slider_R buttons={Navigation_RELATED} />
             </div>
           </div>
         </div>
