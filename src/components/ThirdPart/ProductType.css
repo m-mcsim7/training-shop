@@ -97,6 +97,7 @@ body {
 .item__card {
   position: relative;
   width: 22.95%;
+  
 }
 @media (max-width: 1115px) {
   .item__card {

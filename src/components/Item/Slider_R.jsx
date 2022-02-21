@@ -44,15 +44,35 @@ function Slider_R(props) {
       className="related-products__items mySwiper"
       navigation={true}
       modules={[Navigation]}
-      slidesPerView={4}
+      //slidesPerView={4}
       slidesPerGroup={1}
-      spaceBetween={30}
+      spaceBetween={50}
       navigation={{
         nextEl: props.buttons.nextEl,
         prevEl: props.buttons.prevEl,
       }}
+
+
+
+      breakpoints={{
+         // when window width is >= 640px
+         1130: {
+           slidesPerView: 4,
+
+         },
+         // when window width is >= 768px
+         840: {
+           slidesPerView: 3,
+         },
+         570: {
+           slidesPerView: 2,
+         },
+         //600: {
+         //  slidesPerView: 1,
+         //},
+       }}
     >
-      <SwiperSlide>
+      <SwiperSlide className="swiper_r">
         <Link
           to={`/${items[0][1]}/${items[0][0].id}`}
           className="item__card"
@@ -66,8 +86,8 @@ function Slider_R(props) {
               alt="item"
             />
           </div>
-          <div className="item__card-title">{items[0][0].name}</div>
-          <div className="item__card-suptitle">
+          <div className="item__card-title_r">{items[0][0].name}</div>
+          <div className="item__card-suptitle_r">
             <div className="item__card-price">
               $ {items[0][0].price}
               {items[0][0].discount && (
@@ -101,8 +121,8 @@ function Slider_R(props) {
               alt="item"
             />
           </div>
-          <div className="item__card-title">{items[1][0].name}</div>
-          <div className="item__card-suptitle">
+          <div className="item__card-title_r">{items[1][0].name}</div>
+          <div className="item__card-suptitle_r">
             <div className="item__card-price">
               $ {items[1][0].price}
               {items[1][0].discount && (
@@ -136,8 +156,8 @@ function Slider_R(props) {
               alt="item"
             />
           </div>
-          <div className="item__card-title">{items[0][0].name}</div>
-          <div className="item__card-suptitle">
+          <div className="item__card-title_r">{items[0][0].name}</div>
+          <div className="item__card-suptitle_r">
             <div className="item__card-price">
               $ {items[0][0].price}
               {items[0][0].discount && (
@@ -171,8 +191,8 @@ function Slider_R(props) {
               alt="item"
             />
           </div>
-          <div className="item__card-title">{items[0][0].name}</div>
-          <div className="item__card-suptitle">
+          <div className="item__card-title_r">{items[0][0].name}</div>
+          <div className="item__card-suptitle_r">
             <div className="item__card-price">
               $ {items[0][0].price}
               {items[0][0].discount && (
@@ -206,8 +226,8 @@ function Slider_R(props) {
               alt="item"
             />
           </div>
-          <div className="item__card-title">{items[5][0].name}</div>
-          <div className="item__card-suptitle">
+          <div className="item__card-title_r">{items[5][0].name}</div>
+          <div className="item__card-suptitle_r">
             <div className="item__card-price">
               $ {items[5][0].price}
               {items[5][0].discount && (

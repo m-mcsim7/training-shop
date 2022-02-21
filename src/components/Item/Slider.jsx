@@ -39,7 +39,7 @@ function Slider(props) {
         slidesPerView={4}
         slidesPerGroup={1}
         spaceBetween={16}
-      //  loop= {true}
+        loop= {true}
       >
         <SwiperSlide>
           <img src={Photo_1} alt="baner" />
@@ -66,10 +66,7 @@ function Slider(props) {
           slidesPerGroup={1}
           slidesPerView={1}
           spaceBetween={15}
-         // loop= {true}
-      //  thumbs={{
-      //    swiper: {nav}
-      //  }}
+          loop= {true}
       >
         <SwiperSlide>
           <img src={Photo_1} alt="baner" />
