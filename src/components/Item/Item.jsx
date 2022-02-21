@@ -1,15 +1,20 @@
 import React from "react";
-import Item_card_related from "../Item_card/Item_card_related";
+//import Item_card_related from "../Item_card/Item_card_related";
+import Slider from "./Slider";
+import Slider_R from "./Slider_R";
+
+import Item_card_RELATED from "../Item_card/Item_card_RELATED";
+//import { Navigation } from "swiper";
 
 import Share from "../../img/icons/Share.svg";
 import Star from "../../img/icons/star.svg";
 import Slider_up from "../../img/icons/slider_up.png";
 import Slider_down from "../../img/icons/slider_down.png";
-import Photo_1 from "../../img/images/item_photo1.jpg";
-import Photo_2 from "../../img/images/item_photo2.jpg";
-import Photo_3 from "../../img/images/item_photo3.jpg";
-import Photo_4 from "../../img/images/item_photo4.jpg";
-import Photo_main from "../../img/images/main_photo.jpg";
+//import Photo_1 from "../../img/images/item_photo1.jpg";
+//import Photo_2 from "../../img/images/item_photo2.jpg";
+//import Photo_3 from "../../img/images/item_photo3.jpg";
+//import Photo_4 from "../../img/images/item_photo4.jpg";
+//import Photo_main from "../../img/images/main_photo.jpg";
 import Item_color_1 from "../../img/images/item_color1.jpg";
 import Item_color_2 from "../../img/images/item_color2.jpg";
 import Item_color_3 from "../../img/images/item_color3.jpg";
@@ -29,16 +34,23 @@ import Left from "../../img/icons/left.png";
 import Right from "../../img/icons/right.png";
 import Heart from "../../img/icons/hearth.svg";
 import Scale from "../../img/icons/scales.svg";
-//import Item1 from "../../img/images/item1.jpg";
-//import Item2 from "../../img/images/item2.jpg";
-//import Item3 from "../../img/images/item3.jpg";
-//import Item4 from "../../img/images/item4.jpg";
+
 import Review from "../../img/icons/review.svg";
+
+
 
 import "./Item.css";
 
 function Item(props) {
-   let id = "product-page-" + props.product_type;
+const Navigation={
+   nextEl:".swiper-button-next-out",
+   prevEl:".swiper-button-prev-out"
+   }
+const Navigation_RELATED ={
+   nextEl:".swiper-button-next-out-related",
+   prevEl:".swiper-button-prev-out-related"
+   }
+  let id = "product-page-" + props.product_type;
   return (
     <div data-test-id={id}>
       <div className="nav__categoriya">
@@ -50,7 +62,9 @@ function Item(props) {
                   <a href="https://m-mcsim7.github.io/training-shop/">Home</a>
                 </li>
                 <li>
-                  <a href="https://m-mcsim7.github.io/training-shop/">{props.product_type}</a>
+                  <a href="https://m-mcsim7.github.io/training-shop/">
+                    {props.product_type}
+                  </a>
                 </li>
                 <li>
                   <a href="https://m-mcsim7.github.io/training-shop/">
@@ -90,19 +104,13 @@ function Item(props) {
             </div>
             <div className="item__all">
               <div className="item__slider">
-                <div className="item__slider-small-photo">
-                  <div className="item__slider-arrow">
-                    <img src={Slider_up} alt="up_icon" />
-                    <img src={Slider_down} alt="down_icon" />
-                  </div>
-                  <img src={Photo_1} alt="item__photo" />
-                  <img src={Photo_2} alt="item__photo" />
-                  <img src={Photo_3} alt="item__photo" />
-                  <img src={Photo_4} alt="item__photo" />
-                </div>
-                <div className="item__slider-big-photo">
-                  <img src={Photo_main} alt="main__photo" />
-                </div>
+
+
+                <div className="swiper-button-prev-out"></div>
+                <div className="swiper-button-next-out"></div>
+
+                <Slider buttons={Navigation}/>
+
               </div>
               <div className="item__info">
                 <div className="item__info-color">
@@ -201,7 +209,9 @@ function Item(props) {
                     </div>
                     <div className="item__review">
                       <div className="item__review-title">
-                        <div className="item__review-title-name">Oleh Chabanov</div>
+                        <div className="item__review-title-name">
+                          Oleh Chabanov
+                        </div>
                         <div className="item__review-title-data">
                           <img src={Star} alt="star" />
                           <img src={Star} alt="star" />
@@ -218,7 +228,9 @@ function Item(props) {
                     </div>
                     <div className="item__review">
                       <div className="item__review-title">
-                        <div className="item__review-title-name">ShAmAn design</div>
+                        <div className="item__review-title-name">
+                          ShAmAn design
+                        </div>
                         <div className="item__review-title-data">
                           <img src={Star} alt="star" />
                           <img src={Star} alt="star" />
@@ -236,19 +248,28 @@ function Item(props) {
                   <div className="item__info-line"></div>
                 </div>
               </div>
+
+
+
+              
             </div>
 
             <div className="related-products">
               <div className="related-products__title">
                 <div>RELATED PRODUCTS</div>
                 <p>
-                  <img src={Left} alt="icon" />
-                  <img src={Right} alt="icon" />
+                  <img className="swiper-button-next-out-related" src={Left} alt="icon" />
+                  <img className="swiper-button-prev-out-related" src={Right} alt="icon" />
                 </p>
               </div>
-              <div className="related-products__items">
-                 <Item_card_related />
-              </div>
+
+              {/*<Slider_RELATED />*/}
+              <Slider_R  buttons={Navigation_RELATED}/>
+              {/*<Item_card_RELATED product_item = {"women"} />*/}
+              {/*<div className="related-products__items">
+                <Item_card_related />
+              </div>*/}
+              
             </div>
           </div>
         </div>
