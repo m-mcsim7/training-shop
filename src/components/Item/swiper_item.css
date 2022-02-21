@@ -1,7 +1,9 @@
 
 
-.slider_item {
+.slider_item_swiper {
   display: flex;
+  /*max-width: 574px;*/
+
 }
 
 .item__slider-big-photo.swiper {
@@ -55,10 +57,10 @@ swiper-button-next::after {
 }
 
 .swiper-button-prev-out {
-   left: 80px ;
+   left: 10px ;
    top: 0;
    cursor: pointer;
-   position: relative;
+   position: absolute;
    width: 40px;
    height: 40px;
    border-radius: 20px;
@@ -68,10 +70,10 @@ swiper-button-next::after {
    transform: rotate(90deg)
 }
 .swiper-button-next-out {
-   left: 96px ;
+   left: 50px ;
    top: 0;
    cursor: pointer;
-   position: relative;
+   position: absolute;
    width: 40px;
    height: 40px;
    border-radius: 20px;

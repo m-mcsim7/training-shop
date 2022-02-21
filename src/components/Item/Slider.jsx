@@ -19,7 +19,7 @@ const [secondSwiper, setSecondSwiper] = useState(null);
 
 
   return (
-    <section className="slider_item"
+    <section className="slider_item_swiper"
     data-test-id="product-slider">
       <Swiper
       

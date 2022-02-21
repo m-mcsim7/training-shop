@@ -36,6 +36,8 @@ function Item_card_RELATED(props) {
   let genderItems = items.filter((e) => e[1] === item);
   let id_card = "clothes-card-" + item;
 
+
+
   return (
     <div className="sort__items">
       {genderItems.map((card, index) => (

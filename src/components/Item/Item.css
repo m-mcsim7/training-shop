@@ -159,6 +159,8 @@
 .item__all {
   margin-top: 10px;
   display: flex;
+  /*justify-content: space-between;*/
+  gap: 30px;
 }
 @media (max-width: 1120px) {
   .item__all {
@@ -167,7 +169,9 @@
   }
 }
 .item__slider {
-  display: flex;
+   position: relative;
+  /*display: flex;*/
+  max-width: 558px;
 }
 
 @media (max-width: 1120px) {
