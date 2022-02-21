@@ -3,7 +3,7 @@ import React from "react";
 import Slider from "./Slider";
 import Slider_R from "./Slider_R";
 
-import Item_card_RELATED from "../Item_card/Item_card_RELATED";
+//import Item_card_RELATED from "../Item_card/Item_card_RELATED";
 //import { Navigation } from "swiper";
 
 import Share from "../../img/icons/Share.svg";
