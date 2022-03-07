@@ -1,34 +1,78 @@
-import React from "react";
-//import Item_card_men from "../Item_card/Item_card_men";
+import React, { useState } from "react";
+
+import { PRODUCTS } from "../../products/products.js";
+import { particularsMenu } from "../../products/products.js";
+
 import Item_card from "../Item_card/Item_card";
 
 import "./ProductType.css";
 
+function ProductType(props) {
+  const particulars = [
+    "NEW ARRIVALS",
+    "SPECIALS",
+    "BESTSELLERS",
+    "MOST VIEWED",
+    "FEATURED PRODUCTS",
+  ];
+
+  console.log(particularsMenu)
+
+  let id = "clothes-" + props.product_type;
+  const [changParticular, setChangParticular] = useState(0);
 
 
-function ProductType (props)  {
+  let item = props.product_type;
 
+  let particularNameChange;
 
-   let id = 'clothes-' + props.product_type;
+  function activeParticular() {
+    for (let i of particularsMenu) {
+      if (i.name === particulars[changParticular]) {
+        particularNameChange = i.particularName;
+      }
+    }
+  }
+  activeParticular();
+
+  let particularLink = particularNameChange;
+  const newProducts = [];
+
+  function changeParticularsMenu() {
+    for (let i of PRODUCTS[item]) {
+      i.particulars[particularLink] && newProducts.push(i);
+    }
+
+    return newProducts;
+  }
+  changeParticularsMenu();
 
   return (
-    <div data-test-id = {id}>
+    <div data-test-id={id}>
       <div className="sort">
         <div className="container">
           <div className="sort__main">
             <div className="sort__title">
               <div className="sort__logo">{props.product_type}’S</div>
               <ul className="sort__navigation">
-                <li>NEW ARRIVALS</li>
-                <li>SPECIALS</li>
-                <li>BESTSELLERS</li>
-                <li>MOST VIEWED</li>
-                <li>FEATURED PRODUCTS</li>
+                {particulars.map((item, index) => (
+                  <li
+                   data-test-id={`clothes-${props.product_type}-${particularsMenu[index].particularName}`}
+                    className={changParticular === index ? "_active " : ""}
+                    key={index}
+                    onClick={() => setChangParticular(index)}
+                  >
+                    {item}
+                  </li>
+                ))}
               </ul>
             </div>
             <div className="sort__items">
-               <Item_card product_item = {props.product_type} />
-
+              <Item_card
+                newProducts={newProducts}
+                product_item={props.product_type}
+                // changParticular={changParticular}
+              />
             </div>
             <div className="sort__button">See All</div>
           </div>

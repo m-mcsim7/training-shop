@@ -14,7 +14,7 @@ export const PRODUCTS = {
       material: 'Шерсть - 50%, Акрил - 50%',
       rating: 4,
       price: 108,
-      sizes: ['M INT'],
+      sizes: ['M '],
       discount: null,
       reviews: [
         {
@@ -65,7 +65,7 @@ export const PRODUCTS = {
       material: 'Шерсть - 80%, Полиамид - 20%',
       rating: 5,
       price: 108,
-      sizes: ['M INT'],
+      sizes: ['M '],
       discount: null,
       reviews: [],
       images: [
@@ -131,7 +131,7 @@ export const PRODUCTS = {
       material: 'Хлопок - 50%, Полиэстер - 50%',
       rating: 5,
       price: 184.8,
-      sizes: ['M INT'],
+      sizes: ['M '],
       discount: null,
       reviews: [],
       images: [
@@ -167,7 +167,7 @@ export const PRODUCTS = {
       material: 'Акрил - 85%, Шерсть - 15%',
       rating: 1,
       price: 148.8,
-      sizes: ['M INT'],
+      sizes: ['M '],
       discount: null,
       reviews: [{ name: 'Alesha Popovich', text: 'Хороший товар!', rating: 1, id: '620134b07d2312f4e7932fa5' }],
       images: [
@@ -213,7 +213,7 @@ export const PRODUCTS = {
       material: 'Хлопок - 100%',
       rating: 4,
       price: 179.99,
-      sizes: ['M INT', 'S INT', 'L INT', 'XL INT', 'XXL INT'],
+      sizes: ['M ', 'S ', 'L ', 'XL ', 'XXL '],
       discount: null,
       reviews: [],
       images: [
@@ -249,7 +249,7 @@ export const PRODUCTS = {
       material: 'Хлопок - 100%',
       rating: 4,
       price: 134,
-      sizes: ['M INT', 'S INT', 'L INT', 'XL INT'],
+      sizes: ['M ', 'S ', 'L ', 'XL '],
       discount: null,
       reviews: [
         {
@@ -319,7 +319,7 @@ export const PRODUCTS = {
       material: 'Акрил - 80%, Шерсть - 20%',
       rating: 4,
       price: 191.2,
-      sizes: ['M INT', 'XXL INT', 'L INT', '3XL INT'],
+      sizes: ['M ', 'XXL ', 'L ', '3XL '],
       discount: null,
       reviews: [
         {
@@ -392,7 +392,7 @@ export const PRODUCTS = {
       material: 'Акрил - 80%, Шерсть - 20%',
       rating: 5,
       price: 64.5,
-      sizes: ['S INT', 'M INT', 'XXL INT', 'XL INT'],
+      sizes: ['S ', 'M ', 'XXL ', 'XL '],
       discount: null,
       reviews: [
         { name: 'Dmitry', text: 'Отличный вариант', rating: 5, id: '6203adf977fffe0cd128c1c4' },
@@ -433,7 +433,7 @@ export const PRODUCTS = {
       material: 'Хлопок - 65%, Полиэстер - 35%',
       rating: 5,
       price: 59.4,
-      sizes: ['S INT', 'M INT', 'XXL INT', 'XL INT'],
+      sizes: ['S ', 'M ', 'XXL ', 'XL '],
       discount: null,
       reviews: [
         {
@@ -467,7 +467,7 @@ export const PRODUCTS = {
       material: 'Акрил - 80%, Шерсть - 20%',
       rating: 5,
       price: 74.8,
-      sizes: ['S INT', 'M INT', 'XXL INT', 'XL INT'],
+      sizes: ['S ', 'M ', 'XXL ', 'XL '],
       discount: null,
       reviews: [
         {
@@ -501,7 +501,7 @@ export const PRODUCTS = {
       material: 'Полиэстер - 100%',
       rating: 4,
       price: 79.7,
-      sizes: ['L INT', 'XXL INT', 'XL INT'],
+      sizes: ['L ', 'XXL ', 'XL '],
       discount: '-40%',
       reviews: [
         { name: 'Aliaksei', text: 'Приятный материал и цвет', rating: 5, id: '6204f6c377fffe0cd128c603' },
@@ -540,7 +540,7 @@ export const PRODUCTS = {
       material: 'Акрил - 80%, Шерсть - 20%',
       rating: 3,
       price: 93.8,
-      sizes: ['M INT', 'XXL INT', '3XL INT', '5XL INT'],
+      sizes: ['M ', 'XXL ', '3XL ', '5XL '],
       discount: null,
       reviews: [
         { name: 'Sergey', text: 'Не соответствует размеру.', rating: 2, id: '6204f80b77fffe0cd128c61b' },
@@ -568,7 +568,7 @@ export const PRODUCTS = {
       material: 'Хлопок - 35%, Полиэстер - 65%',
       rating: 3,
       price: 49.4,
-      sizes: ['XXL INT', 'XL INT'],
+      sizes: ['XXL ', 'XL '],
       discount: null,
       reviews: [
         {
@@ -601,7 +601,7 @@ export const PRODUCTS = {
       material: 'Акрил - 20%, Шерсть - 80%',
       rating: 5,
       price: 134,
-      sizes: ['S INT', 'M INT', 'XXL INT', 'XL INT'],
+      sizes: ['S ', 'M ', 'XXL ', 'XL '],
       discount: null,
       reviews: [
         {
@@ -634,7 +634,7 @@ export const PRODUCTS = {
       material: 'Хлопок - 200%',
       rating: 2,
       price: 261.2,
-      sizes: ['S INT', 'M INT', 'L INT', 'XXL INT', 'XL INT'],
+      sizes: ['S ', 'M ', 'L ', 'XXL ', 'XL '],
       discount: null,
       reviews: [{ name: 'Ilya', text: 'Не подошёл по размеру', rating: 2, id: '62050b2a77fffe0cd128c7bd' }],
       images: [
@@ -660,7 +660,7 @@ export const PRODUCTS = {
       material: 'Хлопок - 55%, Полиэстер - 45%',
       rating: 2,
       price: 80.4,
-      sizes: ['S INT', 'M INT'],
+      sizes: ['S ', 'M '],
       discount: null,
       reviews: [
         { name: 'Alex', text: 'Плохо сидит не советую', rating: 1, id: '62050bdc77fffe0cd128c7ca' },
@@ -699,7 +699,7 @@ export const PRODUCTS = {
       material: 'Акрил - 40%, Шерсть - 60%',
       rating: 5,
       price: 84.8,
-      sizes: ['S INT', 'M INT', 'XXL INT', 'XL INT'],
+      sizes: ['S ', 'M ', 'XXL ', 'XL '],
       discount: null,
       reviews: [
         { name: 'Aliaksei', text: 'Очень качественная вещь!', rating: 5, id: '62050d9a77fffe0cd128c7e2' },
@@ -750,7 +750,7 @@ export const PRODUCTS = {
       material: 'Акрил - 80%, Шерсть - 20%',
       rating: 4,
       price: 54.8,
-      sizes: ['S INT', 'M INT'],
+      sizes: ['S ', 'M '],
       discount: '-60%',
       reviews: [
         { name: 'Natali', text: 'Ни о чём', rating: 2, id: '620510d177fffe0cd128c814' },
@@ -784,7 +784,7 @@ export const PRODUCTS = {
       material: 'Хлопок - 50%, Акрил - 50%',
       rating: 4,
       price: 203.4,
-      sizes: ['S INT', 'M INT', 'XXL INT', 'XL INT', '3XL INT'],
+      sizes: ['S ', 'M ', 'XXL ', 'XL ', '3XL '],
       discount: '-19%',
       reviews: [
         { name: 'Andrew', text: 'Немного мал, перезаказали на побольше', rating: 4, id: '620511b177fffe0cd128c828' },
@@ -806,7 +806,7 @@ export const PRODUCTS = {
       material: 'Акрил - 50%, Хлопок - 50%',
       rating: 4,
       price: 200.8,
-      sizes: ['S INT', 'M INT', 'XXL INT', 'XL INT'],
+      sizes: ['S ', 'M ', 'XXL ', 'XL '],
       discount: null,
       reviews: [
         {
@@ -848,7 +848,7 @@ export const PRODUCTS = {
       material: 'Полиэстер - 100%',
       rating: 4,
       price: 99.99,
-      sizes: ['L INT', 'XS INT', 'XXS INT', 'S INT', 'M INT'],
+      sizes: ['L ', 'XS ', 'XXS ', 'S ', 'M '],
       discount: '-58%',
       reviews: [
         {
@@ -943,7 +943,7 @@ export const PRODUCTS = {
       material: 'Полиэстер - 100%',
       rating: 5,
       price: 289,
-      sizes: ['XS INT', 'S INT', 'M INT'],
+      sizes: ['XS ', 'S ', 'M '],
       discount: null,
       reviews: [],
       images: [
@@ -969,7 +969,7 @@ export const PRODUCTS = {
       material: 'Полиамид - 82%, Эластан - 18%',
       rating: 5,
       price: 159,
-      sizes: ['40 RUS', '42 RUS', '48 RUS'],
+      sizes: ['40 ', '42 ', '48 '],
       discount: '-15%',
       reviews: [
         {
@@ -1013,7 +1013,7 @@ export const PRODUCTS = {
       material: 'Полиэстер - 100%',
       rating: 4,
       price: 80.3,
-      sizes: ['L INT', 'XS INT', 'S INT'],
+      sizes: ['L ', 'XS ', 'S '],
       discount: '-60%',
       reviews: [
         {
@@ -1105,7 +1105,7 @@ export const PRODUCTS = {
       material: 'Полиэстер - 100%',
       rating: 3,
       price: 143.3,
-      sizes: ['L INT', 'XS INT', 'S INT', 'M INT'],
+      sizes: ['L ', 'XS ', 'S ', 'M '],
       discount: '-40%',
       reviews: [
         {
@@ -1163,7 +1163,7 @@ export const PRODUCTS = {
       material: 'Полиэстер - 100%',
       rating: 4,
       price: 214,
-      sizes: ['XS INT', 'S INT', 'M INT'],
+      sizes: ['XS ', 'S ', 'M '],
       discount: null,
       reviews: [
         {
@@ -1262,7 +1262,7 @@ export const PRODUCTS = {
       material: 'Полиэстер - 100%',
       rating: 4,
       price: 214,
-      sizes: ['XS INT', 'S INT', 'M INT'],
+      sizes: ['XS ', 'S ', 'M '],
       discount: null,
       reviews: [],
       images: [
@@ -1312,4 +1312,25 @@ export const PRODUCTS = {
     },
   ],
 };
-
+export const particularsMenu = [
+   {
+     particularName: "isNewArrivals",
+     name: "NEW ARRIVALS",
+   },
+   {
+     particularName: "isSpecial",
+     name: "SPECIALS",
+   },
+   {
+     particularName: "isBestseller",
+     name: "BESTSELLERS",
+   },
+   {
+     particularName: "isMostViewed",
+     name: "MOST VIEWED",
+   },
+   {
+     particularName: "isFeatured",
+     name: "FEATURED PRODUCTS",
+   },
+ ];

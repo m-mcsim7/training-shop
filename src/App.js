@@ -22,8 +22,6 @@ function App() {
         <Route exact path="/women" element={<Categories product_type={"women"}/>} />
         <Route exact path="/men" element={<Categories product_type={"men"}/>} />
         <Route path="/men/*" element={<Item product_type={"men"}/>} />
-        {/*<Route path="/men/*" element={<ItemMen />} />*/}
-        {/*<Route path="/women/*" element={<ItemWomen />} />*/}
         <Route path="/women/*" element={<Item product_type={"women"} />} />
       </Routes>
 

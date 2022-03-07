@@ -1,24 +1,13 @@
 import React from "react";
-//import Item_card_related from "../Item_card/Item_card_related";
+import { Link, useParams } from "react-router-dom";
+import { PRODUCTS } from "../../products/products.js";
+
 import Slider from "./Slider";
 import Slider_R from "./Slider_R";
-
-//import Item_card_RELATED from "../Item_card/Item_card_RELATED";
-//import { Navigation } from "swiper";
+import Rating from "../Item_card/Rating";
 
 import Share from "../../img/icons/Share.svg";
-import Star from "../../img/icons/star.svg";
-import Slider_up from "../../img/icons/slider_up.png";
-import Slider_down from "../../img/icons/slider_down.png";
-//import Photo_1 from "../../img/images/item_photo1.jpg";
-//import Photo_2 from "../../img/images/item_photo2.jpg";
-//import Photo_3 from "../../img/images/item_photo3.jpg";
-//import Photo_4 from "../../img/images/item_photo4.jpg";
-//import Photo_main from "../../img/images/main_photo.jpg";
-import Item_color_1 from "../../img/images/item_color1.jpg";
-import Item_color_2 from "../../img/images/item_color2.jpg";
-import Item_color_3 from "../../img/images/item_color3.jpg";
-import Item_color_4 from "../../img/images/item_color4.jpg";
+
 import Size_guide from "../../img/icons/size_guide.svg";
 import Shipping from "../../img/icons/Shipping_Delivery.svg";
 import Returns from "../../img/icons/Returns.svg";
@@ -48,25 +37,54 @@ function Item(props) {
     nextEl: ".swiper-button-next-out-related",
     prevEl: ".swiper-button-prev-out-related",
   };
-  let id = "product-page-" + props.product_type;
+  const product_type = "product-page-" + props.product_type;
+
+  const cardID = Object.values(useParams())[0];
+  let card;
+  const arr = PRODUCTS[props.product_type];
+  const arrImages = [];
+
+  for (let i of arr) {
+    if (i.id === cardID) {
+      card = i;
+    }
+  }
+  const arrColor = card.images.map((item) => item.color);
+  const strColor = new Set(arrColor);
+  const arrColorIncludes = [...strColor];
+
+  for (let i of card.images) {
+    arrImages.push(i.url);
+  }
+
+  const card_url = [card.images[0].url];
+  for (let i = 1; i < card.images.length; i++) {
+    if (card.images[i].color !== card.images[i - 1].color) {
+      card_url.push(card.images[i].url);
+    }
+  }
+  const [activeSise, setAativeSise] = React.useState(0)
+  const [activeColor, setAativeColor] = React.useState(0)
+
+
   return (
-    <div data-test-id={id}>
+    <div data-test-id={product_type}>
       <div className="nav__categoriya">
         <div className="container">
           <div className="nav__categotiya-wrapper">
             <div className="nav_categoriya__chit">
               <ul className="nav__categoriya-link">
                 <li>
-                  <a href="https://m-mcsim7.github.io/training-shop/">Home</a>
+                  <Link to={"/"}>Home</Link>
                 </li>
                 <li>
-                  <a href="https://m-mcsim7.github.io/training-shop/">
+                  <Link to={`/${props.product_type}`}>
                     {props.product_type}
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a href="https://m-mcsim7.github.io/training-shop/">
-                    Women's tracksuit Q109
+                    {card.name}
                   </a>
                 </li>
               </ul>
@@ -75,7 +93,7 @@ function Item(props) {
                 <p>Share</p>
               </div>
             </div>
-            <div className="nav__categoriya-title">Women's tracksuit Q109</div>
+            <div className="nav__categoriya-title">{card.name}</div>
           </div>
         </div>
       </div>
@@ -84,12 +102,8 @@ function Item(props) {
           <div className="item__wrapper">
             <div className="item__score-all">
               <div className="item__score">
-                <img src={Star} alt="star" />
-                <img src={Star} alt="star" />
-                <img src={Star} alt="star" />
-                <img src={Star} alt="star" />
-                <img src={Star} alt="star" />
-                <p>2 Reviews</p>
+                <Rating rating={card.rating} />
+                <p>{card.reviews.length} Reviews</p>
               </div>
               <div className="item__score__info">
                 <p>
@@ -105,39 +119,68 @@ function Item(props) {
                 <div className="swiper-button-prev-out"></div>
                 <div className="swiper-button-next-out"></div>
 
-                <Slider buttons={Navigation} />
-                
+                <Slider buttons={Navigation} images={arrImages} />
               </div>
               <div className="item__info">
                 <div className="item__info-color">
                   <p>
-                    <span>COLOR:</span>Blue
+                    <span>COLOR:</span>
+                    <p className="card_color">
+                        {arrColorIncludes[activeColor]}
+                      </p>
                   </p>
                 </div>
                 <div className="item__info-color-foto">
-                  <img src={Item_color_1} alt="item_color" />
-                  <img src={Item_color_2} alt="item_color" />
-                  <img src={Item_color_3} alt="item_color" />
-                  <img src={Item_color_4} alt="item_color" />
+                  {card_url.map((item, index) => (
+                    <img
+                        className={activeColor === index ? 'color-img _active' : 'color-img'}
+                        onClick={() => setAativeColor(index)}
+                      key={index}
+                      src={`https://training.cleverland.by/shop${item}`}
+                      alt="item_color"
+                    />
+                  ))}
                 </div>
+
                 <div className="item__info-size">
                   <p>
-                    <span>Size:</span>S
+                    <span>Size:</span>
+                    {card.sizes[activeSise]}
                   </p>
                 </div>
-                <div className="item__info-size-icon">
-                  <p className="size_icon">XS</p>
-                  <p className="size_icon_active">S</p>
-                  <p className="size_icon">M</p>
-                  <p className="size_icon">L</p>
+                <div className="item__info-size-icon" >
+                  {card.sizes.map((item, index) => (
+                    <p className={activeSise === index ? 'size_icon _active' : 'size_icon'}
+                    key={index}
+                    onClick={() => setAativeSise(index)}
+                    >
+                      {item}
+                    </p>
+                  ))}
                 </div>
+
+
                 <div className="item__info-size-guide">
                   <img src={Size_guide} alt="" />
                   Size guide
                 </div>
                 <div className="item__info-line"></div>
                 <div className="item__info-cost">
-                  <div className="item__info-price">$ 379.99</div>
+                  <div className="item__info-price">
+                    ${" "}
+                    {card.discount
+                      ? Math.round(
+                          (card.price -
+                            (card.price / 100) * card.discount.slice(1, -1)) *
+                            100
+                        ) / 100
+                      : card.price}
+                    {card.discount && (
+                      <span className="item__info-price-sale">
+                        $ {card.price}
+                      </span>
+                    )}
+                  </div>
                   <div className="item__info-add-to-card">Add to card</div>
                   <img src={Heart} alt="icon" />
                   <img src={Scale} alt="icon" />
@@ -178,13 +221,24 @@ function Item(props) {
                   <div className="item__info-additional">
                     <p>ADDITIONAL INFORMATION</p>
                     <p>
-                      Color: <span>Blue, White, Black, Grey</span>
+                      Color: 
+                      
+                      {arrColorIncludes.map((item, index) => (
+                      <span className="card_color" key={index}>
+                        {item}
+                      </span>
+                    ))}
                     </p>
                     <p>
-                      Size: <span>XS, S, M, L</span>
+                      Size:
+                      {card.sizes.map((item, index) => (
+                        <span className="card_sizes" key={index}>
+                          {item}
+                        </span>
+                      ))}
                     </p>
                     <p>
-                      Material: <span>100% Polyester</span>
+                      Material: <span>{card.material}</span>
                     </p>
                   </div>
                   <div className="item__info-line"></div>
@@ -192,54 +246,27 @@ function Item(props) {
                     <p>REVIEWS</p>
                     <div className="item__info-score-reviews">
                       <div className="item__score-star">
-                        <img src={Star} alt="star" />
-                        <img src={Star} alt="star" />
-                        <img src={Star} alt="star" />
-                        <img src={Star} alt="star" />
-                        <img src={Star} alt="star" />
-                        <p>2 Reviews</p>
+                        <Rating rating={card.rating} />
+                        <p>{card.reviews.length} Reviews</p>
                       </div>
                       <p>
                         <img src={Review} alt="icon" /> Write a review
                       </p>
                     </div>
-                    <div className="item__review">
-                      <div className="item__review-title">
-                        <div className="item__review-title-name">
-                          Oleh Chabanov
+
+                    {card.reviews.map((item, index) => (
+                      <div className="item__review" key={index}>
+                        <div className="item__review-title">
+                          <div className="item__review-title-name">
+                            {" "}
+                            {item.name}{" "}
+                          </div>
+
+                          <Rating rating={item.rating} />
                         </div>
-                        <div className="item__review-title-data">
-                          <img src={Star} alt="star" />
-                          <img src={Star} alt="star" />
-                          <img src={Star} alt="star" />
-                          <img src={Star} alt="star" />
-                          <img src={Star} alt="star" />
-                        </div>
+                        <div className="item__review-contain">{item.text}</div>
                       </div>
-                      <div className="item__review-contain">
-                        On the other hand, we denounce with righteous
-                        indignation and like men who are so beguiled and
-                        demoralized by the charms of pleasure of the moment
-                      </div>
-                    </div>
-                    <div className="item__review">
-                      <div className="item__review-title">
-                        <div className="item__review-title-name">
-                          ShAmAn design
-                        </div>
-                        <div className="item__review-title-data">
-                          <img src={Star} alt="star" />
-                          <img src={Star} alt="star" />
-                          <img src={Star} alt="star" />
-                          <img src={Star} alt="star" />
-                          <img src={Star} alt="star" />
-                        </div>
-                      </div>
-                      <div className="item__review-contain">
-                        At vero eos et accusamus et iusto odio dignissimos
-                        ducimus qui blanditiis praesentium voluptatum deleniti
-                      </div>
-                    </div>
+                    ))}
                   </div>
                   <div className="item__info-line"></div>
                 </div>

@@ -21,7 +21,7 @@
     padding-right: 20px;
   }
 }
-@media (max-width: 525px) {
+@media (max-width: 725px) {
   .footer__input {
     height: 100px;
   }

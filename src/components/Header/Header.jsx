@@ -20,8 +20,7 @@ function Header() {
     <div
       className="header"
       data-test-id="header"
-      // onClick={() => setMenuActive(!menuActive)}
-       onClick={() => (menuActive) ? setMenuActive(!menuActive): setMenuActive(menuActive) }
+      onClick={() => (menuActive) ? setMenuActive(!menuActive): setMenuActive(menuActive) }
     >
       <div className="container">
         <div

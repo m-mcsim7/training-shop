@@ -1,17 +1,23 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import Rating from "./Rating";
+import Rating from "../../components/Item_card/Rating";
 import { PRODUCTS } from "../../products/products.js";
-import { particularsMenu } from "../../products/products.js";
+//import { particularsMenu } from "../../products/products.js";
 //import { particularsMenu } from "../../products/particularsMenu.js";
 
-function Item_card(props) {
+function Item_card_filter(props) {
   let item = props.product_item;
   let newProducts;
-  props.newProducts === undefined
+
+
+    (props.newProductsIncludes.length  === 0) && (props.arrLengthZero == 4)
     ? (newProducts = PRODUCTS[item])
-    : (newProducts = props.newProducts);
+    : (newProducts = props.newProductsIncludes);
+
+
+
+
 
   return (
     <div className="sort__items">
@@ -33,7 +39,7 @@ function Item_card(props) {
           </div>
           <div className="item__card-title">{card.name}</div>
           <div className="item__card-suptitle">
-            <div className="item__card-price">
+          <div className="item__card-price">
               ${" "}
               {card.discount
                 ? Math.round(
@@ -54,4 +60,4 @@ function Item_card(props) {
   );
 }
 
-export default Item_card;
+export default Item_card_filter;
