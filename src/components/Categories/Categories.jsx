@@ -1,7 +1,8 @@
 import React from "react";
 //import Item_card_men from "../Item_card/Item_card_men";
 import Item_card from "../Item_card/Item_card";
-import Filter from "./Filter";
+import Filter_women from "./Filter_women";
+import Filter_men from "./Filter_men";
 import { Link } from "react-router-dom";
 
 import Share from "../../img/icons/Share.svg";
@@ -39,39 +40,11 @@ function Categories(props) {
           </div>
         </div>
       </div>
-      <Filter product_item={props.product_type}/>
-      {/*--------------------------------------------------
-
-      <div className="filter">
-        <div className="container">
-          <div className="filter__wrapper">
-            <div className="filter__items">
-              <div className="filter__filter">
-                <img src={filter} alt="filter" />
-                <p>filter</p>
-              </div>
-              <div className="filter__view">
-                <img src={view1} alt="view" />
-                <img src={view2} alt="view" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/*--------------------------------------------------*/}
-      {/*<div className="items">
-        <div className="continer">
-          <div className="items_wrapper">
-            <div className="sort__items">
-              <Item_card product_item={props.product_type} />
-            </div>
-            <div className="item__further">
-              <img src={further} alt="item__further" />
-            </div>
-          </div>
-        </div>
-      </div>*/}
+      {props.product_type === "women" ? (
+        <Filter_women product_item={props.product_type} />
+      ) : (
+         <Filter_men product_item={props.product_type} />
+      )}
     </div>
   );
 }

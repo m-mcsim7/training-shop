@@ -16,9 +16,8 @@ function ProductType(props) {
     "FEATURED PRODUCTS",
   ];
 
-  console.log(particularsMenu)
 
-  let id = "clothes-" + props.product_type;
+
   const [changParticular, setChangParticular] = useState(0);
 
 
