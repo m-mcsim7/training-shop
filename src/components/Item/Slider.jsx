@@ -10,7 +10,7 @@ import "swiper/css/navigation";
 function Slider(props) {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   return (
-    <section className="slider_item_swiper" data-test-id="product-slider">
+    <section className="slider_item_swiper">
       <Swiper
         className="item__slider-small-photo mySwiper"
         navigation={true}

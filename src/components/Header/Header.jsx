@@ -19,7 +19,6 @@ function Header() {
   return (
     <div
       className="header"
-      data-test-id="header"
       onClick={() => (menuActive) ? setMenuActive(!menuActive): setMenuActive(menuActive) }
     >
       <div className="container">
@@ -52,7 +51,6 @@ function Header() {
             <Link
               to="/"
               className="header-nav-logo"
-              data-test-id="header-logo-link"
             >
               CleverShop
             </Link>
@@ -105,7 +103,6 @@ function Header() {
               className={
                 menuActive ? "header__burger _active" : "header__burger"
               }
-              data-test-id="burger-menu-btn"
             >
               <span></span>
             </li>

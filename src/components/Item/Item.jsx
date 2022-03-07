@@ -68,7 +68,7 @@ function Item(props) {
 
 
   return (
-    <div data-test-id={product_type}>
+    <div>
       <div className="nav__categoriya">
         <div className="container">
           <div className="nav__categotiya-wrapper">

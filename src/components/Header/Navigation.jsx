@@ -17,11 +17,10 @@ function Navigation(props) {
         props.setActive(!props.active);
       }}
       className={props.active ? "main__navigation _active" : "main__navigation"}
-      data-test-id="burger-menu"
     >
       {items.map((item, index) => (
         <li key={index}>
-          <Link to={`${item.href}`} data-test-id={`menu-link-${item.href}`}>
+          <Link to={`${item.href}`}>
             {item.value}
           </Link>
         </li>

@@ -14,7 +14,7 @@ import "./Footer.css";
 
 function Footer() {
   return <div>
-           <footer className="footer" data-test-id="footer">
+           <footer className="footer" >
         <div className="container">
           <div className="footer__wrapper">
             <div className="footer__input">
@@ -33,10 +33,10 @@ function Footer() {
             <div className="footer__rows">
               <ul className="footer__column">
                 <li>Categories</li>
-                <li><Link to="/men" data-test-id="footer-nav-link-men">Men</Link></li>
-                <li><Link to="/women" data-test-id="footer-nav-link-women">Women</Link></li>
-                <li><Link to="/accessories" data-test-id="footer-nav-link-accessories">Accessories</Link></li>
-                <li><Link to="/beauty" data-test-id="footer-nav-link-beauty">Beauty</Link></li>
+                <li><Link to="/men">Men</Link></li>
+                <li><Link to="/women">Women</Link></li>
+                <li><Link to="/accessories">Accessories</Link></li>
+                <li><Link to="/beauty">Beauty</Link></li>
                </ul>
               <ul className="footer__column">
                 <li>Infomation</li>

@@ -24,7 +24,6 @@ function Item_card_filter(props) {
       {newProducts.map((card, index) => (
         <Link
           to={`/${item}/${card.id}`}
-          // data-test-id={id_card}
           key={index}
           className="item__card"
         >

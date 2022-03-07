@@ -14,7 +14,6 @@ import further from "../../img/icons/item__further.svg";
 import "./Categories.css";
 
 function Categories(props) {
-  let id = "products-page-" + props.product_type;
   return (
     <div>
       <div className="nav__categoriya">

@@ -24,7 +24,7 @@ function Slider(props) {
 
 
   return (
-    <section className="slider_item_swiper" data-test-id="product-slider">
+    <section className="slider_item_swiper">
 
       <Swiper
         className="item__slider-small-photo mySwiper"
