@@ -16,7 +16,7 @@ import "./Categories.css";
 function Categories(props) {
   let id = "products-page-" + props.product_type;
   return (
-    <div data-test-id={id}>
+    <div>
       <div className="nav__categoriya">
         <div className="container">
           <div className="nav__categotiya-wrapper">

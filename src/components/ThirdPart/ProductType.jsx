@@ -48,7 +48,7 @@ function ProductType(props) {
   changeParticularsMenu();
 
   return (
-    <div data-test-id={id}>
+    <div>
       <div className="sort">
         <div className="container">
           <div className="sort__main">
