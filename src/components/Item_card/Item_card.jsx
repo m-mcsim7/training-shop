@@ -17,6 +17,7 @@ function Item_card(props) {
     <div className="sort__items">
       {newProducts.map((card, index) => (
         <Link
+        data-test-id={`clothes-card-${item}`}
           to={`/${item}/${card.id}`}
           key={index}
           className="item__card"
