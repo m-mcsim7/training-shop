@@ -47,7 +47,7 @@ function ProductType(props) {
   changeParticularsMenu();
 
   return (
-    <div>
+    <div data-test-id={`clothes-${props.product_type}`}>
       <div className="sort">
         <div className="container">
           <div className="sort__main">
