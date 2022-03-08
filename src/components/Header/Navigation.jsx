@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 const items = [
   { value: "About Us", href: "/about" },
-  { value: "Women", href: "/women" },
-  { value: "Men", href: "/men" },
+  { value: "women", href: "/women" },
+  { value: "men", href: "/men" },
   { value: "Beauty", href: "/beauty" },
   { value: "Blog", href: "/blog" },
   { value: "Contact", href: "/contact" },
@@ -20,7 +20,9 @@ function Navigation(props) {
     >
       {items.map((item, index) => (
         <li key={index}>
-          <Link to={`${item.href}`}>
+          <Link to={`${item.href}`}
+          data-test-id={`menu-link-${item.value}`}
+          >
             {item.value}
           </Link>
         </li>
