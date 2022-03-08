@@ -33,6 +33,16 @@
   height: 318px;
   overflow-y: scroll;
 }
+.filter__column_ul {
+
+}
+.filter__column_ul li{
+   /*cursor: pointer;*/
+   padding-top: 16px;
+}
+.filter__column_ul li label{
+   cursor: pointer;
+}
 .filter__column::-webkit-scrollbar {
   width: 4px;
   background-color: #e6e6e6;
@@ -41,11 +51,8 @@
   background-color: #8d8b8b;
   height: 116px;
 }
-.filter__column label {
-   cursor: pointer;
-  padding-top: 16px;
-}
-.filter__column label:last-child {
+
+.filter__column_ul li:last-child {
   padding-bottom: 16px;
 }
 .filter__column h2 {
