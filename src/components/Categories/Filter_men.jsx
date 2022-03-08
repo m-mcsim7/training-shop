@@ -347,7 +347,7 @@ function Filter(props) {
                   >
                     <label>
                       <input
-                      data-test-id={`filters-${brandArr[0]}-${item}`}
+                        data-test-id={`filters-${brandArr[0]}-${item}`}
                         type="checkbox"
                         value={item}
                         onChange={() => handleToggleBrand(item)}
