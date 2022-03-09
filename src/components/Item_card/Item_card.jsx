@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import Rating from "./Rating";
 import { PRODUCTS } from "../../products/products.js";
 import { particularsMenu } from "../../products/products.js";
-//import { particularsMenu } from "../../products/particularsMenu.js";
 
 function Item_card(props) {
   let item = props.product_item;
@@ -12,7 +11,6 @@ function Item_card(props) {
   props.newProducts === undefined
     ? (newProducts = PRODUCTS[item])
     : (newProducts = props.newProducts);
-
   return (
     <div className="sort__items">
       {newProducts.map((card, index) => (

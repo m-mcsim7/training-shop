@@ -24,9 +24,6 @@ function Slider(props) {
           prevEl: props.buttons.prevEl,
         }}
         direction="vertical"
-      //  slidesPerView={props.images.length}
-      //  slidesPerView={props.images.length}
-
         slidesPerView={ (props.images.length < 5) ? props.images.length : 4}
         slidesPerGroup={1}
         spaceBetween={16}

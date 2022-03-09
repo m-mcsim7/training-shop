@@ -138,6 +138,7 @@ body {
   width: 100%;
 }
 .item__card-sale {
+   z-index: 5;
   position: absolute;
   top: 0;
   width: 53px;
@@ -209,4 +210,5 @@ body {
   border: 2px solid #f8f8f8;
   background-color: #f8f8f8;
   text-transform: uppercase;
+  cursor: pointer;
 }

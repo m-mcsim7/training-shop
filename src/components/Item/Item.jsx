@@ -290,7 +290,7 @@ function Item(props) {
                 </p>
               </div>
 
-              <Slider_R buttons={Navigation_RELATED} />
+              <Slider_R products={arr} buttons={Navigation_RELATED} product_type={props.product_type} />
             </div>
           </div>
         </div>

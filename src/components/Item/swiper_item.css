@@ -193,6 +193,7 @@ swiper-button-next::after {
 }
 .swiper_r {
   width: 1280px;
+  /*border: 1px solid rgb(185, 14, 14);*/
   
 }
 @media (max-width: 1110px) {

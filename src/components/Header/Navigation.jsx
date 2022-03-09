@@ -2,12 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const items = [
-  { value: "About Us", href: "/about" },
+  { value: "about us", href: "/about" },
   { value: "women", href: "/women" },
   { value: "men", href: "/men" },
-  { value: "Beauty", href: "/beauty" },
-  { value: "Blog", href: "/blog" },
-  { value: "Contact", href: "/contact" },
+  { value: "beauty", href: "/beauty" },
+  { value: "blog", href: "/blog" },
+  { value: "contact", href: "/contact" },
 ];
 
 function Navigation(props) {

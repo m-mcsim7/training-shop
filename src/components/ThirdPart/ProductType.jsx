@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import { PRODUCTS } from "../../products/products.js";
 import { particularsMenu } from "../../products/products.js";
+import { Link } from "react-router-dom";
 
 import Item_card from "../Item_card/Item_card";
 
@@ -16,10 +17,7 @@ function ProductType(props) {
     "FEATURED PRODUCTS",
   ];
 
-
-
   const [changParticular, setChangParticular] = useState(0);
-
 
   let item = props.product_type;
 
@@ -56,7 +54,7 @@ function ProductType(props) {
               <ul className="sort__navigation">
                 {particulars.map((item, index) => (
                   <li
-                   data-test-id={`clothes-${props.product_type}-${particularsMenu[index].particularName}`}
+                    data-test-id={`clothes-${props.product_type}-${particularsMenu[index].particularName}`}
                     className={changParticular === index ? "_active " : ""}
                     key={index}
                     onClick={() => setChangParticular(index)}
@@ -73,7 +71,9 @@ function ProductType(props) {
                 // changParticular={changParticular}
               />
             </div>
-            <div className="sort__button">See All</div>
+            <Link to={`/${props.product_type}`}>
+              <div className="sort__button">See All</div>
+            </Link>
           </div>
         </div>
       </div>
