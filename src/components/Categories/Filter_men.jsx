@@ -301,8 +301,8 @@ function Filter(props) {
             </div>
           </div>
         </div>
-
-        <div
+        {filterActive  && 
+        (    <div
           data-test-id={`filters-${gender}`}
           className={
             filterActive ? "filter__wrapper_rows" : "filter__wrapper_rows _none"
@@ -379,6 +379,7 @@ function Filter(props) {
             </div>
           </div>
         </div>
+        )}
         {textFilterArr.length > 0 && (
           <div
             className={
