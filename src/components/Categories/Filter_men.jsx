@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useParams } from "react-router-dom";
 import "./filter.css";
 import { PRODUCTS } from "../../products/products.js";
 import Item_card_filter from "./Item_card_filter";
@@ -12,8 +13,6 @@ import further from "../../img/icons/item__further.svg";
 function Filter(props) {
   let gender = props.product_item;
 
-  
-
   //----------------------------------------------------color---------------------------------------
   const colorChekBox = PRODUCTS[gender].map((item, index) =>
     item.images.map((item) => item.color)
@@ -22,6 +21,7 @@ function Filter(props) {
   colorChekBoxIncludes.sort();
   const colorArr = ["color", colorChekBoxIncludes];
   const [color, setColor] = useState([]);
+  console.log(color.length)
 
   let newProductsColorChekBox = PRODUCTS[gender];
   const colorChekBoxId = PRODUCTS[gender].map((item, index) => ({
@@ -137,6 +137,7 @@ function Filter(props) {
     }
     setBrand(newBrand);
   };
+  console.log(brand)
   //----------------------------------------------------Price---------------------------------------
   const priceChekBox = PRODUCTS[gender].map((item, index) => item.price);
 
@@ -189,6 +190,21 @@ function Filter(props) {
     }
     setPrice(newPrice);
   };
+  //----------------------------------------------Удаляем чекбокс-------------------------------------------
+  //  const linkPage = Object.values(useParams());
+  //   console.log(linkPage)
+  console.log(gender);
+
+  React.useEffect(() => {
+    return () => {
+      setColor([]);
+      setBrand([]);
+      setSize([]);
+      setPrice([]);
+      setFilterActive(false);
+    };
+  }, [gender]);
+
   //----------------------------------------------Выводим текст-------------------------------------------
 
   const colorText = color.map((item) => "color:" + item);
@@ -204,7 +220,6 @@ function Filter(props) {
   ].flat();
 
   let textFilterStr = textFilterArr.join("");
-
 
   //---------------------------------------------Объеденяем массивы----------------------------------------------
 
@@ -266,7 +281,7 @@ function Filter(props) {
             <div className="filter__items">
               <div className="filter__filter">
                 <div
-                data-test-id='filter-button'
+                  data-test-id="filter-button"
                   onClick={() => {
                     setFilterActive(!filterActive);
                   }}
@@ -274,7 +289,7 @@ function Filter(props) {
                     filterActive ? "filter_icon _active" : "filter_icon"
                   }
                 >
-                   <p>filter</p>
+                  <p>filter</p>
                 </div>
                 {/*<p>filter</p>*/}
               </div>
@@ -288,7 +303,7 @@ function Filter(props) {
         </div>
 
         <div
-        data-test-id={`filters-${gender}`}
+          data-test-id={`filters-${gender}`}
           className={
             filterActive ? "filter__wrapper_rows" : "filter__wrapper_rows _none"
           }
@@ -296,84 +311,71 @@ function Filter(props) {
           <div className="filter__rows">
             <div className="filter__column">
               <h2>{colorArr[0]}</h2>
-              <ul data-test-id={`filters-color`} className="filter__column_ul">
+              <div data-test-id={`filters-color`} className="filter__column_ul">
                 {colorArr[1].map((item, index) => (
-                  <li
-                    
-                    key={index}
-                  >
-                    <label>
-                      <input
+                  <label key={index}>
+                    <input
                       data-test-id={`filters-${colorArr[0]}-${item}`}
-                        className="checkbox"
-                        type="checkbox"
-                        value={item}
-                        onChange={() => handleToggle(item)}
-                      />{" "}
-                      {item}
-                    </label>
-                  </li>
+                      className="checkbox"
+                      type="checkbox"
+                      value={item}
+                      checked = {color.indexOf(item) > -1}
+                      onChange={() => handleToggle(item)}
+                    />{" "}
+                    {item}
+                  </label>
                 ))}
-              </ul>
+              </div>
             </div>
             <div className="filter__column">
               <h2>{sizeArr[0]}</h2>
-              <ul data-test-id={`filters-size`} className="filter__column_ul">
+              <div data-test-id={`filters-size`} className="filter__column_ul">
                 {sizeArr[1].map((item, index) => (
-                  <li
-                    
-                    key={index}
-                  >
-                    <label>
-                      <input
+                  <label key={index}>
+                    <input
                       data-test-id={`filters-${sizeArr[0]}-${item}`}
-                        type="checkbox"
-                        value={item}
-                        onChange={() => handleToggleSize(item)}
-                      />{" "}
-                      {item}
-                    </label>
-                  </li>
+                      type="checkbox"
+                      value={item}
+                      checked = {size.indexOf(item) > -1}
+                      onChange={() => handleToggleSize(item)}
+                    />{" "}
+                    {item}
+                  </label>
                 ))}
-              </ul>
+              </div>
             </div>
             <div className="filter__column">
               <h2>{brandArr[0]}</h2>
-              <ul data-test-id={`filters-brand`} className="filter__column_ul">
+              <div data-test-id={`filters-brand`} className="filter__column_ul">
                 {brandArr[1].map((item, index) => (
-                  <li
-                    
-                    key={index}
-                  >
-                    <label>
-                      <input
-                        data-test-id={`filters-${brandArr[0]}-${item}`}
-                        type="checkbox"
-                        value={item}
-                        onChange={() => handleToggleBrand(item)}
-                      />{" "}
-                      {item}
-                    </label>
-                  </li>
+                  <label key={index}>
+                    <input
+                      data-test-id={`filters-${brandArr[0]}-${item}`}
+                      type="checkbox"
+                      value={item}
+                      checked = {brand.indexOf(item) > -1}
+                      onChange={() => handleToggleBrand(item)}
+                    />{" "}
+                    {item}
+                  </label>
                 ))}
-              </ul>
+              </div>
             </div>
             <div className="filter__column">
               <h2>{priceArr[0]}</h2>
-              <ul className="filter__column_ul">
+              <div className="filter__column_ul">
                 {priceChekBoxIncludes.map((item, index) => (
-                  <li key={index}>
-                     <label>
-                     <input
+                  <label key={index}>
+                    <input
                       type="checkbox"
                       value={item}
+                      checked = {price.indexOf(item) > -1}
                       onChange={() => handleTogglePrice(item)}
                     />{" "}
                     {item}
-                     </label>
-                  </li>
+                  </label>
                 ))}
-              </ul>
+              </div>
             </div>
           </div>
         </div>

@@ -6,18 +6,14 @@ import Rating from "../Item_card/Rating";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
 
-//import { PRODUCTS } from "../../products/products";
-
 import "swiper/css";
 import "./swiper_item.css";
 import "swiper/css/navigation";
 
 function Slider_R(props) {
   let newProducts = props.products;
-  console.log(newProducts);
-  let item = props.product_type;
-  console.log(item);
 
+  let item = props.product_type;
 
   return (
     <Swiper

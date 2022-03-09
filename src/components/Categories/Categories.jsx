@@ -1,7 +1,9 @@
 import React from "react";
-//import Item_card_men from "../Item_card/Item_card_men";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
 import Item_card from "../Item_card/Item_card";
-import Filter_women from "./Filter_women";
+//import Filter from "./Filter";
 import Filter_men from "./Filter_men";
 import { Link } from "react-router-dom";
 
@@ -14,7 +16,18 @@ import further from "../../img/icons/item__further.svg";
 
 import "./Categories.css";
 
+
+
+
+
 function Categories(props) {
+
+   const { pathname } = useLocation();
+
+   useEffect(() => {
+     window.scrollTo(0, 0);
+   }, [pathname]);
+
   return (
     <div data-test-id={`products-page-${props.product_type}`}>
       <div className="nav__categoriya">
@@ -40,11 +53,9 @@ function Categories(props) {
           </div>
         </div>
       </div>
-      {props.product_type === "women" ? (
-        <Filter_women product_item={props.product_type} />
-      ) : (
-         <Filter_men product_item={props.product_type} />
-      )}
+
+        <Filter_men product_item={props.product_type} />
+
     </div>
   );
 }

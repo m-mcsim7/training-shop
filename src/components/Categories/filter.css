@@ -58,12 +58,14 @@
 .filter__column_ul {
    overflow-y: scroll;
    margin-bottom: 15px;
+   display: flex;
+   flex-direction: column;
 }
-.filter__column_ul li {
+.filter__column_ul label {
   /*cursor: pointer;*/
   padding-top: 16px;
 }
-.filter__column_ul li label {
+.filter__column_ul label {
   cursor: pointer;
 }
 .filter__column_ul::-webkit-scrollbar {

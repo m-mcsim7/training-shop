@@ -1,6 +1,8 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
 import { PRODUCTS } from "../../products/products.js";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 import Slider from "./Slider";
 import Slider_R from "./Slider_R";
@@ -29,6 +31,13 @@ import Review from "../../img/icons/review.svg";
 import "./Item.css";
 
 function Item(props) {
+   const { pathname } = useLocation();
+
+   useEffect(() => {
+     window.scrollTo(0, 0);
+   }, [pathname]);
+
+
   const Navigation = {
     nextEl: ".swiper-button-next-out",
     prevEl: ".swiper-button-prev-out",
@@ -65,6 +74,14 @@ function Item(props) {
   }
   const [activeSise, setAativeSise] = React.useState(0)
   const [activeColor, setAativeColor] = React.useState(0)
+
+
+  useEffect(() => {
+     return () => {
+      setAativeSise(0)
+      setAativeColor(0)
+     }
+  }, [cardID])
 
 
   return (
