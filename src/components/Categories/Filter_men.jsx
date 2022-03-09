@@ -322,7 +322,7 @@ function Filter(props) {
                       <input
                         className="checkbox"
                         type="checkbox"
-                        data-test-id={`filters-${colorArr[0]}-${item}`}
+                        data-test-id={`filter-${colorArr[0]}-${item}`}
                         value={item}
                         checked={color.indexOf(item) > -1}
                         onChange={() => handleToggle(item)}
@@ -342,7 +342,7 @@ function Filter(props) {
                     <label key={index}>
                       <input
                         type="checkbox"
-                        data-test-id={`filters-${sizeArr[0]}-${item}`}
+                        data-test-id={`filter-${sizeArr[0]}-${item}`}
                         value={item}
                         checked={size.indexOf(item) > -1}
                         onChange={() => handleToggleSize(item)}
@@ -362,7 +362,7 @@ function Filter(props) {
                     <label key={index}>
                       <input
                         type="checkbox"
-                        data-test-id={`filters-${brandArr[0]}-${item}`}
+                        data-test-id={`filter-${brandArr[0]}-${item}`}
                         value={item}
                         checked={brand.indexOf(item) > -1}
                         onChange={() => handleToggleBrand(item)}
