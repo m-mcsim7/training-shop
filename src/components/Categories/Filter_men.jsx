@@ -313,9 +313,9 @@ function Filter(props) {
               <h2>{colorArr[0]}</h2>
               <div data-test-id={`filters-color`} className="filter__column_ul">
                 {colorArr[1].map((item, index) => (
-                  <label key={index}>
+                  <label key={index}
+                  data-test-id={`filters-${colorArr[0]}-${item}`}>
                     <input
-                      data-test-id={`filters-${colorArr[0]}-${item}`}
                       className="checkbox"
                       type="checkbox"
                       value={item}
@@ -331,9 +331,10 @@ function Filter(props) {
               <h2>{sizeArr[0]}</h2>
               <div data-test-id={`filters-size`} className="filter__column_ul">
                 {sizeArr[1].map((item, index) => (
-                  <label key={index}>
+                  <label key={index}
+                  data-test-id={`filters-${sizeArr[0]}-${item}`}>
                     <input
-                      data-test-id={`filters-${sizeArr[0]}-${item}`}
+                      
                       type="checkbox"
                       value={item}
                       checked = {size.indexOf(item) > -1}
@@ -348,9 +349,10 @@ function Filter(props) {
               <h2>{brandArr[0]}</h2>
               <div data-test-id={`filters-brand`} className="filter__column_ul">
                 {brandArr[1].map((item, index) => (
-                  <label key={index}>
+                  <label key={index}
+                  data-test-id={`filters-${brandArr[0]}-${item}`}>
                     <input
-                      data-test-id={`filters-${brandArr[0]}-${item}`}
+                      
                       type="checkbox"
                       value={item}
                       checked = {brand.indexOf(item) > -1}
