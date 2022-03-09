@@ -21,7 +21,7 @@ function Filter(props) {
   colorChekBoxIncludes.sort();
   const colorArr = ["color", colorChekBoxIncludes];
   const [color, setColor] = useState([]);
-  console.log(color.length)
+  console.log(color.length);
 
   let newProductsColorChekBox = PRODUCTS[gender];
   const colorChekBoxId = PRODUCTS[gender].map((item, index) => ({
@@ -137,7 +137,7 @@ function Filter(props) {
     }
     setBrand(newBrand);
   };
-  console.log(brand)
+  console.log(brand);
   //----------------------------------------------------Price---------------------------------------
   const priceChekBox = PRODUCTS[gender].map((item, index) => item.price);
 
@@ -301,86 +301,95 @@ function Filter(props) {
             </div>
           </div>
         </div>
-        {filterActive  && 
-        (    <div
-          data-test-id={`filters-${gender}`}
-          className={
-            filterActive ? "filter__wrapper_rows" : "filter__wrapper_rows _none"
-          }
-        >
-          <div className="filter__rows">
-            <div className="filter__column">
-              <h2>{colorArr[0]}</h2>
-              <div data-test-id={`filters-color`} className="filter__column_ul">
-                {colorArr[1].map((item, index) => (
-                  <label key={index}
-                  data-test-id={`filters-${colorArr[0]}-${item}`}>
-                    <input
-                      className="checkbox"
-                      type="checkbox"
-                      value={item}
-                      checked = {color.indexOf(item) > -1}
-                      onChange={() => handleToggle(item)}
-                    />{" "}
-                    {item}
-                  </label>
-                ))}
+        {filterActive && (
+          <div
+            data-test-id={`filters-${gender}`}
+            className={
+              filterActive
+                ? "filter__wrapper_rows"
+                : "filter__wrapper_rows _none"
+            }
+          >
+            <div className="filter__rows">
+              <div className="filter__column">
+                <h2>{colorArr[0]}</h2>
+                <div
+                  data-test-id={`filters-color`}
+                  className="filter__column_ul"
+                >
+                  {colorArr[1].map((item, index) => (
+                    <label key={index}>
+                      <input
+                        className="checkbox"
+                        type="checkbox"
+                        data-test-id={`filters-${colorArr[0]}-${item}`}
+                        value={item}
+                        checked={color.indexOf(item) > -1}
+                        onChange={() => handleToggle(item)}
+                      />{" "}
+                      {item}
+                    </label>
+                  ))}
+                </div>
               </div>
-            </div>
-            <div className="filter__column">
-              <h2>{sizeArr[0]}</h2>
-              <div data-test-id={`filters-size`} className="filter__column_ul">
-                {sizeArr[1].map((item, index) => (
-                  <label key={index}
-                  data-test-id={`filters-${sizeArr[0]}-${item}`}>
-                    <input
-                      
-                      type="checkbox"
-                      value={item}
-                      checked = {size.indexOf(item) > -1}
-                      onChange={() => handleToggleSize(item)}
-                    />{" "}
-                    {item}
-                  </label>
-                ))}
+              <div className="filter__column">
+                <h2>{sizeArr[0]}</h2>
+                <div
+                  data-test-id={`filters-size`}
+                  className="filter__column_ul"
+                >
+                  {sizeArr[1].map((item, index) => (
+                    <label key={index}>
+                      <input
+                        type="checkbox"
+                        data-test-id={`filters-${sizeArr[0]}-${item}`}
+                        value={item}
+                        checked={size.indexOf(item) > -1}
+                        onChange={() => handleToggleSize(item)}
+                      />{" "}
+                      {item}
+                    </label>
+                  ))}
+                </div>
               </div>
-            </div>
-            <div className="filter__column">
-              <h2>{brandArr[0]}</h2>
-              <div data-test-id={`filters-brand`} className="filter__column_ul">
-                {brandArr[1].map((item, index) => (
-                  <label key={index}
-                  data-test-id={`filters-${brandArr[0]}-${item}`}>
-                    <input
-                      
-                      type="checkbox"
-                      value={item}
-                      checked = {brand.indexOf(item) > -1}
-                      onChange={() => handleToggleBrand(item)}
-                    />{" "}
-                    {item}
-                  </label>
-                ))}
+              <div className="filter__column">
+                <h2>{brandArr[0]}</h2>
+                <div
+                  data-test-id={`filters-brand`}
+                  className="filter__column_ul"
+                >
+                  {brandArr[1].map((item, index) => (
+                    <label key={index}>
+                      <input
+                        type="checkbox"
+                        data-test-id={`filters-${brandArr[0]}-${item}`}
+                        value={item}
+                        checked={brand.indexOf(item) > -1}
+                        onChange={() => handleToggleBrand(item)}
+                      />{" "}
+                      {item}
+                    </label>
+                  ))}
+                </div>
               </div>
-            </div>
-            <div className="filter__column">
-              <h2>{priceArr[0]}</h2>
-              <div className="filter__column_ul">
-                {priceChekBoxIncludes.map((item, index) => (
-                  <label key={index}>
-                    <input
-                      type="checkbox"
-                      value={item}
-                      checked = {price.indexOf(item) > -1}
-                      onChange={() => handleTogglePrice(item)}
-                    />{" "}
-                    {item}
-                  </label>
-                ))}
+              <div className="filter__column">
+                <h2>{priceArr[0]}</h2>
+                <div className="filter__column_ul">
+                  {priceChekBoxIncludes.map((item, index) => (
+                    <label key={index}>
+                      <input
+                        type="checkbox"
+                        value={item}
+                        checked={price.indexOf(item) > -1}
+                        onChange={() => handleTogglePrice(item)}
+                      />{" "}
+                      {item}
+                    </label>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
-        </div>
         )}
         {textFilterArr.length > 0 && (
           <div
