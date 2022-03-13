@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import basket_number from "../../img/icons/basket_number.svg";
+import { useSelector } from "react-redux";
+import Cart from '../Cart/Cart'
+
 import Search from "../../img/icons/Search.svg";
 import Earth from "../../img/icons/Earth.svg";
 import Human from "../../img/icons/human.svg";
@@ -11,21 +13,27 @@ import Navigation from "./Navigation";
 import SocialIcons from "./SocialIcons";
 
 function Header() {
+  const items = useSelector((state) => state.cart.itemsInCart);
+  let itemsLength = items.length
+
   const [menuActive, setMenuActive] = useState(false);
   menuActive
     ? (document.body.style.overflow = "hidden")
     : (document.body.style.overflow = "scroll");
 
+    const [isCartMenuVisible, setIsCartMenuVisible] = useState(false)
+
   return (
     <div
       className="header"
-      onClick={() => (menuActive) ? setMenuActive(!menuActive): setMenuActive(menuActive) }
+      onClick={() =>
+        menuActive ? setMenuActive(!menuActive) : setMenuActive(menuActive)
+      }
     >
+      {/*{isCartMenuVisible && <Cart menuVisible={[isCartMenuVisible, setIsCartMenuVisible]}/>}*/}
+       <Cart menuVisible={[isCartMenuVisible, setIsCartMenuVisible]}/>
       <div className="container">
-        <div
-          className="header__top top"
-
-        >
+        <div className="header__top top">
           <ul className="top__contacts">
             <li>
               <a href="tel:+375291002030" className="top__phone">
@@ -48,10 +56,7 @@ function Header() {
         <div className="header__main main ">
           <div className="main_logo">
             <div className="main__backgraund"></div>
-            <Link
-              to="/"
-              className="header-nav-logo"
-            >
+            <Link to="/" className="header-nav-logo">
               CleverShop
             </Link>
           </div>
@@ -87,19 +92,17 @@ function Header() {
                 <img src={Human} alt="icon" />
               </a>
             </li>
-            <li>
-              <a
-                className="main__icons-basket"
-                href="https://m-mcsim7.github.io/training-shop/"
-              >
-                <img src={basket_number} alt="basket_number" />
-              </a>
+            <li className="main__icons-basket"
+            data-test-id='cart-button'
+            onClick={() => setIsCartMenuVisible(!isCartMenuVisible)}
+            >
+              {itemsLength > 0 ? <span>{itemsLength}</span> : null}
             </li>
             <li
               onClick={(e) => {
-                 setMenuActive(!menuActive)
-                 e.stopPropagation()
-               }}
+                setMenuActive(!menuActive);
+                e.stopPropagation();
+              }}
               className={
                 menuActive ? "header__burger _active" : "header__burger"
               }
@@ -108,7 +111,6 @@ function Header() {
             </li>
           </ul>
         </div>
-        
       </div>
     </div>
   );

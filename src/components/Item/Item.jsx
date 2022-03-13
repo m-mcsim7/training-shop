@@ -3,6 +3,10 @@ import { Link, useParams } from "react-router-dom";
 import { PRODUCTS } from "../../products/products.js";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+
+import { setItemInCart, deleteItemFromCart } from "../../redux/cart/reducer";
 
 import Slider from "./Slider";
 import Slider_R from "./Slider_R";
@@ -31,12 +35,11 @@ import Review from "../../img/icons/review.svg";
 import "./Item.css";
 
 function Item(props) {
-   const { pathname } = useLocation();
+  const { pathname } = useLocation();
 
-   useEffect(() => {
-     window.scrollTo(0, 0);
-   }, [pathname]);
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   const Navigation = {
     nextEl: ".swiper-button-next-out",
@@ -72,17 +75,36 @@ function Item(props) {
       card_url.push(card.images[i].url);
     }
   }
-  const [activeSise, setAativeSise] = React.useState(0)
-  const [activeColor, setAativeColor] = React.useState(0)
-
+  const [activeSise, setAativeSise] = React.useState(0);
+  const [activeColor, setAativeColor] = React.useState(0);
 
   useEffect(() => {
-     return () => {
-      setAativeSise(0)
-      setAativeColor(0)
-     }
-  }, [cardID])
+    return () => {
+      setAativeSise(0);
+      setAativeColor(0);
+    };
+  }, [cardID]);
 
+  const dispatch = useDispatch();
+
+  const cardInCart = Object.assign({}, card);
+
+  cardInCart.images = [card.images[activeColor]];
+  cardInCart.sizes = [card.sizes[activeSise]];
+
+  const items = useSelector((state) => state.cart.itemsInCart);
+
+  let itemsStrArr = items.map((item) => JSON.stringify(item));
+
+  let cardInCartStr = JSON.stringify(cardInCart);
+
+  let itemInCard = itemsStrArr.includes(cardInCartStr);
+
+  function hadleClick() {
+    itemInCard
+      ? dispatch(deleteItemFromCart(cardInCart))
+      : dispatch(setItemInCart(cardInCart));
+  }
 
   return (
     <div data-test-id={`product-page-${props.product_type}`}>
@@ -143,15 +165,19 @@ function Item(props) {
                   <p>
                     <span>COLOR:</span>
                     <p className="card_color">
-                        {arrColorIncludes[activeColor]}
-                      </p>
+                      {arrColorIncludes[activeColor]}
+                    </p>
                   </p>
                 </div>
                 <div className="item__info-color-foto">
                   {card_url.map((item, index) => (
                     <img
-                        className={activeColor === index ? 'color-img _active' : 'color-img'}
-                        onClick={() => setAativeColor(index)}
+                      className={
+                        activeColor === index
+                          ? "color-img _active"
+                          : "color-img"
+                      }
+                      onClick={() => setAativeColor(index)}
                       key={index}
                       src={`https://training.cleverland.by/shop${item}`}
                       alt="item_color"
@@ -165,17 +191,19 @@ function Item(props) {
                     {card.sizes[activeSise]}
                   </p>
                 </div>
-                <div className="item__info-size-icon" >
+                <div className="item__info-size-icon">
                   {card.sizes.map((item, index) => (
-                    <p className={activeSise === index ? 'size_icon _active' : 'size_icon'}
-                    key={index}
-                    onClick={() => setAativeSise(index)}
+                    <p
+                      className={
+                        activeSise === index ? "size_icon _active" : "size_icon"
+                      }
+                      key={index}
+                      onClick={() => setAativeSise(index)}
                     >
                       {item}
                     </p>
                   ))}
                 </div>
-
 
                 <div className="item__info-size-guide">
                   <img src={Size_guide} alt="" />
@@ -198,7 +226,10 @@ function Item(props) {
                       </span>
                     )}
                   </div>
-                  <div className="item__info-add-to-card">Add to card</div>
+                  <div className="item__info-add-to-card" onClick={hadleClick}
+                  data-test-id='add-cart-button'>
+                    {itemInCard ? "remove to card" : "Add to card"}
+                  </div>
                   <img src={Heart} alt="icon" />
                   <img src={Scale} alt="icon" />
                 </div>
@@ -238,13 +269,12 @@ function Item(props) {
                   <div className="item__info-additional">
                     <p>ADDITIONAL INFORMATION</p>
                     <p>
-                      Color: 
-                      
+                      Color:
                       {arrColorIncludes.map((item, index) => (
-                      <span className="card_color" key={index}>
-                        {item}
-                      </span>
-                    ))}
+                        <span className="card_color" key={index}>
+                          {item}
+                        </span>
+                      ))}
                     </p>
                     <p>
                       Size:
@@ -307,7 +337,11 @@ function Item(props) {
                 </p>
               </div>
 
-              <Slider_R products={arr} buttons={Navigation_RELATED} product_type={props.product_type} />
+              <Slider_R
+                products={arr}
+                buttons={Navigation_RELATED}
+                product_type={props.product_type}
+              />
             </div>
           </div>
         </div>
