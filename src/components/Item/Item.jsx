@@ -6,7 +6,11 @@ import { useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 
-import { setItemInCart, deleteItemFromCart, removeToCard } from "../../redux/cart/reducer";
+import {
+  setItemInCart,
+  deleteItemFromCart,
+  removeToCard,
+} from "../../redux/cart/reducer";
 
 import Slider from "./Slider";
 import Slider_R from "./Slider_R";
@@ -89,9 +93,18 @@ function Item(props) {
 
   const cardInCart = Object.assign({}, card);
 
-  cardInCart.images = [card.images[activeColor]];
+
+
+  const colorArrIncludes = [card.images[0]]
+
+  for (let i = 1; i < card.images.length; i++){
+     if (card.images[i-1].color !== card.images[i].color){
+      colorArrIncludes.push(card.images[i])
+     }
+  }
+  console.log(colorArrIncludes);
+  cardInCart.images = [colorArrIncludes[activeColor]];
   cardInCart.sizes = [card.sizes[activeSise]];
-  //  cardInCart.quantity = 1;
 
   const items = useSelector((state) => state.cart.itemsInCart);
 
@@ -105,15 +118,11 @@ function Item(props) {
     cardInCart.sizes[0],
   ].join("");
 
-
   const includesArr = items.map((item) =>
     [item.id, item.images[0].color, item.sizes[0]].join("")
   );
 
-  
   let itemInCard = includesArr.includes(includesCard);
-
-
 
   function hadleClick() {
     itemInCard
@@ -192,7 +201,9 @@ function Item(props) {
                           ? "color-img _active"
                           : "color-img"
                       }
-                      onClick={() => setAativeColor(index)}
+                      onClick={() => (
+                        setAativeColor(index), console.log(index)
+                      )}
                       key={index}
                       src={`https://training.cleverland.by/shop${item}`}
                       alt="item_color"

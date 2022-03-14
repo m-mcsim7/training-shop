@@ -9,6 +9,7 @@ const cartSlice = createSlice({
   reducers: {
     setItemInCart: (state, action) => {
       console.log(action.payload);
+      
       state.itemsInCart.push({ ...action.payload, quantity: 1 });
     },
     deleteItemFromCart: (state, action) => {
@@ -32,9 +33,6 @@ const cartSlice = createSlice({
       );
     },
     removeToCard: (state, action) => {
-   //         const includesArr = state.itemsInCart.map((item) =>
-   //   [item.id, item.images[0].color, item.sizes[0]].join("")
-   // );
     state.itemsInCart = state.itemsInCart.filter(
       (item) => [item.id, item.images[0].color, item.sizes[0]].join("") !== action.payload
     );
