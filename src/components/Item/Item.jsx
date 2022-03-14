@@ -6,7 +6,7 @@ import { useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 
-import { setItemInCart, deleteItemFromCart } from "../../redux/cart/reducer";
+import { setItemInCart, deleteItemFromCart, removeToCard } from "../../redux/cart/reducer";
 
 import Slider from "./Slider";
 import Slider_R from "./Slider_R";
@@ -113,9 +113,11 @@ function Item(props) {
   
   let itemInCard = includesArr.includes(includesCard);
 
+
+
   function hadleClick() {
     itemInCard
-      ? dispatch(deleteItemFromCart(cardInCart))
+      ? dispatch(removeToCard(includesCard))
       : dispatch(setItemInCart(cardInCart));
   }
 
