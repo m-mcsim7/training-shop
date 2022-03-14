@@ -91,12 +91,7 @@ function Item(props) {
 
   cardInCart.images = [card.images[activeColor]];
   cardInCart.sizes = [card.sizes[activeSise]];
-  cardInCart.quantity = 1;
-
-  console.log(cardInCart.images)
-  console.log(arrColorIncludes)
-  console.log(activeColor)
-  console.log(cardInCart.images)
+  //  cardInCart.quantity = 1;
 
   const items = useSelector((state) => state.cart.itemsInCart);
 
@@ -104,7 +99,19 @@ function Item(props) {
 
   let cardInCartStr = JSON.stringify(cardInCart);
 
-  let itemInCard = itemsStrArr.includes(cardInCartStr);
+  let includesCard = [
+    cardInCart.id,
+    cardInCart.images[0].color,
+    cardInCart.sizes[0],
+  ].join("");
+
+
+  const includesArr = items.map((item) =>
+    [item.id, item.images[0].color, item.sizes[0]].join("")
+  );
+
+  
+  let itemInCard = includesArr.includes(includesCard);
 
   function hadleClick() {
     itemInCard
@@ -232,8 +239,11 @@ function Item(props) {
                       </span>
                     )}
                   </div>
-                  <div className="item__info-add-to-card" onClick={hadleClick}
-                  data-test-id='add-cart-button'>
+                  <div
+                    className="item__info-add-to-card"
+                    onClick={hadleClick}
+                    data-test-id="add-cart-button"
+                  >
                     {itemInCard ? "remove to card" : "Add to card"}
                   </div>
                   <img src={Heart} alt="icon" />

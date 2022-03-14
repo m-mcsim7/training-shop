@@ -107,6 +107,7 @@
   /*height: 55vh;*/
   flex-grow: 1;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 .cart__item__wrapper {
   display: flex;
@@ -203,7 +204,7 @@
 .cart__item__basket {
   display: inline-block;
   position: relative;
-  left: 30px;
+  left: 10px;
   bottom: 5px;
 }
 .cart__item__basket img {
