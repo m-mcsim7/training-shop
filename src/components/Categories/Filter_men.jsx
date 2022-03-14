@@ -21,7 +21,6 @@ function Filter(props) {
   colorChekBoxIncludes.sort();
   const colorArr = ["color", colorChekBoxIncludes];
   const [color, setColor] = useState([]);
-  console.log(color.length);
 
   let newProductsColorChekBox = PRODUCTS[gender];
   const colorChekBoxId = PRODUCTS[gender].map((item, index) => ({
@@ -137,7 +136,6 @@ function Filter(props) {
     }
     setBrand(newBrand);
   };
-  console.log(brand);
   //----------------------------------------------------Price---------------------------------------
   const priceChekBox = PRODUCTS[gender].map((item, index) => item.price);
 
@@ -191,9 +189,6 @@ function Filter(props) {
     setPrice(newPrice);
   };
   //----------------------------------------------Удаляем чекбокс-------------------------------------------
-  //  const linkPage = Object.values(useParams());
-  //   console.log(linkPage)
-  console.log(gender);
 
   React.useEffect(() => {
     return () => {

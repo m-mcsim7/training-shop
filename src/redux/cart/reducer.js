@@ -8,8 +8,8 @@ const cartSlice = createSlice({
   },
   reducers: {
     setItemInCart: (state, action) => {
-      //Необходимо добавить кол-во товара перед пуш
-      state.itemsInCart.push(action.payload);
+       console.log(action.payload)
+      state.itemsInCart.push({...action.payload, quantity:1});
       
     },
     deleteItemFromCart: (state, action) => {
@@ -17,12 +17,24 @@ const cartSlice = createSlice({
         (item) => JSON.stringify(item) !== JSON.stringify(action.payload)
       );
     },
+
     addQuantity: (state, action) => {
-      // сделать функцию для увеличения кол-ва товара в корзине
+      state.itemsInCart.map(
+         (item) => JSON.stringify(item) === JSON.stringify(action.payload) ?
+         item.quantity += 1 
+      : item.quantity 
+      );
+    },
+    delQuantity: (state, action) => {
+      state.itemsInCart.map(
+         (item) => JSON.stringify(item) === JSON.stringify(action.payload) ?
+         item.quantity -= 1 
+      : item.quantity 
+      );
     },
   },
 });
 
-export const { setItemInCart, deleteItemFromCart, addQuantity } =
+export const { setItemInCart, deleteItemFromCart, addQuantity, delQuantity } =
   cartSlice.actions;
 export default cartSlice.reducer;

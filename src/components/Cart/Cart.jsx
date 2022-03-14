@@ -1,7 +1,7 @@
 import React from "react";
 //import { PRODUCTS } from "../../products/products.js";
 import { useSelector } from "react-redux";
-import { deleteItemFromCart, addQuantity } from "../../redux/cart/reducer";
+import { deleteItemFromCart, addQuantity, delQuantity } from "../../redux/cart/reducer";
 import { useDispatch } from "react-redux";
 
 import basket from "../../img/icons/item__basket.svg";
@@ -17,10 +17,10 @@ function Cart(props) {
   let totalPrice = items.reduce(
     (acc, item) =>
       (acc += item.discount
-        ? Math.round(
+        ? (Math.round(
             (item.price - (item.price / 100) * item.discount.slice(1, -1)) * 100
-          ) / 100
-        : item.price),
+          ) / 100) * item.quantity
+        : item.price * item.quantity),
     0
   );
 
@@ -88,18 +88,16 @@ function Cart(props) {
                         <span
                           className="cart__item__numder__remove"
                           data-test-id='minus-product'
-                          onClick={() => setQuantityItemInCard(quantityItemInCard - 1)} //уменьшение
+                          onClick={() => dispatch(delQuantity(item))}
                         >
                           -
                         </span>
-                        {quantityItemInCard > 0 ? quantityItemInCard : dispatch(deleteItemFromCart(item))}
+                        {item.quantity > 0 ? item.quantity : dispatch(deleteItemFromCart(item))}
 
                         <span
                           className="cart__item__numder__add"
                           data-test-id='plus-product'
-                          onClick={() =>
-                            setQuantityItemInCard(quantityItemInCard + 1)
-                          }
+                          onClick={() => dispatch(addQuantity(item))}
                         >
                           +
                         </span>
@@ -107,13 +105,13 @@ function Cart(props) {
                       <div className="cart__item__price">
                         ${" "}
                         {(item.discount
-                          ? Math.round(
+                          ? (Math.round(
                               (item.price -
                                 (item.price / 100) *
                                   item.discount.slice(1, -1)) *
                                 100
-                            ) / 100
-                          : item.price) * quantityItemInCard}
+                            ) / 100) * item.quantity
+                          : item.price) * item.quantity}
                       </div>
                       <div
                         className="cart__item__basket"

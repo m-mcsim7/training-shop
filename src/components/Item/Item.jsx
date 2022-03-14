@@ -91,6 +91,12 @@ function Item(props) {
 
   cardInCart.images = [card.images[activeColor]];
   cardInCart.sizes = [card.sizes[activeSise]];
+  cardInCart.quantity = 1;
+
+  console.log(cardInCart.images)
+  console.log(arrColorIncludes)
+  console.log(activeColor)
+  console.log(cardInCart.images)
 
   const items = useSelector((state) => state.cart.itemsInCart);
 
