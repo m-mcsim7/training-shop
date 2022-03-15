@@ -1,7 +1,11 @@
 import React from "react";
 //import { PRODUCTS } from "../../products/products.js";
 import { useSelector } from "react-redux";
-import { deleteItemFromCart, addQuantity, delQuantity } from "../../redux/cart/reducer";
+import {
+  deleteItemFromCart,
+  addQuantity,
+  delQuantity,
+} from "../../redux/cart/reducer";
 import { useDispatch } from "react-redux";
 
 import basket from "../../img/icons/item__basket.svg";
@@ -19,7 +23,9 @@ function Cart(props) {
       (acc += item.discount
         ? (Math.round(
             (item.price - (item.price / 100) * item.discount.slice(1, -1)) * 100
-          ) / 100) * item.quantity
+          ) /
+            100) *
+          item.quantity
         : item.price * item.quantity),
     0
   );
@@ -37,7 +43,7 @@ function Cart(props) {
       onClick={() =>
         isCartMenuVisible ? setIsCartMenuVisible(!isCartMenuVisible) : null
       }
-      data-test-id='cart'
+      data-test-id="cart"
     >
       <div
         className={
@@ -66,9 +72,7 @@ function Cart(props) {
             </ul>
             <div className="cart__item">
               {items.map((item, index) => (
-                <div className="cart__item__container"
-                data-test-id='cart-card'
-                >
+                <div className="cart__item__container" data-test-id="cart-card">
                   <div className="cart__item__wrapper" key={index}>
                     <div className="cart__item__img">
                       <img
@@ -87,16 +91,18 @@ function Cart(props) {
                       <div className="cart__number">
                         <span
                           className="cart__item__numder__remove"
-                          data-test-id='minus-product'
+                          data-test-id="minus-product"
                           onClick={() => dispatch(delQuantity(item))}
                         >
                           -
                         </span>
-                        {item.quantity > 0 ? item.quantity : dispatch(deleteItemFromCart(item))}
+                        {item.quantity > 0
+                          ? item.quantity
+                          : dispatch(deleteItemFromCart(item))}
 
                         <span
                           className="cart__item__numder__add"
-                          data-test-id='plus-product'
+                          data-test-id="plus-product"
                           onClick={() => dispatch(addQuantity(item))}
                         >
                           +
@@ -105,17 +111,18 @@ function Cart(props) {
                       <div className="cart__item__price">
                         ${" "}
                         {item.discount
-                          ? (Math.round(
+                          ? ((Math.round(
                               (item.price -
                                 (item.price / 100) *
                                   item.discount.slice(1, -1)) *
-                                100
-                            ) / 100) * item.quantity
-                          : ((item.price) * item.quantity).toFixed(2)}
+                                100) /
+                              100) *
+                            item.quantity).toFixed(2)
+                          : (item.price * item.quantity).toFixed(2)}
                       </div>
                       <div
                         className="cart__item__basket"
-                        data-test-id='remove-product'
+                        data-test-id="remove-product"
                         onClick={() => dispatch(deleteItemFromCart(item))}
                       >
                         <img src={basket} alt="icon" />
@@ -127,12 +134,11 @@ function Cart(props) {
               ))}
             </div>
             <div className="cart_total">
-              Total <span>$ 
-                 {totalPrice.toFixed(2)}
-                 {/*{Math.round(totalPrice * 100) / 100}*/}
-                 
-                 </span>
-              
+              Total{" "}
+              <span>
+                ${totalPrice.toFixed(2)}
+                {/*{Math.round(totalPrice * 100) / 100}*/}
+              </span>
             </div>
             <div className="button__further">Further</div>
             <div
