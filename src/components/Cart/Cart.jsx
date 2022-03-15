@@ -111,7 +111,7 @@ function Cart(props) {
                                   item.discount.slice(1, -1)) *
                                 100
                             ) / 100) * item.quantity
-                          : (item.price) * item.quantity}
+                          : ((item.price) * item.quantity).toFixed(2)}
                       </div>
                       <div
                         className="cart__item__basket"
@@ -128,7 +128,8 @@ function Cart(props) {
             </div>
             <div className="cart_total">
               Total <span>$ 
-                 {Math.round(totalPrice * 100) / 100}
+                 {totalPrice.toFixed(2)}
+                 {/*{Math.round(totalPrice * 100) / 100}*/}
                  
                  </span>
               
