@@ -104,14 +104,14 @@ function Cart(props) {
                       </div>
                       <div className="cart__item__price">
                         ${" "}
-                        {(item.discount
+                        {item.discount
                           ? (Math.round(
                               (item.price -
                                 (item.price / 100) *
                                   item.discount.slice(1, -1)) *
                                 100
                             ) / 100) * item.quantity
-                          : item.price) * item.quantity}
+                          : (item.price) * item.quantity}
                       </div>
                       <div
                         className="cart__item__basket"
