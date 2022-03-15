@@ -88,36 +88,48 @@ function Cart(props) {
                         </p>
                         <p className="cart__item__color">{item.sizes[0]}</p>
                       </div>
+
+                      <div className="cart_price_wrapper">
                       <div className="cart__number">
-                        <span
+                        <div
                           className="cart__item__numder__remove"
                           data-test-id="minus-product"
                           onClick={() => dispatch(delQuantity(item))}
                         >
                           -
-                        </span>
-                        {item.quantity > 0
-                          ? item.quantity
-                          : dispatch(deleteItemFromCart(item))}
+                        </div>
+                        <div>
+                          {item.quantity > 0
+                            ? item.quantity
+                            : dispatch(deleteItemFromCart(item))}
+                        </div>
 
-                        <span
+                        <div
                           className="cart__item__numder__add"
                           data-test-id="plus-product"
                           onClick={() => dispatch(addQuantity(item))}
                         >
                           +
-                        </span>
+                        </div>
                       </div>
-                      <div className="cart__item__price">
+
+
+
+
+<div className="cart_item_price_total">
+<div className="cart__item__price">
                         ${" "}
                         {item.discount
-                          ? ((Math.round(
-                              (item.price -
-                                (item.price / 100) *
-                                  item.discount.slice(1, -1)) *
-                                100) /
-                              100) *
-                            item.quantity).toFixed(2)
+                          ? (
+                              (Math.round(
+                                (item.price -
+                                  (item.price / 100) *
+                                    item.discount.slice(1, -1)) *
+                                  100
+                              ) /
+                                100) *
+                              item.quantity
+                            ).toFixed(2)
                           : (item.price * item.quantity).toFixed(2)}
                       </div>
                       <div
@@ -127,6 +139,12 @@ function Cart(props) {
                       >
                         <img src={basket} alt="icon" />
                       </div>
+
+</div>
+</div>
+
+
+
                     </div>
                   </div>
                   <div className="cart__item__line"></div>

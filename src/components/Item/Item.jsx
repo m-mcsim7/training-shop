@@ -238,7 +238,7 @@ function Item(props) {
                 <div className="item__info-line"></div>
                 <div className="item__info-cost">
                   <div className="item__info-price">
-                    ${" "}
+                    ${""}
                     {card.discount
                       ? Math.round(
                           (card.price -
@@ -248,7 +248,7 @@ function Item(props) {
                       : card.price}
                     {card.discount && (
                       <span className="item__info-price-sale">
-                        $ {card.price}
+                        ${card.price}
                       </span>
                     )}
                   </div>
