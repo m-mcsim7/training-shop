@@ -15,9 +15,8 @@ import "./Cart.css";
 
 function Cart(props) {
   const [isCartMenuVisible, setIsCartMenuVisible] = props.menuVisible;
-
   const items = useSelector((state) => state.cart.itemsInCart);
-
+  
   let totalPrice = items.reduce(
     (acc, item) =>
       (acc += item.discount
@@ -90,61 +89,54 @@ function Cart(props) {
                       </div>
 
                       <div className="cart_price_wrapper">
-                      <div className="cart__number">
-                        <div
-                          className="cart__item__numder__remove"
-                          data-test-id="minus-product"
-                          onClick={() => dispatch(delQuantity(item))}
-                        >
-                          -
-                        </div>
-                        <div>
-                          {item.quantity > 0
-                            ? item.quantity
-                            : dispatch(deleteItemFromCart(item))}
+                        <div className="cart__number">
+                          <div
+                            className="cart__item__numder__remove"
+                            data-test-id="minus-product"
+                            onClick={() => dispatch(delQuantity(item))}
+                          >
+                            -
+                          </div>
+                          <div>
+                            {item.quantity > 0
+                              ? item.quantity
+                              : dispatch(deleteItemFromCart(item))}
+                          </div>
+
+                          <div
+                            className="cart__item__numder__add"
+                            data-test-id="plus-product"
+                            onClick={() => dispatch(addQuantity(item))}
+                          >
+                            +
+                          </div>
                         </div>
 
-                        <div
-                          className="cart__item__numder__add"
-                          data-test-id="plus-product"
-                          onClick={() => dispatch(addQuantity(item))}
-                        >
-                          +
+                        <div className="cart_item_price_total">
+                          <div className="cart__item__price">
+                            ${" "}
+                            {item.discount
+                              ? (
+                                  (Math.round(
+                                    (item.price -
+                                      (item.price / 100) *
+                                        item.discount.slice(1, -1)) *
+                                      100
+                                  ) /
+                                    100) *
+                                  item.quantity
+                                ).toFixed(2)
+                              : (item.price * item.quantity).toFixed(2)}
+                          </div>
+                          <div
+                            className="cart__item__basket"
+                            data-test-id="remove-product"
+                            onClick={() => dispatch(deleteItemFromCart(item))}
+                          >
+                            <img src={basket} alt="icon" />
+                          </div>
                         </div>
                       </div>
-
-
-
-
-<div className="cart_item_price_total">
-<div className="cart__item__price">
-                        ${" "}
-                        {item.discount
-                          ? (
-                              (Math.round(
-                                (item.price -
-                                  (item.price / 100) *
-                                    item.discount.slice(1, -1)) *
-                                  100
-                              ) /
-                                100) *
-                              item.quantity
-                            ).toFixed(2)
-                          : (item.price * item.quantity).toFixed(2)}
-                      </div>
-                      <div
-                        className="cart__item__basket"
-                        data-test-id="remove-product"
-                        onClick={() => dispatch(deleteItemFromCart(item))}
-                      >
-                        <img src={basket} alt="icon" />
-                      </div>
-
-</div>
-</div>
-
-
-
                     </div>
                   </div>
                   <div className="cart__item__line"></div>

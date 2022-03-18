@@ -1,17 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { render } from "@testing-library/react";
 
 const cartSlice = createSlice({
   name: "cart",
   initialState: {
-    itemsInCart: [],
+    itemsInCart: [],    
   },
   reducers: {
     setItemInCart: (state, action) => {
-      console.log(action.payload);
-      
       state.itemsInCart.push({ ...action.payload, quantity: 1 });
     },
+
     deleteItemFromCart: (state, action) => {
       state.itemsInCart = state.itemsInCart.filter(
         (item) => JSON.stringify(item) !== JSON.stringify(action.payload)
@@ -33,11 +31,11 @@ const cartSlice = createSlice({
       );
     },
     removeToCard: (state, action) => {
-    state.itemsInCart = state.itemsInCart.filter(
-      (item) => [item.id, item.images[0].color, item.sizes[0]].join("") !== action.payload
-    );
-   // console.log(action.payload);
-   // console.log(includesArr);
+      state.itemsInCart = state.itemsInCart.filter(
+        (item) =>
+          [item.id, item.images[0].color, item.sizes[0]].join("") !==
+          action.payload
+      );
     },
   },
 });
