@@ -1,26 +1,32 @@
 import React from "react";
 import { useEffect } from "react";
+import { useSelector } from "react-redux";
 import { useLocation } from "react-router-dom";
-
-import Item_card from "../Item_card/Item_card";
-//import Filter from "./Filter";
 import Filter_men from "./Filter_men";
 import { Link } from "react-router-dom";
 
 import Share from "../../img/icons/Share.svg";
-//import view1 from "../../img/icons/view1.svg"
-//import view2 from "../../img/icons/view2.svg"
-import down from "../../img/icons/down.svg";
-import further from "../../img/icons/item__further.svg";
-//import filter from "../../img/icons/filter.svg"
-
 import "./Categories.css";
 
 
 
 
 
+
 function Categories(props) {
+
+
+   const productsAPi = useSelector((state) => state.productsApiSlice.productsApi);
+
+   function isEmpty(obj) {
+      for (let key in obj) {
+        // если тело цикла начнет выполняться - значит в объекте есть свойства
+        return false;
+      }
+      return true;
+    }
+
+
 
    const { pathname } = useLocation();
 
@@ -54,7 +60,7 @@ function Categories(props) {
         </div>
       </div>
 
-        <Filter_men product_item={props.product_type} />
+      {!isEmpty(productsAPi) && <Filter_men product_item={props.product_type} />}
 
     </div>
   );

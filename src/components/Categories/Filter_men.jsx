@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import "./filter.css";
-import { PRODUCTS } from "../../products/products.js";
+//import { PRODUCTS } from "../../products/products.js";
 import Item_card_filter from "./Item_card_filter";
+import { useSelector } from "react-redux";
 
 import view1 from "../../img/icons/view1.svg";
 import view2 from "../../img/icons/view2.svg";
@@ -12,6 +13,10 @@ import further from "../../img/icons/item__further.svg";
 
 function Filter(props) {
   let gender = props.product_item;
+  const productsAPi = useSelector((state) => state.productsApiSlice.productsApi);
+  let PRODUCTS = productsAPi
+
+
 
   //----------------------------------------------------color---------------------------------------
   const colorChekBox = PRODUCTS[gender].map((item, index) =>

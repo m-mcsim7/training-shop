@@ -3,17 +3,36 @@ import { Link } from "react-router-dom";
 
 import Rating from "./Rating";
 import { PRODUCTS } from "../../products/products.js";
-import { particularsMenu } from "../../products/products.js";
+import { useGetProductsQuery } from "../../redux/productsApi/productsApi";
 
 function Item_card(props) {
+  //--------------------------------------API----------------------------------------------------
+  const { data = {} } = useGetProductsQuery();
+  //if (isLoading) return <h1>Loading....</h1>
+  //  console.log(data[product_type]);
+
+//  const [api, setApi] = React.useState({});
+
+//  React.useEffect(() => {
+//    fetch("https://training.cleverland.by/shop/products")
+//      .then((resp) => resp.json())
+//      .then((json) => {
+//        setApi(json);
+//      });
+//  }, []);
+
+  //---------------------------------------------------------------------------------------
+
   let item = props.product_item;
   let newProducts;
-  props.newProducts === undefined
-    ? (newProducts = PRODUCTS[item])
-    : (newProducts = props.newProducts);
+    props.newProducts === undefined
+      ? (newProducts = PRODUCTS[item])
+      : (newProducts = props.newProducts);
+
+
   return (
     <div className="sort__items">
-      {newProducts.map((card, index) => (
+      {newProducts!==undefined && newProducts.map((card, index) => (
         <Link
         data-test-id={`clothes-card-${item}`}
           to={`/${item}/${card.id}`}

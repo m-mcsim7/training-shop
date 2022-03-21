@@ -1,21 +1,27 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import { Provider } from "react-redux";
-import { store } from './redux/idex'
+import { store } from "./redux/idex";
 
 import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
 import Categories from "./components/Categories/Categories";
 import Item from "./components/Item/Item.jsx";
 import Footer from "./components/Footer/Footer";
+import { useGetProductsQuery } from "./redux/productsApi/productsApi"
 
 import "./App.css";
 
 function App() {
+
+   //const { data = {} } = useGetProductsQuery();
+   //console.log(data)
+
   return (
     <Provider store={store}>
       <div className="App" data-test-id="app">
         <Header />
+        
         <Routes>
           <Route exact path="/" element={<Main />} />
           <Route

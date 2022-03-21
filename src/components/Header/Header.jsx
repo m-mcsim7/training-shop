@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-import Cart from '../Cart/Cart'
+import Cart from "../Cart/Cart";
 
 import Search from "../../img/icons/Search.svg";
 import Earth from "../../img/icons/Earth.svg";
@@ -11,17 +11,33 @@ import "./Header.css";
 
 import Navigation from "./Navigation";
 import SocialIcons from "./SocialIcons";
+import { useGetProductsQuery } from "../../redux/productsApi/productsApi";
+
+import { addProductsApiInStore } from "../../redux/productsApi/reducer";
+
+import { useDispatch } from "react-redux";
 
 function Header() {
+   const dispatch = useDispatch();
+   const { data = {} } = useGetProductsQuery();
+
+   useEffect(() => {
+      dispatch(addProductsApiInStore(data))
+   }, [data])
+
+   console.log(data)
+
+
+
   const items = useSelector((state) => state.cart.itemsInCart);
-  let itemsLength = items.length
+  let itemsLength = items.length;
 
   const [menuActive, setMenuActive] = useState(false);
   menuActive
     ? (document.body.style.overflow = "hidden")
     : (document.body.style.overflow = "scroll");
 
-    const [isCartMenuVisible, setIsCartMenuVisible] = useState(false)
+  const [isCartMenuVisible, setIsCartMenuVisible] = useState(false);
 
   return (
     <div
@@ -30,8 +46,8 @@ function Header() {
         menuActive ? setMenuActive(!menuActive) : setMenuActive(menuActive)
       }
     >
-      {/*{isCartMenuVisible && <Cart menuVisible={[isCartMenuVisible, setIsCartMenuVisible]}/>}*/}
-       <Cart menuVisible={[isCartMenuVisible, setIsCartMenuVisible]}/>
+       
+      <Cart menuVisible={[isCartMenuVisible, setIsCartMenuVisible]} />
       <div className="container">
         <div className="header__top top">
           <ul className="top__contacts">
@@ -92,9 +108,10 @@ function Header() {
                 <img src={Human} alt="icon" />
               </a>
             </li>
-            <li className="main__icons-basket"
-            data-test-id='cart-button'
-            onClick={() => setIsCartMenuVisible(!isCartMenuVisible)}
+            <li
+              className="main__icons-basket"
+              data-test-id="cart-button"
+              onClick={() => setIsCartMenuVisible(!isCartMenuVisible)}
             >
               {itemsLength > 0 ? <span>{itemsLength}</span> : null}
             </li>
