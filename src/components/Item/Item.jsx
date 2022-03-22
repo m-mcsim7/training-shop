@@ -14,6 +14,7 @@ import Slider from "./Slider";
 import Slider_R from "./Slider_R";
 import Rating from "../Item_card/Rating";
 
+
 import Share from "../../img/icons/Share.svg";
 
 import Size_guide from "../../img/icons/size_guide.svg";

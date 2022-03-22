@@ -1,0 +1,13 @@
+.error{
+   border: 1px solid rgb(0, 0, 0);
+   height: 40px;
+   max-width: 1110px;
+   position: relative;
+   z-index: 100;
+   margin: 0 auto;
+   background-color: rgb(252, 140, 140);
+}
+.error h2{
+   font-size: 20px;
+   line-height: 40px;
+}

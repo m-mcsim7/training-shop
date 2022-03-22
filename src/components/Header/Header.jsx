@@ -16,10 +16,12 @@ import { useGetProductsQuery } from "../../redux/productsApi/productsApi";
 import { addProductsApiInStore } from "../../redux/productsApi/reducer";
 
 import { useDispatch } from "react-redux";
+import Loading from "../Loading/Loading";
+import Error from "../Error/Error";
 
 function Header() {
    const dispatch = useDispatch();
-   const { data = {} } = useGetProductsQuery();
+   const { data = {}, isLoading, isError } = useGetProductsQuery();
 
    useEffect(() => {
       dispatch(addProductsApiInStore(data))
@@ -129,6 +131,8 @@ function Header() {
           </ul>
         </div>
       </div>
+      {isLoading && <Loading/>}
+      {isError && <Error/>}
     </div>
   );
 }
