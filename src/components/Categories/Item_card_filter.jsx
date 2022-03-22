@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 import Rating from "../../components/Item_card/Rating";
 import { PRODUCTS } from "../../products/products.js";
+import { useGetProductsQuery } from "../../redux/productsApi/productsApi";
 //import { particularsMenu } from "../../products/products.js";
 //import { particularsMenu } from "../../products/particularsMenu.js";
 
@@ -10,9 +11,10 @@ function Item_card_filter(props) {
   let item = props.product_item;
   let newProducts;
 
+  const { data = {} } = useGetProductsQuery();
 
     (props.newProductsIncludes.length  === 0) && (props.arrLengthZero == 4)
-    ? (newProducts = PRODUCTS[item])
+    ? (newProducts = data[item])
     : (newProducts = props.newProductsIncludes);
 
 

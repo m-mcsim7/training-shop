@@ -26,7 +26,7 @@ function Item_card(props) {
   let item = props.product_item;
   let newProducts;
     props.newProducts === undefined
-      ? (newProducts = PRODUCTS[item])
+      ? (newProducts = data[item])
       : (newProducts = props.newProducts);
 
 

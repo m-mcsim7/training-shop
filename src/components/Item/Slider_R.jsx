@@ -39,7 +39,7 @@ function Slider_R(props) {
         570: {
           slidesPerView: 2,
         },
-        400: {
+        360: {
           slidesPerView: 1,
         },
       }}

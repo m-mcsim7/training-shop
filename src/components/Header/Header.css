@@ -295,6 +295,11 @@ body {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 400px) {
+   .main__icons{
+      padding-left: 10px;
+   }
+}
 @media (max-width: 935px) {
   .main__navigation {
     position: fixed;
