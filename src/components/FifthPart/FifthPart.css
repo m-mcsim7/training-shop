@@ -1,21 +1,21 @@
- /*font-family: 'Inter', sans-serif;
+/*font-family: 'Inter', sans-serif;
  font-family: 'Playfair Display SC', serif;
  font-family: 'Spartan', sans-serif;*/
- 
- /*--------------------*/
- body {
-   font-family: "Spartan", sans-serif;
-   color: #121212;
- }
- .wrapper {
- }
- .header {
- }
- .container {
-   max-width: 1280px;
-   margin: 0 auto;
- }
- .bigbanner {
+
+/*--------------------*/
+body {
+  font-family: "Spartan", sans-serif;
+  color: #121212;
+}
+.wrapper {
+}
+.header {
+}
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.bigbanner {
 }
 .container {
 }
@@ -35,7 +35,6 @@
   z-index: 2;
 }
 
-
 .bigbanner_man {
   position: absolute;
   top: 45px;
@@ -44,17 +43,17 @@
   z-index: 2;
 }
 @media (max-width: 1130px) {
-   .bigbanner_woman {
-      left: 2%;
-   }
+  .bigbanner_woman {
+    left: 2%;
+  }
 }
 @media (max-width: 950px) {
-   .bigbanner_woman {
-      display: none;
-   }
-   .bigbanner_man {
-      display: none;
-   }
+  .bigbanner_woman {
+    display: none;
+  }
+  .bigbanner_man {
+    display: none;
+  }
 }
 .bigbanner__contain {
   position: absolute;
@@ -65,11 +64,11 @@
   border-radius: 4px;
   margin: 60px auto;
 }
-@media (max-width: 585px){
-   .bigbanner__contain{
-      width: 340px;
-      left: calc(50% - 170px);
-   }
+@media (max-width: 585px) {
+  .bigbanner__contain {
+    width: 340px;
+    left: calc(50% - 170px);
+  }
 }
 .bigbanner__subtitle {
   margin-top: 80px;
@@ -110,10 +109,17 @@
   text-align: center;
   opacity: 0.4;
 }
+.bigbanner__email-error {
+  color: #ea1e63;
+  text-align: center;
+  margin-bottom: -24px;
+  line-height: 24px;
+}
+
 .bigbanner__button {
   text-transform: uppercase;
   font-size: 16px;
-  font-weight: 500;
+  font-weight:500 ;
   line-height: 18px;
   text-align: center;
   display: block;
@@ -122,12 +128,17 @@
   width: 340px;
   background: rgba(18, 18, 18, 1);
   margin: 24px auto 0 auto;
+  transition: all 0.5 linear;
+  
 }
-@media (max-width: 585px){
-   .bigbanner__email{
-      width: 200px;
-   }
-   .bigbanner__button{
-      width: 200px;
-   }
+.bigbanner__button:disabled{
+   opacity: 0.5;
+}
+@media (max-width: 585px) {
+  .bigbanner__email {
+    width: 200px;
+  }
+  .bigbanner__button {
+    width: 200px;
+  }
 }
