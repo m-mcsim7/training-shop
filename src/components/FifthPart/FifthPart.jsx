@@ -11,14 +11,17 @@ function FifthPart() {
     "E-mail не может быть пустым"
   );
   const [formValid, setFormValid] = React.useState(false);
-  const [addEmail, { isLoading, isError }] = useAddEmailMutation();
+  const [addEmail, { isError, isLoading }] = useAddEmailMutation();
 
+  const mail = {
+     mail: email,
+  }
+console.log(mail)
   const handleAddEmail = async () => {
-    if (email) {
-      await addEmail({ mail: email }).unwrap();
-      setEmail('')
-    }
+    await addEmail(JSON.parse(JSON.stringify(mail))).unwrap();
   };
+console.log('isLoading', isLoading)
+console.log('isError', isError)
 
   React.useEffect(() => {
     if (emailError) {
@@ -68,13 +71,20 @@ function FifthPart() {
                 {emailDirty && emailError && (
                   <div className="bigbanner__email-error">{emailError}</div>
                 )}
-                <button 
-                className="bigbanner__button" 
-                disabled={!formValid}
-                onClick={handleAddEmail}
+                <button
+                  className="bigbanner__button"
+                  disabled={!formValid}
+                  onClick={(e) => {
+                    handleAddEmail();
+                    e.preventDefault();
+                  }}
                 >
                   Subscribe
                 </button>
+                {isLoading && (
+                  <div className="bigbanner__email-error">Loading..</div>
+                )}
+                {isError && <div className="bigbanner__email-error">Error</div>}
               </form>
             </div>
           </div>

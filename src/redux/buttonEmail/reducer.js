@@ -7,7 +7,7 @@ export const emailApi = createApi({
       addEmail: build.mutation({
          query: (body) => ({
             method: 'POST',
-            body
+            body,
          }),
       })
    })

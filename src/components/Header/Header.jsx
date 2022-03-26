@@ -27,9 +27,6 @@ function Header() {
       dispatch(addProductsApiInStore(data))
    }, [data])
 
-   console.log(data)
-
-
 
   const items = useSelector((state) => state.cart.itemsInCart);
   let itemsLength = items.length;
