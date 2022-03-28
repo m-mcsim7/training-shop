@@ -1,5 +1,6 @@
-import React from 'react';
+import React from "react";
 import { Link } from "react-router-dom";
+import { useAddEmailMutation } from "../../redux/buttonEmail/reducer";
 import SocialIcons from "../../components/Header/SocialIcons";
 
 import pay1 from "../../img/icons/pay/pay1.svg";
@@ -13,31 +14,104 @@ import pay7 from "../../img/icons/pay/pay7.svg";
 import "./Footer.css";
 
 function Footer() {
-  return <div>
-           <footer className="footer" >
+  const [email, setEmail] = React.useState("");
+  const [emailDirty, setEmailDirty] = React.useState(false);
+  const [emailError, setEmailError] = React.useState(
+    "E-mail не может быть пустым"
+  );
+  const [formValid, setFormValid] = React.useState(false);
+  const [addEmail, { isLoading, error, isError }] = useAddEmailMutation();
+
+  const mailAdd = {
+    mail: email,
+  };
+  const handleAddEmail = async () => {
+    await addEmail(mailAdd);
+  };
+
+  React.useEffect(() => {
+    if (emailError) {
+      setFormValid(false);
+    } else {
+      setFormValid(true);
+    }
+  }, [emailError]);
+
+  const emailHandler = (e) => {
+    setEmail(e.target.value);
+    const re =
+      /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+    if (!re.test(String(e.target.value).toLocaleLowerCase())) {
+      setEmailError("Некорректный e-mail");
+    } else {
+      setEmailError("");
+    }
+  };
+
+  const blurHandler = () => setEmailDirty(true);
+  return (
+    <div>
+      <footer className="footer">
         <div className="container">
           <div className="footer__wrapper">
             <div className="footer__input">
               <div className="footer__input-text">BE IN TOUCH WITH US:</div>
-              <div className="footer__input-input">
-                <input
-                  className="footer__input-email"
-                  type="email"
-                  name="email-address"
-                  placeholder="Enter your email"
-                />
-                <button className="footer__input-button">Join Us</button>
-              </div>
+
+                <form className="footer__input-input">
+                  <input
+                    onBlur={(e) => blurHandler(e)}
+                    value={email}
+                    onChange={(e) => emailHandler(e)}
+                    className="footer__input-email"
+                    type="email"
+                    name="email"
+                    placeholder="Enter your email"
+                  />
+                {emailDirty && emailError && (
+                  <div className="bigbanner__email-error-footer">{emailError}</div>
+                )}
+                {isError &&
+                  (error.originalStatus !== 200 ? (
+                    <div className="bigbanner__email-error-footer">
+                      Ошибка при отправке почты
+                    </div>
+                  ) : (
+                    <div className="bigbanner__email-notEerror-footer">
+                      Почта отправлена успешно
+                    </div>
+                  ))}
+                  <button 
+                  className={
+                     isLoading
+                       ? "footer__input-button loading-f"
+                       : "footer__input-button"
+                   }
+                   disabled={!formValid}
+                   onClick={(e) => {
+                     handleAddEmail();
+                     e.preventDefault();
+                   }}
+                  >Join Us</button>
+                </form>
+
               <SocialIcons />
             </div>
             <div className="footer__rows">
               <ul className="footer__column">
                 <li>Categories</li>
-                <li><Link to="/men">Men</Link></li>
-                <li><Link to="/women">Women</Link></li>
-                <li><Link to="/accessories">Accessories</Link></li>
-                <li><Link to="/beauty">Beauty</Link></li>
-               </ul>
+                <li>
+                  <Link to="/men">Men</Link>
+                </li>
+                <li>
+                  <Link to="/women">Women</Link>
+                </li>
+                <li>
+                  <Link to="/accessories">Accessories</Link>
+                </li>
+                <li>
+                  <Link to="/beauty">Beauty</Link>
+                </li>
+              </ul>
               <ul className="footer__column">
                 <li>Infomation</li>
                 <li>About Us</li>
@@ -61,22 +135,41 @@ function Footer() {
               </ul>
             </div>
             <div className="footer__pay">
-              <div className='footer__copyright'>Copyright © 2032 all rights reserved</div>
-              <div className="footer__pay-line">
-                 <div><img src={pay1} alt="pay" /></div>
-                 <div><img src={pay2} alt="pay" /></div>
-                 <div><img src={pay3} alt="pay" /></div>
-                 <div><img src={pay4} alt="pay" /></div>
-                 <div><img src={pay5} alt="pay" /></div>
-                 <div><img src={pay6} alt="pay" /></div>
-                 <div><img src={pay7} alt="pay" /></div>
+              <div className="footer__copyright">
+                Copyright © 2032 all rights reserved
               </div>
-              <div className='footer__link'><a href="https://clevertec.ru/">Clevertec.ru/training</a></div>
+              <div className="footer__pay-line">
+                <div>
+                  <img src={pay1} alt="pay" />
+                </div>
+                <div>
+                  <img src={pay2} alt="pay" />
+                </div>
+                <div>
+                  <img src={pay3} alt="pay" />
+                </div>
+                <div>
+                  <img src={pay4} alt="pay" />
+                </div>
+                <div>
+                  <img src={pay5} alt="pay" />
+                </div>
+                <div>
+                  <img src={pay6} alt="pay" />
+                </div>
+                <div>
+                  <img src={pay7} alt="pay" />
+                </div>
+              </div>
+              <div className="footer__link">
+                <a href="https://clevertec.ru/">Clevertec.ru/training</a>
+              </div>
             </div>
           </div>
         </div>
       </footer>
-  </div>;
+    </div>
+  );
 }
 
 export default Footer;

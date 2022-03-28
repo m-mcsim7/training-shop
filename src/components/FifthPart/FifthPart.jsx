@@ -11,17 +11,14 @@ function FifthPart() {
     "E-mail не может быть пустым"
   );
   const [formValid, setFormValid] = React.useState(false);
-  const [addEmail, { isError, isLoading }] = useAddEmailMutation();
+  const [addEmail, { isLoading, error, isError }] = useAddEmailMutation();
 
-  const mail = {
-     mail: email,
-  }
-console.log(mail)
-  const handleAddEmail = async () => {
-    await addEmail(JSON.parse(JSON.stringify(mail))).unwrap();
+  const mailAdd = {
+    mail: email,
   };
-console.log('isLoading', isLoading)
-console.log('isError', isError)
+  const handleAddEmail = async () => {
+    await addEmail(mailAdd);
+  };
 
   React.useEffect(() => {
     if (emailError) {
@@ -71,8 +68,22 @@ console.log('isError', isError)
                 {emailDirty && emailError && (
                   <div className="bigbanner__email-error">{emailError}</div>
                 )}
+                {isError &&
+                  (error.originalStatus !== 200 ? (
+                    <div className="bigbanner__email-error">
+                      Ошибка при отправке почты
+                    </div>
+                  ) : (
+                    <div className="bigbanner__email-notEerror">
+                      Почта отправлена успешно
+                    </div>
+                  ))}
                 <button
-                  className="bigbanner__button"
+                  className={
+                    isLoading
+                      ? "bigbanner__button loading"
+                      : "bigbanner__button"
+                  }
                   disabled={!formValid}
                   onClick={(e) => {
                     handleAddEmail();
@@ -81,10 +92,6 @@ console.log('isError', isError)
                 >
                   Subscribe
                 </button>
-                {isLoading && (
-                  <div className="bigbanner__email-error">Loading..</div>
-                )}
-                {isError && <div className="bigbanner__email-error">Error</div>}
               </form>
             </div>
           </div>

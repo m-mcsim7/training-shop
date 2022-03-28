@@ -56,12 +56,14 @@
 }
 
 .footer__input-button {
+   padding-left: 10px;
+  position: relative;
   display: block;
   margin-left: 12px;
   height: 32px;
   width: 108px;
   border: 1px solid #ffffff;
-  background-color: transparent;
+  background: #181818;
   color: #ffffff;
   opacity: 0.9;
   font-size: 12px;
@@ -72,6 +74,45 @@
   text-transform: uppercase;
   font-family: "Spartan", sans-serif;
 }
+.footer__input-button:disabled {
+  background: #887d7d;
+  border: 0px solid #ffffff;
+}
+.footer__input-button.loading-f::after {
+   content: "";
+   border: 3px solid #ea1e63;
+   position: absolute;
+   width: 20px;
+   border-top-color: transparent;
+   height: 20px;
+   border-radius: 50%;
+   top: 50%;
+   left: 15%;
+   transform: translate(-50%, -50%);
+   animation: loading 1s infinite linear;
+ }
+ @keyframes loading {
+   to {
+     transform: translate(-50%, -50%) rotate(360deg);
+   }
+ }
+.bigbanner__email-error-footer {
+  position: absolute;
+  color: #ea1e63;
+  text-align: center;
+  top: -30px;
+  /*margin-bottom: -24px;*/
+  line-height: 24px;
+}
+.bigbanner__email-notEerror-footer {
+  position: absolute;
+  top: -30px;
+  color: #181818;
+  text-align: center;
+  /*margin-bottom: -24px;*/
+  line-height: 24px;
+}
+
 .footer__input-social {
   width: 108px;
   height: 18px;
@@ -123,13 +164,13 @@
 .footer__column li:last-child {
   padding-bottom: 40px;
 }
-@media (max-width: 550px){
-   .footer__rows ul:first-child{
-      display: none;
-   }
-   .footer__rows ul:nth-child(3){
-      display: none;
-   }
+@media (max-width: 550px) {
+  .footer__rows ul:first-child {
+    display: none;
+  }
+  .footer__rows ul:nth-child(3) {
+    display: none;
+  }
 }
 .footer__pay {
   max-width: 1280px;
