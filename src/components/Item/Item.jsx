@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
-//import { PRODUCTS } from "../../products/products.js";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
@@ -8,12 +7,9 @@ import { useSelector } from "react-redux";
 
 import { setItemInCart, removeToCard } from "../../redux/cart/reducer";
 
-//import { useGetProductsQuery } from "../../redux/productsApi/productsApi";
-
 import Slider from "./Slider";
 import Slider_R from "./Slider_R";
 import Rating from "../Item_card/Rating";
-
 
 import Share from "../../img/icons/Share.svg";
 
@@ -36,9 +32,9 @@ import Scale from "../../img/icons/scales.svg";
 import Review from "../../img/icons/review.svg";
 
 import "./Item.css";
+import ModalReview from "../ModalReview/ModalReview";
 
 function Item(props) {
-   
   function isEmpty(obj) {
     for (let key in obj) {
       // если тело цикла начнет выполняться - значит в объекте есть свойства
@@ -50,7 +46,7 @@ function Item(props) {
   const productsAPi = useSelector(
     (state) => state.productsApiSlice.productsApi
   );
-  
+
   const { pathname } = useLocation();
 
   useEffect(() => {
@@ -156,6 +152,11 @@ function Item(props) {
       ? dispatch(removeToCard(includesCard))
       : dispatch(setItemInCart(cardInCart));
   }
+  const [activModalReview, setActivModalReview] = React.useState();
+  activModalReview
+    ? (document.body.style.overflow = "hidden")
+    : (document.body.style.overflow = "scroll");
+
   return (
     <div data-test-id={`product-page-${props.product_type}`}>
       {!isEmpty(productsAPi) && (
@@ -356,11 +357,18 @@ function Item(props) {
                             <Rating rating={card.rating} />
                             <p>{card.reviews.length} Reviews</p>
                           </div>
-                          <p>
+                          <p
+                            className="item__write-review"
+                            onClick={() => setActivModalReview(true)}
+                          >
                             <img src={Review} alt="icon" /> Write a review
                           </p>
                         </div>
-
+                        <ModalReview
+                          active={activModalReview}
+                          setActive={setActivModalReview}
+                          id={cardID}
+                        />
                         {card.reviews.map((item, index) => (
                           <div className="item__review" key={index}>
                             <div className="item__review-title">
