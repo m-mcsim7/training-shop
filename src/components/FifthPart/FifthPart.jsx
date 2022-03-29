@@ -43,7 +43,7 @@ function FifthPart() {
 
   
   isError &&
-  (error.originalStatus !== 200 ? setFormValid(true) : setFormValid(false))
+  (error.originalStatus !== 200 ? setFormValid(false) : setFormValid(true))
 
   return (
     <div>
