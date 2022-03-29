@@ -90,7 +90,7 @@ function FifthPart() {
                       ? "bigbanner__button loading"
                       : "bigbanner__button"
                   }
-                  disabled={!formValid || !isError}
+                  disabled={!formValid}
                   onClick={(e) => {
                     handleAddEmail();
                     e.preventDefault();
