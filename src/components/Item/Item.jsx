@@ -358,6 +358,7 @@ function Item(props) {
                             <p>{card.reviews.length} Reviews</p>
                           </div>
                           <p
+                          data-test-id="review-button"
                             className="item__write-review"
                             onClick={() => setActivModalReview(true)}
                           >

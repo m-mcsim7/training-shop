@@ -72,6 +72,7 @@ function ModalReview({ active, setActive, id }) {
 
   return (
     <div
+    data-test-id="review-modal"
       className={active ? "modal active" : "modal"}
       onClick={() => setActive(false)}
     >
@@ -143,6 +144,7 @@ function ModalReview({ active, setActive, id }) {
             </div>
           </div>
           <input
+          data-test-id="review-name-field"
             value={name}
             className="modal__name"
             type="text"
@@ -153,6 +155,7 @@ function ModalReview({ active, setActive, id }) {
           />
           {nameDirty && nameError && <div className="modal__nameError">{nameError}</div>}
           <textarea
+          data-test-id="review-text-field"
             value={review}
             type="comment"
             className="modal__comment"
@@ -163,6 +166,7 @@ function ModalReview({ active, setActive, id }) {
           />
           {reviewDirty && reviewError && <div className="modal__reviewError">{reviewError}</div>}
           <button
+          data-test-id="review-submit-button"
             type="submit"
             className={
                isLoading

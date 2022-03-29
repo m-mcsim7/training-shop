@@ -59,6 +59,7 @@ function Footer() {
 
                 <form className="footer__input-input">
                   <input
+                  data-test-id="footer-mail-field"
                     onBlur={(e) => blurHandler(e)}
                     value={email}
                     onChange={(e) => emailHandler(e)}
@@ -86,6 +87,7 @@ function Footer() {
                        ? "footer__input-button loading-f"
                        : "footer__input-button"
                    }
+                   data-test-id="footer-subscribe-mail-button"
                    disabled={!formValid}
                    onClick={(e) => {
                      handleAddEmail();

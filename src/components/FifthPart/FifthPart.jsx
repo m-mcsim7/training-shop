@@ -57,6 +57,7 @@ function FifthPart() {
               </p>
               <form>
                 <input
+                  data-test-id="main-subscribe-mail-field"
                   onBlur={(e) => blurHandler(e)}
                   value={email}
                   onChange={(e) => emailHandler(e)}
@@ -85,6 +86,7 @@ function FifthPart() {
                       : "bigbanner__button"
                   }
                   disabled={!formValid}
+                  data-test-id="main-subscribe-mail-button"
                   onClick={(e) => {
                     handleAddEmail();
                     e.preventDefault();
