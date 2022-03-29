@@ -41,9 +41,9 @@ function FifthPart() {
 
   const blurHandler = () => setEmailDirty(true);
 
-  
-  isError &&
-  (error.originalStatus !== 200 ? setFormValid(false) : setFormValid(true))
+  console.log(formValid)
+//  isError &&
+//  (error.originalStatus !== 200 ? setFormValid(false) : setFormValid(true))
 
   return (
     <div>
@@ -90,7 +90,7 @@ function FifthPart() {
                       ? "bigbanner__button loading"
                       : "bigbanner__button"
                   }
-                  disabled={!formValid}
+                  disabled={!formValid || !isError}
                   onClick={(e) => {
                     handleAddEmail();
                     e.preventDefault();
