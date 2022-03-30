@@ -15,8 +15,8 @@ function ModalReview({ active, setActive, id, card }) {
     "Поле не может быть пустым"
   );
   const [formValid, setFormValid] = React.useState(false);
-  const [addReview, { isLoading, error, isError, data }] =
-    useAddReviewMutation();
+  const [addReview, { isLoading, isError, data }] = useAddReviewMutation();
+
   const blurHandler = (e) => {
     switch (e.target.name) {
       case "name":
@@ -64,7 +64,7 @@ function ModalReview({ active, setActive, id, card }) {
     text: review,
     rating: ratingRadioButton,
   };
-  console.log(reviewAdd);
+
   const handleAddReview = async () => {
     await addReview(reviewAdd);
     // data && setName("");
@@ -80,13 +80,20 @@ function ModalReview({ active, setActive, id, card }) {
     ? (document.body.style.overflow = "hidden")
     : (document.body.style.overflow = "scroll");
 
+
+  React.useEffect(() => {
+    reviewsNew();
+  }, [card]);
+
+
+  function reviewsNew() {
+   setRevies(card.reviews);
+  }
+
   const [reviews, setRevies] = React.useState(card.reviews);
-  console.log(reviews.length);
 
   data && data.reviews.length > reviews.length && setRevies(data.reviews);
 
-  console.log(card);
-  console.log(card.rating);
   //---------------------------------------------------------------------------
 
   return (
