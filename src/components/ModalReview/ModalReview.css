@@ -156,9 +156,10 @@
    margin-bottom: -20px;
 }
 .modal__reviewError{
+   margin-top: -15px;
    text-align: center;
-   line-height: 20px;
-   margin-bottom: -20px;
+   /*line-height: 10px;
+   margin-bottom: -10px;*/
    color: red;
 }
 .modal__Error{
