@@ -110,11 +110,11 @@ body {
   opacity: 0.4;
 }
 .bigbanner__email-error {
-position: absolute;
+   text-align: center;
   color: #ea1e63;
-  text-align: center;
   margin-bottom: -24px;
   line-height: 24px;
+
 }
 .bigbanner__email-notEerror {
   color: #181818;

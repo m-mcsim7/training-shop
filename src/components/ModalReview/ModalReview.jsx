@@ -27,6 +27,9 @@ function ModalReview({ active, setActive, id, card }) {
         break;
     }
   };
+
+
+
   const nameHandler = (e) => {
     setName(e.target.value);
     if (!e.target.value) {
@@ -51,10 +54,10 @@ function ModalReview({ active, setActive, id, card }) {
     }
   }, [nameError, reviewError, isLoading]);
 
-  const [ratingRadioButton, setRatingRadioButton] = React.useState("1");
+  const [ratingRadioButton, setRatingRadioButton] = React.useState(1);
 
   const hahdleRaiting = (e) => {
-    setRatingRadioButton(e.target.value);
+    setRatingRadioButton(+e.target.value);
   };
 
   const reviewAdd = {
@@ -63,9 +66,10 @@ function ModalReview({ active, setActive, id, card }) {
     text: review,
     rating: ratingRadioButton,
   };
+  console.log(reviewAdd)
   const handleAddReview = async () => {
     await addReview(reviewAdd);
-    data && setName("");
+   // data && setName("");
     setName("");
     setReview("");
     //setActive(false);
@@ -84,11 +88,11 @@ function ModalReview({ active, setActive, id, card }) {
   const[reviews, setRevies]=React.useState(card.reviews)
   console.log(reviews.length)
 
-//  data && console.log(data.reviews.length)
   data &&  data.reviews.length > reviews.length && setRevies(data.reviews) 
 
 
-
+console.log(card  )
+console.log(card.rating)
   //---------------------------------------------------------------------------
 
   return (

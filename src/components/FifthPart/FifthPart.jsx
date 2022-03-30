@@ -17,7 +17,8 @@ function FifthPart() {
     mail: email,
   };
   const handleAddEmail = async () => {
-    await addEmail(mailAdd);
+        await addEmail(mailAdd);
+        setEmail("");
   };
 
   React.useEffect(() => {
@@ -40,10 +41,6 @@ function FifthPart() {
   };
 
   const blurHandler = () => setEmailDirty(true);
-
-  console.log(formValid)
-//  isError &&
-//  (error.originalStatus !== 200 ? setFormValid(false) : setFormValid(true))
 
   return (
     <div>
@@ -90,7 +87,7 @@ function FifthPart() {
                       ? "bigbanner__button loading"
                       : "bigbanner__button"
                   }
-                  disabled={!formValid}
+                  disabled={!formValid || isLoading}
                   onClick={(e) => {
                     handleAddEmail();
                     e.preventDefault();

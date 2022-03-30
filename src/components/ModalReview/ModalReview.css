@@ -150,11 +150,15 @@
    background-color: #c0b2b2;
 }
 .modal__nameError{
-   position: absolute;
+   text-align: center;
    color: red;
+   line-height: 20px;
+   margin-bottom: -20px;
 }
 .modal__reviewError{
-   position: absolute;
+   text-align: center;
+   line-height: 20px;
+   margin-bottom: -20px;
    color: red;
 }
 .modal__Error{

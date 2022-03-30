@@ -27,6 +27,7 @@ function Footer() {
   };
   const handleAddEmail = async () => {
     await addEmail(mailAdd);
+    setEmail("");
   };
 
   React.useEffect(() => {
@@ -57,19 +58,21 @@ function Footer() {
             <div className="footer__input">
               <div className="footer__input-text">BE IN TOUCH WITH US:</div>
 
-                <form className="footer__input-input">
-                  <input
+              <form className="footer__input-input">
+                <input
                   data-test-id="footer-mail-field"
-                    onBlur={(e) => blurHandler(e)}
-                    value={email}
-                    onChange={(e) => emailHandler(e)}
-                    className="footer__input-email"
-                    type="email"
-                    name="email"
-                    placeholder="Enter your email"
-                  />
+                  onBlur={(e) => blurHandler(e)}
+                  value={email}
+                  onChange={(e) => emailHandler(e)}
+                  className="footer__input-email"
+                  type="email"
+                  name="email"
+                  placeholder="Enter your email"
+                />
                 {emailDirty && emailError && (
-                  <div className="bigbanner__email-error-footer">{emailError}</div>
+                  <div className="bigbanner__email-error-footer">
+                    {emailError}
+                  </div>
                 )}
                 {isError &&
                   (error.originalStatus !== 200 ? (
@@ -81,20 +84,22 @@ function Footer() {
                       Почта отправлена успешно
                     </div>
                   ))}
-                  <button 
+                <button
                   className={
-                     isLoading
-                       ? "footer__input-button loading-f"
-                       : "footer__input-button"
-                   }
-                   data-test-id="footer-subscribe-mail-button"
-                   disabled={!formValid}
-                   onClick={(e) => {
-                     handleAddEmail();
-                     e.preventDefault();
-                   }}
-                  >Join Us</button>
-                </form>
+                    isLoading
+                      ? "footer__input-button loading-f"
+                      : "footer__input-button"
+                  }
+                  data-test-id="footer-subscribe-mail-button"
+                  disabled={!formValid || isLoading}
+                  onClick={(e) => {
+                    handleAddEmail();
+                    e.preventDefault();
+                  }}
+                >
+                  Join Us
+                </button>
+              </form>
 
               <SocialIcons />
             </div>
