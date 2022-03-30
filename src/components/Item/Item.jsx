@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
+import { useAddReviewMutation } from "../../redux/sentReview/sentReview";
 
 import { setItemInCart, removeToCard } from "../../redux/cart/reducer";
 
@@ -350,7 +351,18 @@ function Item(props) {
                         </p>
                       </div>
                       <div className="item__info-line"></div>
-                      <div className="item__info-reviews">
+
+                      <ModalReview
+                          active={activModalReview}
+                          setActive={setActivModalReview}
+                          id={cardID}
+                          card={card}
+                        />
+
+
+
+
+                      {/*<div className="item__info-reviews">
                         <p>REVIEWS</p>
                         <div className="item__info-score-reviews">
                           <div className="item__score-star">
@@ -365,11 +377,7 @@ function Item(props) {
                             <img src={Review} alt="icon" /> Write a review
                           </p>
                         </div>
-                        <ModalReview
-                          active={activModalReview}
-                          setActive={setActivModalReview}
-                          id={cardID}
-                        />
+
                         {card.reviews.map((item, index) => (
                           <div className="item__review" key={index}>
                             <div className="item__review-title">
@@ -385,11 +393,21 @@ function Item(props) {
                             </div>
                           </div>
                         ))}
-                      </div>
+                      </div>*/}
+
+
+
+
+
+
                       <div className="item__info-line"></div>
                     </div>
                   </div>
                 </div>
+
+
+
+
 
                 <div className="related-products">
                   <div className="related-products__title">
