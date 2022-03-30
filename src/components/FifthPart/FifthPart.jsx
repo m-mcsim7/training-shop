@@ -17,8 +17,9 @@ function FifthPart() {
     mail: email,
   };
   const handleAddEmail = async () => {
-        await addEmail(mailAdd);
-        setEmail("");
+    await addEmail(mailAdd);
+    setEmail("");
+   
   };
 
   React.useEffect(() => {
@@ -27,12 +28,17 @@ function FifthPart() {
     } else {
       setFormValid(true);
     }
-  }, [emailError]);
+  }, [emailError, email]);
 
   const emailHandler = (e) => {
     setEmail(e.target.value);
+    //console.log(e.target.value.length);
+
     const re =
       /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+   // if (e.target.value.length == 0 || null) {
+   //   setEmailError("E-mail не может быть пустым");
+   // } else 
     if (!re.test(String(e.target.value).toLocaleLowerCase())) {
       setEmailError("Некорректный e-mail");
     } else {

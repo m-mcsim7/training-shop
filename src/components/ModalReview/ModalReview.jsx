@@ -28,8 +28,6 @@ function ModalReview({ active, setActive, id, card }) {
     }
   };
 
-
-
   const nameHandler = (e) => {
     setName(e.target.value);
     if (!e.target.value) {
@@ -66,10 +64,10 @@ function ModalReview({ active, setActive, id, card }) {
     text: review,
     rating: ratingRadioButton,
   };
-  console.log(reviewAdd)
+  console.log(reviewAdd);
   const handleAddReview = async () => {
     await addReview(reviewAdd);
-   // data && setName("");
+    // data && setName("");
     setName("");
     setReview("");
     //setActive(false);
@@ -78,21 +76,17 @@ function ModalReview({ active, setActive, id, card }) {
   //---------------------------------------------------------------------------
   const [activModalReview, setActivModalReview] = React.useState(false);
 
-
   activModalReview
     ? (document.body.style.overflow = "hidden")
     : (document.body.style.overflow = "scroll");
 
+  const [reviews, setRevies] = React.useState(card.reviews);
+  console.log(reviews.length);
 
+  data && data.reviews.length > reviews.length && setRevies(data.reviews);
 
-  const[reviews, setRevies]=React.useState(card.reviews)
-  console.log(reviews.length)
-
-  data &&  data.reviews.length > reviews.length && setRevies(data.reviews) 
-
-
-console.log(card  )
-console.log(card.rating)
+  console.log(card);
+  console.log(card.rating);
   //---------------------------------------------------------------------------
 
   return (
@@ -127,11 +121,14 @@ console.log(card.rating)
 
       {activModalReview && (
         <div
-          data-test-id="review-modal"
           className={activModalReview ? "modal active" : "modal"}
           onClick={() => setActivModalReview(false)}
         >
-          <div className="modal__content" onClick={(e) => e.stopPropagation()}>
+          <div
+            data-test-id="review-modal"
+            className="modal__content"
+            onClick={(e) => e.stopPropagation()}
+          >
             <div className="modal_title">Write a review</div>
             <form>
               <div className="simple-rating">
@@ -249,7 +246,6 @@ console.log(card.rating)
           </div>
         </div>
       )}
- 
     </div>
   );
 }
