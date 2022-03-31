@@ -70,9 +70,9 @@ function ModalReview({ active, setActive, id, card }) {
     // data && setName("");
     setName("");
     setReview("");
-    //setActive(false);
+    setActivModalReview(false);
   };
-
+  isError && setActivModalReview(true)
   //---------------------------------------------------------------------------
   const [activModalReview, setActivModalReview] = React.useState(false);
 

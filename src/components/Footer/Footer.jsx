@@ -26,9 +26,10 @@ function Footer() {
     mail: email,
   };
   const handleAddEmail = async () => {
-    await addEmail(mailAdd);
-    setEmail("");
-  };
+   await addEmail(mailAdd);
+   setEmail("");
+   setFormValid(false);
+ };
 
   React.useEffect(() => {
     if (emailError) {
