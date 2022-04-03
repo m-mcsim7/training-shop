@@ -153,11 +153,26 @@ function Item(props) {
       ? dispatch(removeToCard(includesCard))
       : dispatch(setItemInCart(cardInCart));
   }
+
   const [activModalReview, setActivModalReview] = React.useState();
   activModalReview
     ? (document.body.style.overflow = "hidden")
     : (document.body.style.overflow = "scroll");
 
+//------------------------------------калбек фукция-------------------------------------
+let rewN
+if (!isEmpty(productsAPi)) {
+   rewN = card.reviews.length;
+ }
+console.log(rewN)
+const [rew, setRew] = React.useState(0)
+    const hadleReviews =(rew) => {
+      setRew(rew)
+    }
+   
+    rewN && rewN > rew && setRew(rewN)
+
+//------------------------------------Модалка-------------------------------------
   return (
     <div data-test-id={`product-page-${props.product_type}`}>
       {!isEmpty(productsAPi) && (
@@ -196,7 +211,7 @@ function Item(props) {
                 <div className="item__score-all">
                   <div className="item__score">
                     <Rating rating={card.rating} />
-                    <p>{card.reviews.length} Reviews</p>
+                    <p>{rew} Reviews</p>
                   </div>
                   <div className="item__score__info">
                     <p>
@@ -357,6 +372,8 @@ function Item(props) {
                           setActive={setActivModalReview}
                           id={cardID}
                           card={card}
+                          onChange = {hadleReviews}
+                        //  updateData={this.updateData} 
                         />
 
 

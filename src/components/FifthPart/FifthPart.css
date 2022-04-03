@@ -96,6 +96,7 @@ body {
   color: #ea1e63;
 }
 .bigbanner__email {
+   padding-left: 20px;
   height: 64px;
   width: 340px;
   background: rgba(248, 248, 248, 1);

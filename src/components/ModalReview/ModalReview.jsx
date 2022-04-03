@@ -5,7 +5,7 @@ import { useAddReviewMutation } from "../../redux/sentReview/sentReview";
 import Rating from "../Item_card/Rating";
 import Review from "../../img/icons/review.svg";
 
-function ModalReview({ active, setActive, id, card }) {
+function ModalReview({ active, setActive, id, card, onChange }) {
   const [name, setName] = React.useState("");
   const [review, setReview] = React.useState("");
   const [nameDirty, setNameDirty] = React.useState(false);
@@ -45,12 +45,12 @@ function ModalReview({ active, setActive, id, card }) {
     }
   };
   React.useEffect(() => {
-    if (nameError || reviewError || isLoading) {
+    if (nameError || reviewError || isLoading || (name.length === 0 && review.length === 0)) {
       setFormValid(false);
     } else {
       setFormValid(true);
     }
-  }, [nameError, reviewError, isLoading]);
+  }, [nameError, reviewError, isLoading, name, review]);
 
   const [ratingRadioButton, setRatingRadioButton] = React.useState(1);
 
@@ -67,10 +67,11 @@ function ModalReview({ active, setActive, id, card }) {
 
   const handleAddReview = async () => {
     await addReview(reviewAdd);
-    // data && setName("");
     setName("");
     setReview("");
     setActivModalReview(false);
+    
+
   };
   isError && setActivModalReview(true)
   //---------------------------------------------------------------------------
@@ -80,10 +81,9 @@ function ModalReview({ active, setActive, id, card }) {
     ? (document.body.style.overflow = "hidden")
     : (document.body.style.overflow = "scroll");
 
+    
 
-  React.useEffect(() => {
-    reviewsNew();
-  }, [card]);
+
 
 
   function reviewsNew() {
@@ -94,7 +94,15 @@ function ModalReview({ active, setActive, id, card }) {
 
   data && data.reviews.length > reviews.length && setRevies(data.reviews);
 
+
   //---------------------------------------------------------------------------
+
+
+
+const hadleReviews = () => {
+   onChange(data.reviews.length)
+}
+data && data.reviews.length > reviews.length && hadleReviews()
 
   return (
     <div>
@@ -129,7 +137,8 @@ function ModalReview({ active, setActive, id, card }) {
       {activModalReview && (
         <div
           className={activModalReview ? "modal active" : "modal"}
-          onClick={() => setActivModalReview(false)}
+          onClick={() => {setActivModalReview(false);
+            setFormValid(false)}}
         >
           <div
             data-test-id="review-modal"

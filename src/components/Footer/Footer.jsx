@@ -27,8 +27,11 @@ function Footer() {
   };
   const handleAddEmail = async () => {
    await addEmail(mailAdd);
-   setEmail("");
+   !isError &&  setEmail("");
    setFormValid(false);
+   setReturnMessage(true)
+   isError &&  error.originalStatus === 200 && setEmail('')
+
  };
 
   React.useEffect(() => {
@@ -51,6 +54,10 @@ function Footer() {
   };
 
   const blurHandler = () => setEmailDirty(true);
+
+  const[returnMessage, setReturnMessage] = React.useState(false)
+
+
   return (
     <div>
       <footer className="footer">
@@ -64,7 +71,9 @@ function Footer() {
                   data-test-id="footer-mail-field"
                   onBlur={(e) => blurHandler(e)}
                   value={email}
-                  onChange={(e) => emailHandler(e)}
+                  onChange={(e) => {
+                     emailHandler(e);
+                     setReturnMessage(false)}}
                   className="footer__input-email"
                   type="email"
                   name="email"
@@ -75,7 +84,7 @@ function Footer() {
                     {emailError}
                   </div>
                 )}
-                {isError &&
+                {returnMessage && isError &&
                   (error.originalStatus !== 200 ? (
                     <div className="bigbanner__email-error-footer">
                       Ошибка при отправке почты

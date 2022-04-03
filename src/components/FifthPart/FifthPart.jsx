@@ -16,10 +16,20 @@ function FifthPart() {
   const mailAdd = {
     mail: email,
   };
+
+//  function clearInput(){
+//   setTimeout(isError &&  error.originalStatus === 200 && setEmail(''), 1000)
+////   return isError &&  error.originalStatus === 200 && setEmail('')
+
+  
   const handleAddEmail = async () => {
     await addEmail(mailAdd);
-    setEmail("");
+    
+    !isError &&  setEmail("");
     setFormValid(false);
+    setReturnMessage(true)
+    isError &&  error.originalStatus === 200 && setEmail('')
+
   };
 
 
@@ -45,6 +55,10 @@ function FifthPart() {
 
   const blurHandler = () => setEmailDirty(true);
 
+
+  const[returnMessage, setReturnMessage] = React.useState(false)
+
+
   return (
     <div>
       <div className="bigbanner">
@@ -64,7 +78,9 @@ function FifthPart() {
                   data-test-id="main-subscribe-mail-field"
                   onBlur={(e) => blurHandler(e)}
                   value={email}
-                  onChange={(e) => emailHandler(e)}
+                  onChange={(e) => {
+                     emailHandler(e);
+                     setReturnMessage(false)}}
                   className="bigbanner__email"
                   type="email"
                   name="email"
@@ -73,14 +89,16 @@ function FifthPart() {
                 {emailDirty && emailError && (
                   <div className="bigbanner__email-error">{emailError}</div>
                 )}
-                {isError &&
+                {returnMessage && isError &&
                   (error.originalStatus !== 200 ? (
                     <div className="bigbanner__email-error">
-                      Ошибка при отправке почты
+                      *Ошибка при отправке почты*
+                      {/*{emaiEr}*/}
                     </div>
                   ) : (
                     <div className="bigbanner__email-notEerror">
-                      Почта отправлена успешно
+                      Почта отправлена успешно*
+                      {/*{emaiEr}*/}
                     </div>
                   ))}
                 <button
